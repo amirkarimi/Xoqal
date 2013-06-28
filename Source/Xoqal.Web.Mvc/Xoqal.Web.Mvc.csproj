@@ -73,9 +73,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="Components\DataGridDataRowGenerator.cs" />
     <Compile Include="Components\DataGridGenerator.cs" />
     <Compile Include="Components\DataGridHeaderRowGenerator.cs" />

@@ -42,9 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Models\DetailPaginatedCriteria{T}.cs" />
     <Compile Include="Models\ICreateTime.cs" />

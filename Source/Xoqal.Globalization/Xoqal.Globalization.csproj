@@ -51,9 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="DataAnnotations\IntegerAttribute.cs" />
     <Compile Include="DataAnnotations\RangeAttribute.cs" />
     <Compile Include="DataAnnotations\StringLengthAttribute.cs" />

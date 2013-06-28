@@ -57,9 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="DbContextRoleRepository{T}.cs" />
     <Compile Include="DbContextRolesInPermissionRepository{T}.cs" />
     <Compile Include="DbContextUserRepository{T}.cs" />

@@ -60,9 +60,6 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="CoreTests\CoreViewModelExtensionsTest.cs" />
     <Compile Include="SecurityTests\AuthenticationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

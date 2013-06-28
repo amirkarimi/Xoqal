@@ -53,9 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="IQueryableRepository.cs" />
     <Compile Include="IQueryableRepository{T}.cs" />
     <Compile Include="Linq\Extensions.cs" />

@@ -59,9 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="Authentication.cs" />
     <Compile Include="IAuthentication.cs" />
     <Compile Include="IAuthenticationDataProvider.cs" />

@@ -59,9 +59,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="DbContextRepository.cs" />
     <Compile Include="DbContextRepository{T,TRoot}.cs" />
     <Compile Include="DbContextUnitOfWork.cs" />

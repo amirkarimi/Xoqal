@@ -55,9 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="AdvancedDbContext.cs" />
     <Compile Include="AdvancedObjectContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

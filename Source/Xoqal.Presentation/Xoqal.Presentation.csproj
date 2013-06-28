@@ -75,9 +75,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\RelayCommand{T}.cs" />
     <Compile Include="Controls\DateTimePicker.cs" />

@@ -40,9 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
-      <Link>GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="CrudServiceModelDecorator{TViewModel,TPersistenceModel,TCriteria}.cs" />
     <Compile Include="CrudServiceModelDecorator{TViewModel,TPersistenceModel}.cs" />
     <Compile Include="CrudService{TModel,TCriteria}.cs" />

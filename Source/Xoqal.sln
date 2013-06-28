@@ -14,7 +14,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{3A443BAA-A045-4C45-AA7E-84E24665F862}"
 	ProjectSection(SolutionItems) = preProject
 		Lib\Dynamic.dll = Lib\Dynamic.dll
-		Lib\GlobalAssemblyInfo.cs = Lib\GlobalAssemblyInfo.cs
 		Lib\Microsoft.Practices.Prism.dll = Lib\Microsoft.Practices.Prism.dll
 		Lib\Microsoft.Practices.Prism.UnityExtensions.dll = Lib\Microsoft.Practices.Prism.UnityExtensions.dll
 		Lib\Microsoft.Practices.Prism.UnityExtensions.xml = Lib\Microsoft.Practices.Prism.UnityExtensions.xml
