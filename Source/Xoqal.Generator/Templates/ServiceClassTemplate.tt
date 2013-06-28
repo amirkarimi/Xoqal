@@ -1,0 +1,35 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+namespace <#=this.options.ServicesNamespace#>
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using Xoqal.Data;
+    using Xoqal.Services;
+
+    /// <summary>
+    /// Represents the <#=this.entityInfo.EntityName.ToLower()#> service.
+    /// </summary>
+    internal class <#=this.entityInfo.EntityName#>Service : CrudService<Entities.<#=this.entityInfo.EntityName#>>, I<#=this.entityInfo.EntityName#>Service
+    {
+        private readonly IUnitOfWork unitOfWork;
+        private readonly Data.I<#=this.entityInfo.EntityName#>Repository <#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="<#=this.entityInfo.EntityName#>Service"/> class.
+        /// </summary>
+        /// <param name="unitOfWork">The unit of work.</param>
+        /// <param name="<#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository">The <#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#> repository</param>
+        public <#=this.entityInfo.EntityName#>Service(IUnitOfWork unitOfWork, Data.I<#=this.entityInfo.EntityName#>Repository <#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository)
+            : base(unitOfWork, <#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository)
+        {
+            this.unitOfWork = unitOfWork;
+            this.<#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository = <#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository;
+        }
+    }
+}

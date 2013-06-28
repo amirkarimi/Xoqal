@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Utilities</name>
+    </assembly>
+    <members>
+        <member name="M:Xoqal.Utilities.Attributes.ValidExtensionsAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Utilities.Attributes.ValidExtensionsAttribute"/> class.
+            </summary>
+            <param name="extensions"> The extensions. </param>
+        </member>
+        <member name="M:Xoqal.Utilities.Attributes.ValidExtensionsAttribute.GetExtentions">
+            <summary>
+            Gets the extensions.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="P:Xoqal.Utilities.Attributes.ValidExtensionsAttribute.ExtensionList">
+            <summary>
+            Gets the extensions in comma separated format.
+            </summary>
+            <value> The extensions in comma separated format. </value>
+        </member>
+        <member name="T:Xoqal.Utilities.EnumHelper">
+            <summary>
+            Helps display the enum items.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumDisplay``1(``0)">
+            <summary>
+            Gets the enum display.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumDisplay(System.Type,System.Object)">
+            <summary>
+            Gets the enum display.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumDisplays``1">
+            <summary>
+            Gets the enum displays.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumDisplays(System.Type)">
+            <summary>
+            Gets the enum displays.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumDisplay(System.Object)">
+            <summary>
+            Gets the enum display.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumObjectDisplays(System.Type)">
+            <summary>
+            Gets the enum object displays.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumValueDisplays(System.Type)">
+            <summary>
+            Gets the enum value displays.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.EnumHelper.GetEnumByDisplay``1(System.String)">
+            <summary>
+            Gets the enum by display.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="displayName">The display name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FileHelper.GetValidExtensions(System.Object)">
+            <summary>
+            Gets the valid extensions.
+            </summary>
+            <param name="item"> The item. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FileHelper.GetPhysicalPath(System.String)">
+            <summary>
+            Gets the physical path.
+            </summary>
+            <param name="relativePath"> The relative path. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FileHelper.GetFileType``1(System.String)">
+            <summary>
+            Gets the type of the file.
+            </summary>
+            <param name="fileName">Name of the file.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:Xoqal.Utilities.FingerPrint">
+            <summary>
+            Retrieve a finger print from current machine which is useful for licensing.
+            </summary>
+            <remarks>
+            Got from "http://www.codeproject.com/Articles/28678/Generating-Unique-Key-Finger-Print-for-a-Computer" and clean by A. Karimi (karimi@dev-frame.com)
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetMachineId(Xoqal.Utilities.MachineIdComponents)">
+            <summary>
+            Gets the machine id.
+            </summary>
+            <param name="components">The components.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetHash(System.String)">
+            <summary>
+            Gets the hash.
+            </summary>
+            <param name="s"> The s. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetHexString(System.Byte[])">
+            <summary>
+            Gets the hex string.
+            </summary>
+            <param name="bytes">The bytes.</param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetIdentifier(System.String,System.String,System.String)">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <param name="wmiClass"> The WMI class. </param>
+            <param name="wmiProperty"> The WMI property. </param>
+            <param name="wmiMustBeTrue"> The WMI must be true. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetIdentifier(System.String,System.String)">
+            <summary>
+            Gets the identifier.
+            </summary>
+            <param name="wmiClass"> The WMI class. </param>
+            <param name="wmiProperty"> The WMI property. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetCpuId">
+            <summary>
+            Gets the CPU ID.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetBiosId">
+            <summary>
+            Gets the bios id.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetDiskId">
+            <summary>
+            Gets the disk id.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetVideoId">
+            <summary>
+            Gets the video id.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.FingerPrint.GetMacId">
+            <summary>
+            Macs the id.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.HtmlTextHelper.ConvertHtmlToPlanText(System.String)">
+            <summary>
+            Converts the specified HTML content to a plan text.
+            </summary>
+            <param name="html"> The HTML. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.HtmlTextHelper.ConvertHtmlToPlanText(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Gets a plan text from HTML.
+            </summary>
+            <param name="html"> The HTML. </param>
+            <param name="wordCount"> The word count. </param>
+            <param name="addThreePoint"> if set to <c>true</c> adds three point. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.HtmlTextHelper.Highlight(System.String,System.Int32,System.Boolean,System.String,System.String)">
+            <summary>
+            Highlights the specified word in the given html content.
+            </summary>
+            <param name="html">The HTML.</param>
+            <param name="wordCount">The word count.</param>
+            <param name="addThreePoint">if set to <c>true</c> [add three point].</param>
+            <param name="searchWord">The search word to be highlighted.</param>
+            <param name="highlightCssStyle">The highlight CSS style.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Utilities.HtmlTextHelper.RemoveTagWithContent(System.String,System.String)">
+            <summary>
+            Removes the content of the tag with its content.
+            </summary>
+            <param name="source"> The source. </param>
+            <param name="tagName"> Name of the tag. </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Utilities.ImagingHelper">
+            <summary>
+            Helps simple image processing.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Utilities.ImagingHelper.GetCustomThumbnailImage(System.Byte[],System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.Boolean,System.Int64)">
+            <summary>
+            Gets the custom thumbnail image.
+            </summary>
+            <param name="imageBytes"> The image. </param>
+            <param name="width"> The width. </param>
+            <param name="height"> The height. </param>
+            <param name="shrinkOnly"> The value indicating whether do not make larger images if the given width and height are bigger than original image. </param>
+            <param name="stretch"> The value indicating whether stretch the image to fit the given width and height or not. </param>
+            <param name="quality"> The quality of the encoder. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.ImagingHelper.CalculateFormalSize(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Drawing.Image,System.Int32@,System.Int32@)">
+            <summary>
+            Calculates the destination size in a formal manner (not stretched).
+            </summary>
+            <param name="width"> </param>
+            <param name="height"> </param>
+            <param name="image"> </param>
+            <param name="w"> </param>
+            <param name="h"> </param>
+        </member>
+        <member name="M:Xoqal.Utilities.ImagingHelper.ResizeImage(System.Drawing.Image,System.Int32,System.Int32)">
+            <summary>
+            Resizes the specified image to the specified width and height.
+            </summary>
+            <param name="image"> </param>
+            <param name="width"> </param>
+            <param name="height"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.ImagingHelper.GetEncoder(System.Drawing.Imaging.EncoderParameters@,System.Drawing.Imaging.ImageCodecInfo@,System.Int64)">
+            <summary>
+            Gets the JPEG encoder according to the specified quality.
+            </summary>
+            <param name="encoderParams"> </param>
+            <param name="jpegEncoder"> </param>
+            <param name="quality"> </param>
+        </member>
+        <member name="T:Xoqal.Utilities.MachineIdComponents">
+            <summary>
+            Machine ID components which will be used to generate a machine ID.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Utilities.MachineIdComponents.BaseBoard">
+            <summary>
+            BaseBoard
+            </summary>
+        </member>
+        <member name="F:Xoqal.Utilities.MachineIdComponents.Cpu">
+            <summary>
+            CPU
+            </summary>
+        </member>
+        <member name="F:Xoqal.Utilities.MachineIdComponents.Bios">
+            <summary>
+            BIOS
+            </summary>
+        </member>
+        <member name="F:Xoqal.Utilities.MachineIdComponents.Disk">
+            <summary>
+            Disk
+            </summary>
+        </member>
+        <member name="F:Xoqal.Utilities.MachineIdComponents.Video">
+            <summary>
+            Video
+            </summary>
+        </member>
+        <member name="F:Xoqal.Utilities.MachineIdComponents.MacAddress">
+            <summary>
+            MacAddress
+            </summary>
+        </member>
+        <member name="M:Xoqal.Utilities.PersianTextHelper.GetArabicsFormat(System.String)">
+            <summary>
+            Gets the Arabic format.
+            </summary>
+            <param name="txt"> The Text. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.PersianTextHelper.GetPersianFormat(System.String)">
+            <summary>
+            Gets the Persian format.
+            </summary>
+            <param name="txt"> The Text. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.PersianTextHelper.ConvertToPersianDigit(System.String)">
+            <summary>
+            Converts all digits in the given string to the Persian digits.
+            </summary>
+            <param name="source"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Utilities.ResourceHelper">
+            <summary>
+            Helps to resolve the resource keys.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Utilities.ResourceHelper.GetResourceValue(System.String,System.String)">
+            <summary>
+            Gets the resource value.
+            </summary>
+            <param name="resourceTypeName"> Name of the resource type. </param>
+            <param name="name"> The name. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.ResourceHelper.GetResourceValue(System.Type,System.String)">
+            <summary>
+            Gets the resource value.
+            </summary>
+            <param name="resourceType"> Type of the resource. </param>
+            <param name="name"> The name. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Utilities.TextHelper.GetSummary(System.String,System.Int32)">
+            <summary>
+            Gets the summary.
+            </summary>
+            <param name="text"> The text. </param>
+            <param name="wordCount"> The word count. </param>
+            <returns> </returns>
+        </member>
+    </members>
+</doc>

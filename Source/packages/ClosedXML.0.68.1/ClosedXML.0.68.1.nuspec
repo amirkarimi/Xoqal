@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ClosedXML</id>
+    <version>0.68.1</version>
+    <title>ClosedXML</title>
+    <authors>Manuel De Leon</authors>
+    <owners>Manuel De Leon</owners>
+    <projectUrl>http://closedxml.codeplex.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ClosedXML makes it easier for developers to create Excel 2007/2010 files. It provides a nice object oriented way to manipulate the files (similar to VBA) without dealing with the hassles of XML Docume</description>
+    <tags>Excel OpenXML</tags>
+    <dependencies>
+      <dependency id="DocumentFormat.OpenXml" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

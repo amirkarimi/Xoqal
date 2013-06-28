@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06FE2231-FCB1-4251-82F4-4E86860F2028}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xoqal.Tests</RootNamespace>
+    <AssemblyName>Xoqal.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Ploeh.AutoFixture">
+      <HintPath>..\packages\AutoFixture.3.0.8\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise />
+  </Choose>
+  <ItemGroup>
+    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CoreTests\CoreViewModelExtensionsTest.cs" />
+    <Compile Include="SecurityTests\AuthenticationTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ExportImportTests\ExcelExportImportTest.cs" />
+    <Compile Include="WebMvcTests\DataGridDataRowGeneratorTest.cs" />
+    <Compile Include="WebMvcTests\DataGridGeneratorTest.cs" />
+    <Compile Include="WebMvcTests\DataGridHeaderRowGeneratorTest.cs" />
+    <Compile Include="WebMvcTests\MenuGeneratorTest.cs" />
+    <Compile Include="WebMvcTests\Models\DataGridSampleModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xoqal.Core\Xoqal.Core.csproj">
+      <Project>{09fd2c42-58a9-4aed-a2e6-61c118f15334}</Project>
+      <Name>Xoqal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Data.EntityFramework.Extensions\Xoqal.Data.EntityFramework.Extensions.csproj">
+      <Project>{8c028aa0-24e9-4afd-a957-706456f78118}</Project>
+      <Name>Xoqal.Data.EntityFramework.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Data.EntityFramework\Xoqal.Data.EntityFramework.csproj">
+      <Project>{8beffa3b-590e-4a55-92ee-962c6d6d4317}</Project>
+      <Name>Xoqal.Data.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Data\Xoqal.Data.csproj">
+      <Project>{ff71ea01-001d-4adc-8ed7-624bc19b1324}</Project>
+      <Name>Xoqal.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.ExportImport\Xoqal.ExportImport.csproj">
+      <Project>{d56b8756-524a-46a3-8f47-054e388e8201}</Project>
+      <Name>Xoqal.ExportImport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Generator\Xoqal.Generator.csproj">
+      <Project>{17ec848f-2d14-4fda-b9f5-6b8269e21603}</Project>
+      <Name>Xoqal.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Globalization\Xoqal.Globalization.csproj">
+      <Project>{15772434-6bdc-4c93-b4ee-3a973696c071}</Project>
+      <Name>Xoqal.Globalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Presentation\Xoqal.Presentation.csproj">
+      <Project>{d2b2598a-2bee-4c3e-8f07-1dfec96f3fdf}</Project>
+      <Name>Xoqal.Presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Resources\Xoqal.Resources.csproj">
+      <Project>{dcee0d1e-5330-4bea-b32a-5f8119fdf969}</Project>
+      <Name>Xoqal.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Security.EntityFramework\Xoqal.Security.EntityFramework.csproj">
+      <Project>{5f78a29c-1933-44ec-9f11-0953eb82b8c4}</Project>
+      <Name>Xoqal.Security.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Security\Xoqal.Security.csproj">
+      <Project>{35c4c2ba-051f-4e53-9f43-7c6866b08dc2}</Project>
+      <Name>Xoqal.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Services\Xoqal.Services.csproj">
+      <Project>{550583d9-99f2-4d51-9923-3339e5b95e13}</Project>
+      <Name>Xoqal.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Utilities\Xoqal.Utilities.csproj">
+      <Project>{9855e705-e483-46ff-ad70-9de80b26e8f8}</Project>
+      <Name>Xoqal.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Web.Mvc\Xoqal.Web.Mvc.csproj">
+      <Project>{dbb4389a-1284-4af2-a9f2-cff0b4e7a44f}</Project>
+      <Name>Xoqal.Web.Mvc</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

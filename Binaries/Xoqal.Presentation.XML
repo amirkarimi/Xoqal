@@ -1,0 +1,2310 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Presentation.Commands.RelayCommand">
+            <summary>
+            A command whose sole purpose is to relay its functionality to other objects by invoking delegates. The default return value for the CanExecute method is 'true'.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand.#ctor(System.Action)">
+            <summary>
+            Creates a new command that can always execute.
+            </summary>
+            <param name="execute"> The execution logic. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})">
+            <summary>
+            Creates a new command.
+            </summary>
+            <param name="execute"> The execution logic. </param>
+            <param name="canExecute"> The execution status logic. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter"> Data used by the command. If the command does not require data to be passed, this object can be set to null. </param>
+            <returns> true if this command can be executed; otherwise, false. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter"> Data used by the command. If the command does not require data to be passed, this object can be set to null. </param>
+        </member>
+        <member name="E:Xoqal.Presentation.Commands.RelayCommand.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.Commands.RelayCommand`1">
+            <summary>
+            A command whose sole purpose is to relay its functionality to other objects by invoking delegates. The default return value for the CanExecute method is 'true'.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand`1.#ctor(System.Action{`0})">
+            <summary>
+            Creates a new command that can always execute.
+            </summary>
+            <param name="execute"> The execution logic. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand`1.#ctor(System.Action{`0},System.Func{`0,System.Boolean})">
+            <summary>
+            Creates a new command.
+            </summary>
+            <param name="execute"> The execution logic. </param>
+            <param name="canExecute"> The execution status logic. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand`1.CanExecute(System.Object)">
+            <summary>
+            Defines the method that determines whether the command can execute in its current state.
+            </summary>
+            <param name="parameter"> Data used by the command. If the command does not require data to be passed, this object can be set to null. </param>
+            <returns> true if this command can be executed; otherwise, false. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Commands.RelayCommand`1.Execute(System.Object)">
+            <summary>
+            Defines the method to be called when the command is invoked.
+            </summary>
+            <param name="parameter"> Data used by the command. If the command does not require data to be passed, this object can be set to null. </param>
+        </member>
+        <member name="E:Xoqal.Presentation.Commands.RelayCommand`1.CanExecuteChanged">
+            <summary>
+            Occurs when changes occur that affect whether or not the command should execute.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.DateTimePicker.SelectedDateTimeProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.DateTimePicker.SelectedDateTime"/> dependency property
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.DateTimePicker.DatePartProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.DateTimePicker.DatePart"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.DateTimePicker.TimePartProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.DateTimePicker.TimePart"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.DateTimePicker.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.DateTimePicker"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.DateTimePicker.OnSelectedDateTimeChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when SelectedDateTime change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.DateTimePicker.OnDatePartChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when DatePart change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.DateTimePicker.OnTimePartChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when TimePart change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.DateTimePicker.SelectedDateTime">
+            <summary>
+            Gets or sets the date time value.
+            </summary>
+            <value>
+            The date time value.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.DateTimePicker.DatePart">
+            <summary>
+            Gets or sets the date part.
+            </summary>
+            <value>
+            The date part.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.DateTimePicker.TimePart">
+            <summary>
+            Gets or sets the time part.
+            </summary>
+            <value>
+            The time part.
+            </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.EnumRadioList">
+            <summary>
+            Represents a single selection radio button list.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.EnumRadioList.EnumTypeProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.EnumRadioList.EnumType"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.EnumRadioList.ExcludedValuesProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.EnumRadioList.ExcludedValues"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.EnumRadioList.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.EnumRadioList"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.EnumRadioList.OnEnumTypeChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when EnumType changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.EnumRadioList.EnumType">
+            <summary>
+            Gets or sets the type of the enum.
+            </summary>
+            <value> The type of the enum. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.EnumRadioList.ExcludedValues">
+            <summary>
+            Gets or sets the excluded values.
+            </summary>
+            <value>
+            The excluded values.
+            </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.MultiSelectorListBox">
+            <summary>
+            Represents a list box with multi selection ability.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.MultiSelectorListBox.SelectedItemsProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.MultiSelectorListBox.SelectedItems"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.MultiSelectorListBox.IsAllCheckedProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.MultiSelectorListBox.IsAllChecked"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.MultiSelectorListBox.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.MultiSelectorListBox"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.MultiSelectorListBox.OnItemsSourceChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <summary>
+            Called when the <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> property changes.
+            </summary>
+            <param name="oldValue"> Old value of the <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> property. </param>
+            <param name="newValue"> New value of the <see cref="P:System.Windows.Controls.ItemsControl.ItemsSource" /> property. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.MultiSelectorListBox.OnSelectedItemsChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when SelectedItems changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.MultiSelectorListBox.OnIsAllCheckedChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when is all checked changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.MultiSelectorListBox.OnItemIsSelectedChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the IsSelectedChanged event of the Item control.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.EventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.MultiSelectorListBox.SelectedItems">
+            <summary>
+            Gets or sets the selected items.
+            </summary>
+            <value> The selected items. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.MultiSelectorListBox.IsAllChecked">
+            <summary>
+            Gets or sets a value indicating whether this instance is all checked.
+            </summary>
+            <value>
+            <c>true</c> if this instance is all checked; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.NumericTextBox">
+            <summary>
+            Represents a numeric text box.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.NumericTextBox.CanAcceptDecimalPlaceProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.NumericTextBox.CanAcceptDecimalPlace"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.NumericTextBox.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called when the <see cref="E:System.Windows.UIElement.KeyDown" /> occurs.
+            </summary>
+            <param name="e"> The event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.NumericTextBox.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Invoked whenever an unhandled <see cref="T:System.Windows.Input.KeyEventArgs"/> attached routed event reaches an element derived from this class in its route. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e"> Provides data about the event. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.NumericTextBox.CanAcceptDecimalPlace">
+            <summary>
+            Gets or sets a value indicating whether this instance can accept decimal place.
+            </summary>
+            <value> <c>true</c> if this instance can accept decimal place; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.ScrollHelper">
+            <summary>
+            Helps to manage scrolling in MVVM ways.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.ScrollHelper.IsAutoScrollToEndProperty">
+            <summary>
+            Identifies the IsAutoScrollToEnd dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ScrollHelper.GetIsAutoScrollToEnd(System.Windows.DependencyObject)">
+            <summary>
+            Gets the is auto scroll to end.
+            </summary>
+            <param name="obj"> The object. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ScrollHelper.SetIsAutoScrollToEnd(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the is auto scroll to end.
+            </summary>
+            <param name="obj"> The object. </param>
+            <param name="value"> The value. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ScrollHelper.OnIsAutoScrollToEndChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when IsAutoScrollToEndChanged changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ScrollHelper.OnTextBoxBaseTextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Handles the TextChanged event of the TextBoxBase control.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.Windows.Controls.TextChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.TimePicker.IsDefaultNowProperty">
+            <see>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.TimePicker.IsDefaultNow"/> dependency property.
+            </see>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.TimePicker.TimeValueProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.TimePicker.TimeValue"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.TimePicker.HourProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.TimePicker.Hour"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.TimePicker.MinuteProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.TimePicker.Minute"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.TimePicker"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.OnApplyTemplate">
+            <summary>
+            When overridden in a derived class, is invoked whenever application code or internal processes call <see cref="M:System.Windows.FrameworkElement.ApplyTemplate" />.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.OnInitialized(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event. This method is invoked whenever <see cref="P:System.Windows.FrameworkElement.IsInitialized"/> is set to true internally.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.OnTimeValueChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when TimeValue change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.OnHourChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when Hour change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.CoerceHour(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Called when Hour coerce.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="baseValue">The base value.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.OnMinuteChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when Minute change.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.CoerceMinute(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Called when Minute coerce.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="baseValue">The base value.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.HourTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event of the hourTextBox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.TimePicker.MinuteTextBox_PreviewKeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event of the MinuteTextBox control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.TimePicker.IsDefaultNow">
+            <summary>
+            Gets or sets a value indicating whether this instance is default now.
+            </summary>
+            <value>
+            <c>true</c> if this instance is default now; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.TimePicker.TimeValue">
+            <summary>
+            Gets or sets the time value.
+            </summary>
+            <value>
+            The time value.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.TimePicker.Hour">
+            <summary>
+            Gets or sets the hour.
+            </summary>
+            <value>
+            The hour.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.TimePicker.Minute">
+            <summary>
+            Gets or sets the minute.
+            </summary>
+            <value>
+            The minute.
+            </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.AddConverter">
+            <summary>
+            Provides add operator for bindings.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.AddConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value"> The value produced by the binding source. </param>
+            <param name="targetType"> The type of the binding target property. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> A converted value. If the method returns null, the valid null value is used. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.AddConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value"> The value that is produced by the binding target. </param>
+            <param name="targetType"> The type to convert to. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> A converted value. If the method returns null, the valid null value is used. </returns>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.BooleanToFontWeightConverter">
+            <summary>
+            Converts a Boolean to FontWeight value.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.BooleanToFontWeightConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value"> The value produced by the binding source. </param>
+            <param name="targetType"> The type of the binding target property. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> A converted value. If the method returns null, the valid null value is used. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.BooleanToFontWeightConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value"> The value that is produced by the binding target. </param>
+            <param name="targetType"> The type to convert to. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> A converted value. If the method returns null, the valid null value is used. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBinding.#ctor(System.Windows.Data.BindingExpressionBase,System.Windows.DependencyObject,System.Windows.DependencyProperty,System.TimeSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.Extentions.DelayBinding"/> class.
+            </summary>
+            <param name="bindingExpression">The binding expression.</param>
+            <param name="bindingTarget">The binding target.</param>
+            <param name="bindingTargetProperty">The binding target property.</param>
+            <param name="delay">The delay.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBinding.SetBinding(System.Windows.DependencyObject,System.Windows.DependencyProperty,System.TimeSpan,System.Windows.Data.Binding)">
+            <summary>
+            Sets the binding.
+            </summary>
+            <param name="bindingTarget">The binding target.</param>
+            <param name="bindingTargetProperty">The binding target property.</param>
+            <param name="delay">The delay.</param>
+            <param name="binding">The binding.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBinding.OnBindingTargetKeyUp(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called when binding target key up.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Windows.Input.KeyEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBinding.OnBindingTargetTargetPropertyChanged(System.Object,System.EventArgs)">
+            <summary>
+            Called when binding target target property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBinding.OnTimerTick(System.Object,System.EventArgs)">
+            <summary>
+            Called when timer tick.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBindingExtension.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.Extentions.DelayBindingExtension"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBindingExtension.#ctor(System.Windows.PropertyPath)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.Extentions.DelayBindingExtension"/> class.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.DelayBindingExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            When implemented in a derived class, returns an object that is provided as the value of the target property for this markup extension.
+            </summary>
+            <param name="serviceProvider">A service provider helper that can provide services for the markup extension.</param>
+            <returns>
+            The object value to set on the property where the extension is applied.
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.Converter">
+            <summary>
+            Gets or sets the converter.
+            </summary>
+            <value>
+            The converter.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.ConverterParameter">
+            <summary>
+            Gets or sets the converter parameter.
+            </summary>
+            <value>
+            The converter parameter.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.ElementName">
+            <summary>
+            Gets or sets the name of the element.
+            </summary>
+            <value>
+            The name of the element.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.RelativeSource">
+            <summary>
+            Gets or sets the relative source.
+            </summary>
+            <value>
+            The relative source.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.Source">
+            <summary>
+            Gets or sets the source.
+            </summary>
+            <value>
+            The source.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.ValidatesOnDataErrors">
+            <summary>
+            Gets or sets a value indicating whether validates on data errors.
+            </summary>
+            <value>
+            <c>true</c> if validates on data errors; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.ValidatesOnExceptions">
+            <summary>
+            Gets or sets a value indicating whether validates on exceptions.
+            </summary>
+            <value>
+            <c>true</c> if validates on exceptions; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.Delay">
+            <summary>
+            Gets or sets the delay.
+            </summary>
+            <value>
+            The delay.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.Path">
+            <summary>
+            Gets or sets the path.
+            </summary>
+            <value>
+            The path.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Extentions.DelayBindingExtension.ConverterCulture">
+            <summary>
+            Gets or sets the converter culture.
+            </summary>
+            <value>
+            The converter culture.
+            </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Extentions.FocusBehaviour">
+            <summary>
+            Provide set focus operation for binding.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Extentions.FocusBehaviour.ForceFocusProperty">
+            <summary>
+            Identifies the ForceFocus dependency property
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.FocusBehaviour.GetForceFocus(System.Windows.DependencyObject)">
+            <summary>
+            Gets the force focus.
+            </summary>
+            <param name="d">The d.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Extentions.FocusBehaviour.SetForceFocus(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the force focus.
+            </summary>
+            <param name="d">The d.</param>
+            <param name="val">if set to <c>true</c> [val].</param>
+        </member>
+        <member name="T:Xoqal.Presentation.Security.SecurityHelper">
+            <summary>
+            Helps control the security over UI.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Security.SecurityHelper.PermissionProperty">
+            <summary>
+            Identifies the Permission dependency property
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Security.SecurityHelper.VisibilityProperty">
+            <summary>
+            Identifies the <see cref="T:System.Windows.Visibility"/> dependency property
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Security.SecurityHelper.GetPermission(System.Windows.DependencyObject)">
+            <summary>
+            Gets the permission.
+            </summary>
+            <param name="obj"> The object. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Security.SecurityHelper.SetPermission(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the permission.
+            </summary>
+            <param name="obj"> The object. </param>
+            <param name="value"> The value. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Security.SecurityHelper.GetVisibility(System.Windows.DependencyObject)">
+            <summary>
+            Gets the visibility.
+            </summary>
+            <param name="obj"> The object. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Security.SecurityHelper.SetVisibility(System.Windows.DependencyObject,System.Windows.Visibility)">
+            <summary>
+            Sets the visibility.
+            </summary>
+            <param name="obj"> The object. </param>
+            <param name="value"> The value. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Security.SecurityHelper.OnPermissionChange(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when Permission change.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Security.SecurityHelper.OnFrameworkElementLoaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Handles the Loaded event of the FrameworkElement control.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.CrudViewModel`2">
+            <summary>
+            Represents the base functionality for a simple view-model CRUD operation.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TCriteria"></typeparam>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.PresenterViewModel`2">
+            <summary>
+            Represents a view-model to show data.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TCriteria">The type of the criteria.</typeparam>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2">
+            <summary>
+            Represents the base class for data presenting view-model.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TCriteria"></typeparam>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.ViewModelBase">
+            <summary>
+            Represents the base class for standard View-Models.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IViewModel">
+            <summary>
+            Represents a view-model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IViewModel.ViewTitle">
+            <summary>
+            Gets or sets the view title.
+            </summary>
+            <value> The view title. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IViewModel.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether this view-model is enabled.
+            </summary>
+            <value> <c>true</c> if this view-mode is enabled; otherwise, <c>false</c> . </value>
+            <remarks>
+            It will be useful for UI purpose.
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ViewModelBase.ViewTitle">
+            <summary>
+            Gets the view title.
+            </summary>
+            <value> The view title. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ViewModelBase.IsEnabled">
+            <summary>
+            Gets or sets a value indicating whether this view-model is enabled.
+            </summary>
+            <value> <c>true</c> if this view-mode is enabled; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IPresenterViewModel`2">
+            <summary>
+            Represents a base view-model to show data in paginated manner.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IPresenterViewModel">
+            <summary>
+            Represents a base view-model to show data.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IRefreshableViewModel">
+            <summary>
+            Represents a refreshable view-model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IRefreshableViewModel.RefreshCommand">
+            <summary>
+            Gets the refresh command.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IItemCollectionViewModel">
+            <summary>
+            Represents an item collection view-model.
+            </summary>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.IItemCollectionViewModel.CurrentItemChanged">
+            <summary>
+            Occurs when CurrentItem changed.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IItemCollectionViewModel.CurrentItem">
+            <summary>
+            Gets the current item.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IItemCollectionViewModel.SelectedItems">
+            <summary>
+            Gets or sets the selected items.
+            </summary>
+            <value> The selected items. </value>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.IPresenterViewModel.UpdateData">
+            <summary>
+            Updates the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPresenterViewModel.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPresenterViewModel.Pager">
+            <summary>
+            Gets the pager.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPresenterViewModel.PageSize">
+            <summary>
+            Gets the size of the page.
+            </summary>
+            <value> The size of the page. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IItemCollectionViewModel`1">
+            <summary>
+            Represents an item collection view-model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IItemCollectionViewModel`1.CurrentItem">
+            <summary>
+            Gets or sets the current item.
+            </summary>
+            <value> The current item. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPresenterViewModel`2.Criteria">
+            <summary>
+            Gets or sets the criteria.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="!:PresenterViewModelBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.UpdateData">
+            <summary>
+            Updates the data.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.GetItems(`1)">
+            <summary>
+            Gets the items matching the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.OnCurrentItemChanging(`0)">
+            <summary>
+            Called before CurrentItem change.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.OnCurrentItemChanged">
+            <summary>
+            Called when CurrentItem changed.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.OnRefreshCommandExecute">
+            <summary>
+            Called when RefreshCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.CanExecuteRefreshCommand">
+            <summary>
+            Determines whether this instance can execute RefreshCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute RefreshCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.OnCurrentItemPropertiesChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when properties of current item changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.OnCriteriaPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Called when criteria property changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.OnCollectionViewRefreshed(System.Object,System.EventArgs)">
+            <summary>
+            Called when collection view refreshed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.InitializePager">
+            <summary>
+            Initializes the pager.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.InitializeCommands">
+            <summary>
+            Initializes the commands.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.GetDataSortDescriptions(System.Collections.Generic.IEnumerable{System.ComponentModel.SortDescription})">
+            <summary>
+            Converts WPF sort description objects to Fx ones.
+            </summary>
+            <param name="sortDescriptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.AttachPropertiesChangedEvent(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>
+            Attaches to the PropertyChanged of the given object.
+            </summary>
+            <param name="notifyObject"> </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.DetachPropertiesChangedEvent(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>
+            Attaches to the PropertyChanged of the given object.
+            </summary>
+            <param name="notifyObject"> </param>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.CurrentItemChanged">
+            <summary>
+            Occurs when CurrentItem changed.
+            </summary>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.CurrentItemChanging">
+            <summary>
+            Occurs before CurrentItem change.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.RefreshCommand">
+            <summary>
+            Gets or sets the refresh command.
+            </summary>
+            <value> The refresh command. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.PageSize">
+            <summary>
+            Gets the size of the page.
+            </summary>
+            <value> The size of the page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.Data">
+            <summary>
+            Gets the data (models).
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.Criteria">
+            <summary>
+            Gets or sets the criteria.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.Xoqal#Presentation#ViewModels#IItemCollectionViewModel#CurrentItem">
+            <summary>
+            Gets or sets the current item.
+            </summary>
+            <value> The current item. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.SelectedItems">
+            <summary>
+            Gets or sets the selected items.
+            </summary>
+            <value> The selected items. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.Pager">
+            <summary>
+            Gets the pager.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.CurrentItem">
+            <summary>
+            Gets the current item.
+            </summary>
+            <value> The current item. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.HasCurrentItem">
+            <summary>
+            Gets or sets a value indicating whether this instance has current item.
+            </summary>
+            <value>
+            <c>true</c> if this instance has current item; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PresenterViewModelBase`2.Entities">
+            <summary>
+            Gets the models.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModel`2.#ctor(Xoqal.Services.IPresenterService{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.CrudViewModel`1"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModel`2.GetItems(`1)">
+            <summary>
+            Gets the items matching the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.ICrudViewModel`2">
+            <summary>
+            Represents the base functionality for a simple view-model CRUD operation.
+            </summary>
+            <typeparam name="TModel"> </typeparam>
+            <typeparam name="TCriteria"></typeparam>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.ICrudViewModel">
+            <summary>
+            Represents the base functionality for a simple view-model CRUD operation.
+            </summary>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.ICrudViewModel.EditModeChanged">
+            <summary>
+            Occurs when edit mode changed.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.AddCommand">
+            <summary>
+            Gets the add command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.EditCommand">
+            <summary>
+            Gets the edit command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.DeleteCommand">
+            <summary>
+            Gets the delete command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.AcceptChangesCommand">
+            <summary>
+            Gets the accept changes command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.CancelChangesCommand">
+            <summary>
+            Gets the cancel changes command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.EditMode">
+            <summary>
+            Gets or sets the edit mode.
+            </summary>
+            <value> The edit mode. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.IsInEditMode">
+            <summary>
+            Gets a value indicating whether this instance is in edit mode.
+            </summary>
+            <value> <c>true</c> if this instance is in edit mode; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ICrudViewModel.ValidationController">
+            <summary>
+            Gets or sets the validation controller.
+            </summary>
+            <value> The validation controller. </value>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.#ctor(Xoqal.Services.ICrudService{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.CrudViewModel`2"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnAddCommandExecute">
+            <summary>
+            Called when AddCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.CanExecuteAddCommand">
+            <summary>
+            Determines whether this instance can execute the AddCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute the AddCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnEditCommandExecute">
+            <summary>
+            Called when EditCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.CanExecuteEditCommand">
+            <summary>
+            Determines whether this instance can execute the EditCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute the EditCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnDeleteCommandExecute">
+            <summary>
+            Called when DeleteCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.CanExecuteDeleteCommand">
+            <summary>
+            Determines whether this instance can execute the DeleteCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute the DeleteCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnAcceptChangesCommandExecute">
+            <summary>
+            Called when AcceptChangesCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.CanExecuteAcceptChangesCommand">
+            <summary>
+            Determines whether this instance can execute the AcceptChangesCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute the AcceptChangesCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnCancelChangesCommandExecute">
+            <summary>
+            Called when CancelChangesCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.CanExecuteCancelChangesCommand">
+            <summary>
+            Determines whether this instance can execute the CancelChangesCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute the CancelChangesCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnCurrentItemChanging(`0)">
+            <summary>
+            Called before CurrentItem change.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.InitializeCommands">
+            <summary>
+            Initializes the commands.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.RollBackChanges">
+            <summary>
+            Rolls the changes back (Cancels the edit mode) but doesn't change the EditMode value.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`2.OnEditModeChanged">
+            <summary>
+            Called when edit mode changed.
+            </summary>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.CrudViewModel`2.EditModeChanged">
+            <summary>
+            Occurs when edit mode changed.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.AddCommand">
+            <summary>
+            Gets the new item command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.EditCommand">
+            <summary>
+            Gets the edit item command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.DeleteCommand">
+            <summary>
+            Gets the delete item command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.AcceptChangesCommand">
+            <summary>
+            Gets the accept changes command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.CancelChangesCommand">
+            <summary>
+            Gets the cancel changes command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.EditMode">
+            <summary>
+            Gets or sets the edit mode.
+            </summary>
+            <value> The edit mode. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.IsInEditMode">
+            <summary>
+            Gets a value indicating whether this instance is in edit mode.
+            </summary>
+            <value> <c>true</c> if this instance is in edit mode; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CrudViewModel`2.ValidationController">
+            <summary>
+            Gets the valuator controller.
+            </summary>
+            <value> The validation controller. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.CrudViewModel`1">
+            <summary>
+            Represents the base functionality for a simple view-model CRUD operation.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CrudViewModel`1.#ctor(Xoqal.Services.ICrudService{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.CrudViewModel`1"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.#ctor(System.Collections.IList)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.DataPresenterCollectionView"/> class.
+            </summary>
+            <param name="list">The underlying collection, which must implement <see cref="T:System.Collections.IList"/>.</param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.Refresh">
+            <summary>
+            Re-creates the view.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.OnRefreshed">
+            <summary>
+            Called when this collection refreshed.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.OnSortDescriptionCollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Called when sort description collection changed.
+            </summary>
+            <param name="sender">The sender.</param>
+            <param name="e">The <see cref="T:System.Collections.Specialized.NotifyCollectionChangedEventArgs"/> instance containing the event data.</param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.Refreshed">
+            <summary>
+            Occurs when the collection refreshed.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.NeedsRefresh">
+            <summary>
+            Gets a value indicating whether needs refresh.
+            </summary>
+            <value>
+            <c>true</c> if needs refresh; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.DataPresenterCollectionView.SortDescriptions">
+            <summary>
+            Gets the sort descriptions.
+            </summary>
+            <value>
+            The sort descriptions.
+            </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.EnumCheckBoxItem">
+            <summary>
+            Represents an item of the EnumCheckBoxList control.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.EnumCheckBoxItem.#ctor(System.Action{Xoqal.Presentation.ViewModels.EnumCheckBoxItem})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.EnumCheckBoxItem"/> class.
+            </summary>
+            <param name="isSelectedChangedCallback"> The is selected changed callback. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.EnumCheckBoxItem.SetSilentIsSelected(System.Boolean)">
+            <summary>
+            Sets the IsSelected property silently.
+            </summary>
+            <param name="isSelected"> if set to <c>true</c> [is selected]. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.EnumCheckBoxItem.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value> The value. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.EnumCheckBoxItem.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+            <value> The text. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.EnumCheckBoxItem.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether this instance is selected.
+            </summary>
+            <value> <c>true</c> if this instance is selected; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.EnumCheckBoxList">
+            <summary>
+            Represents a multiple selection enum control with support of the Flags.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumFlagsValueProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumFlagsValue"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.EnumCheckBoxList.SelectedValuesProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.EnumCheckBoxList.SelectedValues"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumTypeProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumType"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumItemsProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumItems"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.EnumCheckBoxList.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.EnumCheckBoxList"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.EnumCheckBoxList.OnEnumTypeChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when EnumType changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.EnumCheckBoxList.OnEnumFlagsValueChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when EnumFlagsValue changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.EnumCheckBoxList.OnSelectionChanged(Xoqal.Presentation.ViewModels.EnumCheckBoxItem)">
+            <summary>
+            Called when selection of an item changed.
+            </summary>
+            <param name="item"> The item. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumFlagsValue">
+            <summary>
+            Gets or sets the enum flags value.
+            </summary>
+            <value>
+            The enum flags value.
+            </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.EnumCheckBoxList.SelectedValues">
+            <summary>
+            Gets or sets the selected values.
+            </summary>
+            <value> The selected values. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumType">
+            <summary>
+            Gets or sets the type of the enum.
+            </summary>
+            <value> The type of the enum. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.EnumCheckBoxList.EnumItems">
+            <summary>
+            Gets or sets the enum items.
+            </summary>
+            <value> The enum items. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.Pager">
+            <summary>
+            Pager control which is integrated with <see cref="T:Xoqal.Presentation.ViewModels.PagerController"/> .
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.Pager.PagerControllerProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.Pager.PagerController"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.Pager.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.Pager"/> class.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.Pager.PagerController">
+            <summary>
+            Gets or sets the page controller.
+            </summary>
+            <value> The page controller. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.SimpleDataGrid">
+            <summary>
+            Simple in memory data grid.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.SimpleDataGrid.PagerControllerProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.SimpleDataGrid.PagerController"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.SimpleDataGrid.SelectedDataItemProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.SimpleDataGrid.SelectedDataItem"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.SimpleDataGrid.SelectedItemsProperty">
+            <summary>
+            Identifies the <see cref="P:Xoqal.Presentation.Controls.SimpleDataGrid.SelectedItems"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Presentation.Controls.SimpleDataGrid"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.Controls.SimpleDataGrid"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.OnLoadingRow(System.Windows.Controls.DataGridRowEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.DataGrid.LoadingRow" /> event.
+            </summary>
+            <param name="e"> The data for the event. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Invoked when the selection changes.
+            </summary>
+            <param name="e"> The data for the event. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.OnIsEnabledChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when IsEnabled changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.OnSelectedDataItemChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when SelectedDataItem changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.SimpleDataGrid.OnSelectedItemChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when SelectedItem changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.SimpleDataGrid.PagerController">
+            <summary>
+            Gets or sets the pager controller.
+            </summary>
+            <value> The pager controller. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.SimpleDataGrid.SelectedDataItem">
+            <summary>
+            Gets or sets the selected data.
+            </summary>
+            <value> The selected data. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.SimpleDataGrid.SelectedItems">
+            <summary>
+            Gets the items in the <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> that are selected.
+            </summary>
+            <returns> The items in the <see cref="T:System.Windows.Controls.Primitives.MultiSelector" /> that are selected. </returns>
+        </member>
+        <member name="P:Xoqal.Presentation.Controls.SimpleDataGrid.LastSelectedIndex">
+            <summary>
+            Gets or sets the selected index before last change.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.Controls.ValidationHelper">
+            <summary>
+            Helps validation for MVVM pattern.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.Controls.ValidationHelper.ValidationControllerProperty">
+            <summary>
+            Identifies the <see cref="T:Xoqal.Presentation.ViewModels.ValidationController"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ValidationHelper.GetValidationController(System.Windows.DependencyObject)">
+            <summary>
+            Gets the validation controller.
+            </summary>
+            <param name="obj">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ValidationHelper.SetValidationController(System.Windows.DependencyObject,Xoqal.Presentation.ViewModels.IValidationController)">
+            <summary>
+            Sets the validation controller.
+            </summary>
+            <param name="obj"> The object. </param>
+            <param name="value"> The value. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Controls.ValidationHelper.OnValidationControllerChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when validation controller changed.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.DependencyPropertyChangedEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.AndConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts source values to a value for the binding target. The data binding engine calls this method when it propagates the values from source bindings to the binding target.
+            </summary>
+            <param name="values">The array of values that the source bindings in the <see cref="T:System.Windows.Data.MultiBinding" /> produces. The value <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the source binding has no value to provide for conversion.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value.If the method returns null, the valid null value is used.A return value of <see cref="T:System.Windows.DependencyProperty" />.<see cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the converter did not produce a value, and that the binding will use the <see cref="P:System.Windows.Data.BindingBase.FallbackValue" /> if it is available, or else will use the default value.A return value of <see cref="T:System.Windows.Data.Binding" />.<see cref="F:System.Windows.Data.Binding.DoNothing" /> indicates that the binding does not transfer the value or use the <see cref="P:System.Windows.Data.BindingBase.FallbackValue" /> or the default value.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.AndConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a binding target value to the source binding values.
+            </summary>
+            <param name="value">The value that the binding target produces.</param>
+            <param name="targetTypes">The array of types to convert to. The array length indicates the number and types of values that are suggested for the method to return.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            An array of values that have been converted from the target value back to the source values.
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.BooleanNotConverter">
+            <summary>
+            Puts logical not on the value.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.BooleanNotConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.BooleanNotConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.DateTimeToNullableConverter">
+            <summary>
+            Converts the source value to null if it was DateTime.MinValue.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.DateTimeToNullableConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.DateTimeToNullableConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.EnumDescriptionConverter">
+            <summary>
+            Converts an enum object to its description attribute text.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.EnumDescriptionConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.EnumDescriptionConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.EnumToBooleanConverter">
+            <summary>
+            Converts enum to Boolean.
+            </summary>
+            <remarks>
+            This converter just works with <see cref="T:System.Int32"/> types as excepted.
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.EnumToBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.EnumToBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.GlobalDateConverter">
+            <summary>
+            Converts the general Date to current system culture. (Supports Persian culture).
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.GlobalDateConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.GlobalDateConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.GlobalDateTimeConverter">
+            <summary>
+            Converts the general DateTime to current system culture. (Supports Persian culture).
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.GlobalDateTimeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.GlobalDateTimeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.IndexToBooleanConverter">
+            <summary>
+            Converts an Index to a Boolean type in the special logic.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.IndexToBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.IndexToBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Xoqal.Presentation.Converters.MultiplyConverter">
+            <summary>
+            Multiply Converter
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.MultiplyConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts source values to a value for the binding target. The data binding engine calls this method when it propagates the values from source bindings to the binding target.
+            </summary>
+            <param name="values"> The array of values that the source bindings in the <see
+             cref="T:System.Windows.Data.MultiBinding" /> produces. The value <see
+             cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the source binding has no value to provide for conversion. </param>
+            <param name="targetType"> The type of the binding target property. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> A converted value.If the method returns null, the valid null value is used.A return value of <see
+             cref="T:System.Windows.DependencyProperty" /> . <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the converter did not produce a value, and that the binding will use the <see
+             cref="P:System.Windows.Data.BindingBase.FallbackValue" /> if it is available, or else will use the default value.A return value of <see
+             cref="T:System.Windows.Data.Binding" /> . <see cref="F:System.Windows.Data.Binding.DoNothing" /> indicates that the binding does not transfer the value or use the <see
+             cref="P:System.Windows.Data.BindingBase.FallbackValue" /> or the default value. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.MultiplyConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a binding target value to the source binding values.
+            </summary>
+            <param name="value"> The value that the binding target produces. </param>
+            <param name="targetTypes"> The array of types to convert to. The array length indicates the number and types of values that are suggested for the method to return. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> An array of values that have been converted from the target value back to the source values. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.OrConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts source values to a value for the binding target. The data binding engine calls this method when it propagates the values from source bindings to the binding target.
+            </summary>
+            <param name="values"> The array of values that the source bindings in the <see
+             cref="T:System.Windows.Data.MultiBinding" /> produces. The value <see
+             cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the source binding has no value to provide for conversion. </param>
+            <param name="targetType"> The type of the binding target property. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> A converted value.If the method returns null, the valid null value is used.A return value of <see
+             cref="T:System.Windows.DependencyProperty" /> . <see cref="F:System.Windows.DependencyProperty.UnsetValue" /> indicates that the converter did not produce a value, and that the binding will use the <see
+             cref="P:System.Windows.Data.BindingBase.FallbackValue" /> if it is available, or else will use the default value.A return value of <see
+             cref="T:System.Windows.Data.Binding" /> . <see cref="F:System.Windows.Data.Binding.DoNothing" /> indicates that the binding does not transfer the value or use the <see
+             cref="P:System.Windows.Data.BindingBase.FallbackValue" /> or the default value. </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.Converters.OrConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a binding target value to the source binding values.
+            </summary>
+            <param name="value"> The value that the binding target produces. </param>
+            <param name="targetTypes"> The array of types to convert to. The array length indicates the number and types of values that are suggested for the method to return. </param>
+            <param name="parameter"> The converter parameter to use. </param>
+            <param name="culture"> The culture to use in the converter. </param>
+            <returns> An array of values that have been converted from the target value back to the source values. </returns>
+        </member>
+        <member name="T:Xoqal.Presentation.Properties.Resources">
+            <summary>
+            A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.Properties.Resources.ResourceManager">
+            <summary>
+            Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.Properties.Resources.Culture">
+            <summary>
+            Overrides the current thread's CurrentUICulture property for all
+            resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.Utilities.DesignTime">
+            <summary>
+            Helps to find out the design time environment.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.Utilities.DesignTime.IsInDesignMode">
+            <summary>
+            Gets a value indicating whether the control is in design mode.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IContainerViewModel">
+            <summary>
+            Represents a view-model in which contains another view-model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IContainerViewModel.ContentViewModel">
+            <summary>
+            Gets or sets the content view model.
+            </summary>
+            <value> The content view model. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IContainerViewModel`1">
+            <summary>
+            Represents a view-model in which contains another view-model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IContainerViewModel`1.ContentViewModel">
+            <summary>
+            Gets or sets the content view model.
+            </summary>
+            <value> The content view model. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.ListHelper">
+            <summary>
+            Represents the helpers to present the list items.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.ListHelper.ToListItemViewModel``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.Boolean,System.String)">
+            <summary>
+            Converts to a list item view model structure.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="source"> </param>
+            <param name="textSelector"> </param>
+            <param name="addEmptyItem"> if set to <c>true</c> add an empty item to the source. </param>
+            <param name="emptyText"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.ListHelper.ToListItemViewModel``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.Object},System.Func{``0,System.String},System.Boolean,System.String)">
+            <summary>
+            Converts to a list item view model structure.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="textSelector"> </param>
+            <param name="addEmptyItem"> if set to <c>true</c> add an empty item to the source. </param>
+            <param name="source"> </param>
+            <param name="dataSelector"> </param>
+            <param name="emptyText"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.ListHelper.ToSimpleText``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.Boolean,System.String)">
+            <summary>
+            Converts to a simple text collection structure.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="source"> The source. </param>
+            <param name="textSelector"> The text selector. </param>
+            <param name="addEmptyItem"> if set to <c>true</c> [add empty item]. </param>
+            <param name="emptyText"> The empty text. </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.ListItemViewModel">
+            <summary>
+            Represents a list item view-model.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.ListItemViewModel.OnIsSelectedChanged">
+            <summary>
+            Called when IsSelected changed.
+            </summary>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.ListItemViewModel.IsSelectedChanged">
+            <summary>
+            Occurs when IsSelected changed.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ListItemViewModel.IsSelected">
+            <summary>
+            Gets or sets a value indicating whether this instance is selected.
+            </summary>
+            <value> <c>true</c> if this instance is selected; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ListItemViewModel.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value> The data. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ListItemViewModel.Text">
+            <summary>
+            Gets or sets the text which presents the text value of the current item.
+            </summary>
+            <value> The text value of the current item. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.CurrentPageChangedEventArgs">
+            <summary>
+            Provides data for CurrentPageChanged event.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.CurrentPageChangedEventArgs.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.CurrentPageChangedEventArgs"/> class.
+            </summary>
+            <param name="startIndex"> The index of the first item in the current page. </param>
+            <param name="itemCount"> The count of items in the current page. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CurrentPageChangedEventArgs.StartIndex">
+            <summary>
+            Gets the index of the first item in the current page.
+            </summary>
+            <value> The index of the first item. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.CurrentPageChangedEventArgs.ItemCount">
+            <summary>
+            Gets the count of items in the current page.
+            </summary>
+            <value> The item count. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.DetailCrudViewModel`4">
+            <summary>
+            Represents the base class for simple CRUD view-model which works as a detail.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IDetailViewModel`1">
+            <summary>
+            Represents a view-model which works as a detail.
+            </summary>
+            <typeparam name="TMasterModel"></typeparam>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IDetailViewModel">
+            <summary>
+            Represents a view-model which works as a detail.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IDetailViewModel.MasterCurrentItem">
+            <summary>
+            Gets or sets the master current item.
+            </summary>
+            <value> The master current item. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IDetailViewModel`1.MasterCurrentItem">
+            <summary>
+            Gets or sets the master current item.
+            </summary>
+            <value> The master current item. </value>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.DetailCrudViewModel`4.#ctor(Xoqal.Services.ICrudService{`0,`2})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.DetailCrudViewModel`4"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.DetailCrudViewModel`4.CanExecuteAddCommand">
+            <summary>
+            Determines whether this instance can execute AddCommand.
+            </summary>
+            <returns> <c>true</c> if this instance can execute AddCommand; otherwise, <c>false</c> . </returns>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.DetailCrudViewModel`4.MasterCurrentItem">
+            <summary>
+            Gets or sets the master current item.
+            </summary>
+            <value> The master current item. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.DetailCrudViewModel`4.Xoqal#Presentation#ViewModels#IDetailViewModel#MasterCurrentItem">
+            <summary>
+            Gets or sets the master current item.
+            </summary>
+            <value> The master current item. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.EditMode">
+            <summary>
+            Edit modes.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.ViewModels.EditMode.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.ViewModels.EditMode.Edit">
+            <summary>
+            Edit
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.ViewModels.EditMode.Insert">
+            <summary>
+            Insert
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IMasterDetailViewModel`2">
+            <summary>
+            Represents a master-detail CRUD view-model.
+            </summary>
+            <typeparam name="TMasterViewModel"> The type of the master view model. </typeparam>
+            <typeparam name="TDetailViewModel"> The type of the detail view model. </typeparam>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IMasterDetailViewModel`2.MasterViewModel">
+            <summary>
+            Gets the master view model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IMasterDetailViewModel`2.DetailViewModel">
+            <summary>
+            Gets the detail view model.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IPagerController">
+            <summary>
+            Represents a pager controller which helps to show a large amount of data in a paginated format.
+            </summary>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.IPagerController.CurrentPageChanged">
+            <summary>
+            Occurs when current page changed.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.CurrentPage">
+            <summary>
+            Gets or sets the current page.
+            </summary>
+            <value> The current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.CurrentPageStartIndex">
+            <summary>
+            Gets the start index of the current page.
+            </summary>
+            <value> The start index of the current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.GotoFirstPageCommand">
+            <summary>
+            Gets the goto first page command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.GotoLastPageCommand">
+            <summary>
+            Gets the goto last page command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.GotoNextPageCommand">
+            <summary>
+            Gets the goto next page command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.GotoPreviousPageCommand">
+            <summary>
+            Gets the goto previous page command.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.PageCount">
+            <summary>
+            Gets the page count.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.PageSize">
+            <summary>
+            Gets or sets the size of the page.
+            </summary>
+            <value> The size of the page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IPagerController.TotalCount">
+            <summary>
+            Gets or sets the total count.
+            </summary>
+            <value> The total count. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.IValidationController">
+            <summary>
+            Represents the validation helper for view-models.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.IValidationController.Attach(System.Windows.DependencyObject)">
+            <summary>
+            Attaches to the element for validation control.
+            </summary>
+            <param name="element"> </param>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IValidationController.HasError">
+            <summary>
+            Gets a value indicating whether the attached element has any validation error.
+            </summary>
+            <value> <c>true</c> if the attached element has any validation error; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.IValidationController.IsAttached">
+            <summary>
+            Gets a value indicating whether validation controller is attached to the corresponding element.
+            </summary>
+            <value> <c>true</c> if validation controller is attached to the corresponding element; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2">
+            <summary>
+            Represents the base functionality for a master-detail view-model.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.#ctor(`0,`1)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2"/> class.
+            </summary>
+            <param name="masterViewModel"> The master view model. </param>
+            <param name="detailViewModel"> The detail view model. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.OnRefreshCommandExecute">
+            <summary>
+            Called when RefreshCommand execute.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.OnMasterViewModelCurrentItemChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the CurrentItemChanged event of the MasterViewModel control.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.EventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.OnMasterViewModelEditModeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the EditModeChanged event of the MasterViewModel control.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.EventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.OnDetailViewModelEditModeChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the EditModeChanged event of the DetailViewModel control.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.EventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.MasterViewModel">
+            <summary>
+            Gets the master view model.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.DetailViewModel">
+            <summary>
+            Gets or sets the detail view model.
+            </summary>
+            <value> The detail view model. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.MasterDetailViewModel`2.RefreshCommand">
+            <summary>
+            Gets the refresh command.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.PagerController">
+            <summary>
+            Default implementation of the <see cref="!:IPagerControler"/>.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.ViewModels.PagerController.currentPage">
+            <summary>
+            The current page.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.ViewModels.PagerController.pageSize">
+            <summary>
+            The length (number of items) of each page.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Presentation.ViewModels.PagerController.totalCount">
+            <summary>
+            The count of items to be divided into pages.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PagerController.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.PagerController"/> class.
+            </summary>
+            <param name="pageSize"> Size of the page. </param>
+            <param name="totalCount"> The total count. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PagerController.RaiseCanExecuteChanged(System.Windows.Input.ICommand[])">
+            <summary>
+            Calls RaiseCanExecuteChanged on any number of DelegateCommand instances.
+            </summary>
+            <param name="commands"> The commands. </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PagerController.OnCurrentPageChanged">
+            <summary>
+            Called when current page changed.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PagerController.GetPageFromIndex(System.Int32)">
+            <summary>
+            Gets the number of the page to which the item with the specified index belongs.
+            </summary>
+            <param name="itemIndex"> The index of the item in question. </param>
+            <returns> The number of the page in which the item with the specified index belongs. </returns>
+        </member>
+        <member name="E:Xoqal.Presentation.ViewModels.PagerController.CurrentPageChanged">
+            <summary>
+            Occurs when the value of <see cref="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPage"/> changes.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.GotoFirstPageCommand">
+            <summary>
+            Gets the command that, when executed, sets <see cref="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPage"/> to 1.
+            </summary>
+            <value> The command that changes the current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.GotoPreviousPageCommand">
+            <summary>
+            Gets the command that, when executed, decrements <see cref="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPage"/> by 1.
+            </summary>
+            <value> The command that changes the current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.GotoNextPageCommand">
+            <summary>
+            Gets the command that, when executed, increments <see cref="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPage"/> by 1.
+            </summary>
+            <value> The command that changes the current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.GotoLastPageCommand">
+            <summary>
+            Gets the command that, when executed, sets <see cref="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPage"/> to <see cref="P:Xoqal.Presentation.ViewModels.PagerController.PageCount"/> .
+            </summary>
+            <value> The command that changes the current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.TotalCount">
+            <summary>
+            Gets or sets the total number of items to be divided into pages.
+            </summary>
+            <value> The total count. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.PageSize">
+            <summary>
+            Gets or sets the number of items that each page contains.
+            </summary>
+            <value> The size of the page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.PageCount">
+            <summary>
+            Gets the number of pages required to contain all items.
+            </summary>
+            <value> The page count. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPage">
+            <summary>
+            Gets or sets the current page starts from 1.
+            </summary>
+            <value> The current page. </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.PagerController.CurrentPageStartIndex">
+            <summary>
+            Gets the index of the first item belonging to the current page.
+            </summary>
+            <value> The index of the first item belonging to the current page. </value>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.PresenterViewModel`1">
+            <summary>
+            Represents a view-model to show data.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.PresenterViewModel`1.#ctor(Xoqal.Services.IPresenterService{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Presentation.ViewModels.CrudViewModel`1"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="T:Xoqal.Presentation.ViewModels.ValidationController">
+            <summary>
+            Default implementation of the <see cref="T:Xoqal.Presentation.ViewModels.IValidationController"/>
+            </summary>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.ValidationController.Attach(System.Windows.DependencyObject)">
+            <summary>
+            Attaches to the element for validation control.
+            </summary>
+            <param name="element"> </param>
+        </member>
+        <member name="M:Xoqal.Presentation.ViewModels.ValidationController.OnValidationError(System.Object,System.Windows.Controls.ValidationErrorEventArgs)">
+            <summary>
+            Called when validation error occurred.
+            </summary>
+            <param name="sender"> The sender. </param>
+            <param name="e"> The <see cref="T:System.Windows.Controls.ValidationErrorEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ValidationController.HasError">
+            <summary>
+            Gets a value indicating whether the attached element has any validation error.
+            </summary>
+            <value> <c>true</c> if the attached element has any validation error; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Presentation.ViewModels.ValidationController.IsAttached">
+            <summary>
+            Gets a value indicating whether validation controller is attached to the corresponding element.
+            </summary>
+            <value> <c>true</c> if validation controller is attached to the corresponding element; otherwise, <c>false</c> . </value>
+        </member>
+    </members>
+</doc>

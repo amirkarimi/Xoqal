@@ -1,0 +1,1681 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Web.Mvc</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Web.Mvc.Components.DataGridDataRowGenerator`1">
+            <summary>
+            Data grid data row generator.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Components.IDataGridDataRowGenerator`1">
+            <summary>
+            Represents a data row generator for <see cref="T:Xoqal.Web.Mvc.Components.IDataGridGenerator`1"/>.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.IDataGridDataRowGenerator`1.GetHtmlString(`0,Xoqal.Web.Mvc.Models.DataGridColumnCollection{`0},System.Func{`0,System.Object})">
+            <summary>
+            Gets the HTML string.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="columns">The columns.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.DataGridDataRowGenerator`1.GetHtmlString(`0,Xoqal.Web.Mvc.Models.DataGridColumnCollection{`0},System.Func{`0,System.Object})">
+            <summary>
+            Gets the HTML string.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="columns">The columns.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.DataGridDataRowGenerator`1.GetDataColumnTag(`0,Xoqal.Web.Mvc.Models.DataGridColumn{`0})">
+            <summary>
+            Gets the data column tag.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="model">The model.</param>
+            <param name="column">The column.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Components.DataGridGenerator`1">
+            <summary>
+            Data grid generator.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Components.IDataGridGenerator`1">
+            <summary>
+            Represents a data grid generator.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.IDataGridGenerator`1.GetHtmlString(Xoqal.Web.Mvc.Models.IPaginated{`0},Xoqal.Web.Mvc.Models.DataGridColumnCollection{`0},System.Object,System.Func{`0,System.Object},System.Web.HtmlString,System.Web.HtmlString,System.Func{Xoqal.Web.Mvc.Models.DataGridColumn{`0},System.String})">
+            <summary>
+            Gets the HTML string.
+            </summary>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="columns">The columns.</param>
+            <param name="tableHtmlAttributes">The table HTML attributes.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <param name="sortLinkGenerator">The sort link generator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.DataGridGenerator`1.#ctor(Xoqal.Web.Mvc.Components.IDataGridHeaderRowGenerator{`0},Xoqal.Web.Mvc.Components.IDataGridDataRowGenerator{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Components.DataGridGenerator`1"/> class.
+            </summary>
+            <param name="headerRowGenerator">The header row generator.</param>
+            <param name="dataRowGenerator">The data row generator.</param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.DataGridGenerator`1.GetHtmlString(Xoqal.Web.Mvc.Models.IPaginated{`0},Xoqal.Web.Mvc.Models.DataGridColumnCollection{`0},System.Object,System.Func{`0,System.Object},System.Web.HtmlString,System.Web.HtmlString,System.Func{Xoqal.Web.Mvc.Models.DataGridColumn{`0},System.String})">
+            <summary>
+            Gets the HTML string.
+            </summary>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="columns">The columns.</param>
+            <param name="tableHtmlAttributes">The table HTML attributes.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <param name="sortLinkGenerator">The sort link generator.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Components.DataGridHeaderRowGenerator`1">
+            <summary>
+            Data grid header row generator.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Components.IDataGridHeaderRowGenerator`1">
+            <summary>
+            Represents a header row generator for <see cref="T:Xoqal.Web.Mvc.Components.IDataGridGenerator`1"/>.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.IDataGridHeaderRowGenerator`1.GetHtmlString(Xoqal.Web.Mvc.Models.DataGridColumnCollection{`0},System.Func{Xoqal.Web.Mvc.Models.DataGridColumn{`0},System.String})">
+            <summary>
+            Gets the HTML string.
+            </summary>
+            <param name="columns">The columns.</param>
+            <param name="sortLinkGenerator">The sort link generator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Components.DataGridHeaderRowGenerator`1.GetHtmlString(Xoqal.Web.Mvc.Models.DataGridColumnCollection{`0},System.Func{Xoqal.Web.Mvc.Models.DataGridColumn{`0},System.String})">
+            <summary>
+            Gets the HTML string.
+            </summary>
+            <param name="columns">The columns.</param>
+            <param name="sortLinkGenerator">The sort link generator.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.CrudController`3">
+            <summary>
+            Represents the base class for CRUD controllers.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.PresenterController`3">
+            <summary>
+            Represents the base class for paginated data presenter controllers.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.IPresenterController`2">
+            <summary>
+            Represents a data presenter controller.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.IPresenterController`2.Details(`1)">
+            <summary>
+            GET: /[Controller]/Details/1
+            </summary>
+            <param name="id"> The id. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.IPresenterController`2.Index(`0)">
+            <summary>
+            GET: /[Controller]
+            </summary>
+            <param name="criteria">The criteria.</param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.IPresenterController`2.Result(`0)">
+            <summary>
+            GET: /[Controller]/Result/?page and sort
+            </summary>
+            <param name="criteria"> The criteria. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`3.#ctor(Xoqal.Services.IPresenterService{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> class.
+            </summary>
+            <param name="service">The service.</param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`3.Index(`1)">
+            <summary>
+            GET: /[Controller]/
+            </summary>
+            <param name="criteria">The criteria.</param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`3.Result(`1)">
+            <summary>
+            GET: /[Controller]/Result/?page and sort Title DESC
+            </summary>
+            <param name="criteria">The criteria.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`3.Details(`2)">
+            <summary>
+            GET: /[Controller]/Details/5
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`3.GetItems(`1)">
+            <summary>
+            Gets items matching the specified criteria.
+            </summary>
+            <param name="criteria">The criteria.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.ICrudController`2">
+            <summary>
+            Represents a controller which supports CRUD operations.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TKey"></typeparam>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.ICrudController`2.Create">
+            <summary>
+            GET: /[Controller]/Create
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.ICrudController`2.Create(`0)">
+            <summary>
+            POST: /[Controller]/Create
+            </summary>
+            <param name="model"> The model. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.ICrudController`2.Delete(`1)">
+            <summary>
+            GET: /[Controller]/Remove/5
+            </summary>
+            <param name="id"> The id. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.ICrudController`2.Edit(`1)">
+            <summary>
+            GET: /[Controller]/Edit/5
+            </summary>
+            <param name="id"> The id. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.ICrudController`2.Edit(`1,`0)">
+            <summary>
+            POST: /[Controller]/Edit/5
+            </summary>
+            <param name="id"> The id. </param>
+            <param name="model"> The model.</param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.#ctor(Xoqal.Services.ICrudService{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Controllers.CrudController`2"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.Create">
+            <summary>
+            GET: /[Controller]/Create
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.Create(`0)">
+            <summary>
+            POST: /[Controller]/Create
+            </summary>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.Edit(`2)">
+            <summary>
+            GET: /[Controller]/Edit/5
+            </summary>
+            <param name="id"> The id. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.Edit(`2,`0)">
+            <summary>
+            POST: /[Controller]/Edit/5
+            </summary>
+            <param name="id">The id.</param>
+            <param name="model">The model.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.Delete(`2)">
+            <summary>
+            GET: /[Controller]/Delete/5
+            </summary>
+            <param name="id"> The id. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`3.GetDeleteConflictErrorResult">
+            <summary>
+            Gets the delete conflict error result.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.CrudController`1">
+            <summary>
+            Represents the base class for CRUD controllers.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`1.#ctor(Xoqal.Services.ICrudService{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Controllers.CrudController`2"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.ICrudController`1">
+            <summary>
+            Represents a controller which supports CRUD operations.
+            </summary>
+            <typeparam name="TModel"> </typeparam>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.IPresenterController">
+            <summary>
+            Represents a data presenter controller.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.IPresenterController`1">
+            <summary>
+            Represents a data presenter controller.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.MenuGenerator">
+            <summary>
+            Generates the base structure used to represents a menu according to the <see cref="T:Xoqal.Web.Mvc.Controllers.MenuItemAttribute"/> 
+            attributes specified for the controllers.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.MenuGenerator.GetMenuItems(System.Reflection.Assembly,System.String)">
+            <summary>
+            Gets the menu items from the specified assembly matching the specified namespace.
+            </summary>
+            <param name="assembly"></param>
+            <param name="namespaceFilter"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.MenuGenerator.GetTypeMenuItem(System.Type,Xoqal.Web.Mvc.Controllers.MenuItemAttribute,Xoqal.Web.Mvc.Security.PermissionAttribute)">
+            <summary>
+            Gets the menu item of the specified type.
+            </summary>
+            <param name="type"></param>
+            <param name="menuItemAttribute"></param>
+            <param name="typePermissionAttribute"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.MenuGenerator.GetMethodMenuItem(System.Type,System.Reflection.MethodInfo,Xoqal.Web.Mvc.Security.PermissionAttribute,Xoqal.Web.Mvc.Controllers.MenuItemAttribute,Xoqal.Web.Mvc.Controllers.MenuItemAttribute)">
+            <summary>
+            Gets the menu item of the specified method.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="methodInfo">The method info.</param>
+            <param name="typePermissionAttribute">The type permission attribute.</param>
+            <param name="typeMenuItemAttribute">The type menu item attribute.</param>
+            <param name="methodMenuItemAttribute">The method menu item attribute.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.MenuItemAttribute">
+            <summary>
+            Indicates that a controller action could be presented as a menu item.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Controllers.MenuItemAttribute"/> class.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.ResourceType">
+            <summary>
+            Gets or sets the resource type.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.TitleResourceName">
+            <summary>
+            Gets or sets the resource name for title.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.CategoryResourceName">
+            <summary>
+            Gets or sets the resource name for category name.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.ActionMethodName">
+            <summary>
+            Gets or sets the action method name.
+            </summary>
+            <remarks>
+            It will be ignored if the <see cref="T:Xoqal.Web.Mvc.Controllers.MenuItemAttribute"/> target is a method.
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.Title">
+            <summary>
+            Gets the title.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Controllers.MenuItemAttribute.Category">
+            <summary>
+            Gets the category.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.PresenterController`1">
+            <summary>
+            Represents the base class for paginated data presenter controllers.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`1.#ctor(Xoqal.Services.IPresenterService{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="!:PresenterControllerresenterController&lt;TModel,TCriteria&gt;"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.DateTimeModelBinder">
+            <summary>
+            A customized DateTime model binder which also supports Persian calendar.
+            </summary>
+            <remarks>
+            To show that the time is in Persian format the value should have a "P" prefix. Ex. /Report/View/19/P13901010 (P13901010 means 1390/10/10 in persian calendar)
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.DateTimeModelBinder.BindModel(System.Web.Mvc.ControllerContext,System.Web.Mvc.ModelBindingContext)">
+            <summary>
+            Binds the model.
+            </summary>
+            <param name="controllerContext"> The controller context. </param>
+            <param name="bindingContext"> The binding context. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.DateTimeModelBinder.ParsePersianDate(System.String)">
+            <summary>
+            Parses the persian date.
+            </summary>
+            <param name="value"> The raw value. </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.ActionExtenstions">
+            <summary>
+            Represents the action extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.ActionExtenstions.IsCurrentAction(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Object)">
+            <summary>
+            Determines whether is current executing action equals to the given one.
+            </summary>
+            <param name="htmlHelper"> The HTML helper. </param>
+            <param name="actionName"> Name of the action. </param>
+            <param name="controllerName"> Name of the controller. </param>
+            <param name="routeValues"> The route values. </param>
+            <returns> <c>true</c> if the current executing action equals to the given one; otherwise, <c>false</c> . </returns>
+            <remarks>
+            Got from http://stackoverflow.com/questions/362514/how-can-i-return-the-current-action-in-an-asp-net-mvc-view but changed by A. Karimi
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.ActionExtenstions.HasRouteValues(System.Web.Mvc.HtmlHelper,System.Object)">
+            <summary>
+            Determines whether the current route values and the given one have the same values.
+            </summary>
+            <param name="htmlHelper"> </param>
+            <param name="routeValues"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions">
+            <summary>
+            AJAX extensions to use in data presentation.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.Pager(System.Web.Mvc.AjaxHelper,Xoqal.Web.Mvc.Models.IPaginated,System.Web.Mvc.Ajax.AjaxOptions,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Generates a pager compatible with the <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="firstLinkText">The first link text.</param>
+            <param name="previousLinkText">The previous link text.</param>
+            <param name="nextLinkText">The next link text.</param>
+            <param name="lastLinkText">The last link text.</param>
+            <param name="currentPageFormat">The format of the current page indicator.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.Pager(System.Web.Mvc.AjaxHelper,Xoqal.Web.Mvc.Models.IPaginated,System.Web.Mvc.Ajax.AjaxOptions,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Generates a pager compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="firstLinkText">The first link text.</param>
+            <param name="previousLinkText">The previous link text.</param>
+            <param name="nextLinkText">The next link text.</param>
+            <param name="lastLinkText">The last link text.</param>
+            <param name="currentPageFormat">The format of the current page indicator.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink``2(System.Web.Mvc.AjaxHelper,System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.String,System.Linq.Expressions.LambdaExpression,System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink``2(System.Web.Mvc.AjaxHelper,System.Web.IHtmlString,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink``1(System.Web.Mvc.AjaxHelper,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.Web.IHtmlString,System.Linq.Expressions.LambdaExpression,System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Object,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.Web.IHtmlString,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.Web.IHtmlString,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Object,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.SortLink(System.Web.Mvc.AjaxHelper,System.Web.IHtmlString,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ajaxOptions">The ajax options.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxDataPresenterExtensions.DataGrid``1(System.Web.Mvc.AjaxHelper,Xoqal.Web.Mvc.Models.IPaginated{``0},Xoqal.Web.Mvc.Models.DataGridColumnCollection{``0},System.Web.Mvc.Ajax.AjaxOptions,System.Object,System.Func{``0,System.Object},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Renders a data grid.
+            </summary>
+            <typeparam name="TModel">The model.</typeparam>
+            <param name="ajaxHelper">The AJAX helper.</param>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="columns">The columns.</param>
+            <param name="ajaxOptions">The AJAX options.</param>
+            <param name="tableHtmlAttributes">The table HTML attributes.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions">
+            <summary>
+            AJAX link extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.PersistRouteLink(System.Web.Mvc.AjaxHelper,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Object)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="ajaxHelper"> The HTML helper. </param>
+            <param name="linkText"> </param>
+            <param name="ajaxOptions"> The ajax options. </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.PersistRouteLink(System.Web.Mvc.AjaxHelper,System.String,System.Object,System.Web.Mvc.Ajax.AjaxOptions,System.Collections.Generic.IDictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="ajaxHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="ajaxOptions"> The ajax options. </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.PersistRouteLink(System.Web.Mvc.AjaxHelper,System.String,System.Object,System.Web.Mvc.Ajax.AjaxOptions,System.Object,System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="ajaxHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="ajaxOptions"> The ajax options. </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.PersistRouteLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Object,System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="ajaxHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeName"> Name of the route. </param>
+            <param name="ajaxOptions"> The ajax options. </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.PersistRouteLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Object,System.Web.Mvc.Ajax.AjaxOptions,System.Object,System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="ajaxHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeName"> Name of the route. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="ajaxOptions"> </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.PersistRouteLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Object,System.Web.Mvc.Ajax.AjaxOptions,System.Collections.Generic.IDictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values by using a route name.
+            </summary>
+            <param name="ajaxHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeName"> Name of the route. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="ajaxOptions"> </param>
+            <param name="htmlAttributes"> </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AjaxLinkExtensions.GenerateLink(System.Web.Mvc.AjaxHelper,System.String,System.String,System.Web.Mvc.Ajax.AjaxOptions,System.Collections.Generic.IDictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            Generates an ajax link.
+            </summary>
+            <param name="ajaxHelper"> </param>
+            <param name="linkText"> </param>
+            <param name="targetUrl"> </param>
+            <param name="ajaxOptions"> </param>
+            <param name="htmlAttributes"> </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.AuthorizationExtensions">
+            <summary>
+            Authorization extension.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AuthorizationExtensions.IsActionAuthorized(System.Web.Mvc.HtmlHelper,System.String,System.String)">
+            <summary>
+            Returns a value indicating whether the specified action is authorized.
+            </summary>
+            <remarks>
+            The code base is gotten from http://vivien-chevallier.com/Articles/create-an-authorized-action-link-extension-for-aspnet-mvc-3
+            </remarks>
+            <param name="htmlHelper"></param>
+            <param name="actionName"></param>
+            <param name="controllerName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.AuthorizationExtensions.GetControllerByName(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Gets an <see cref="T:System.Web.Mvc.ControllerBase"/> instance according to the specified controller name.
+            </summary>
+            <remarks>
+            The code base is gotten from http://vivien-chevallier.com/Articles/create-an-authorized-action-link-extension-for-aspnet-mvc-3
+            </remarks>
+            <param name="htmlHelper"></param>
+            <param name="controllerName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.EnumExtensions">
+            <summary>
+            HTML extension to use for enum.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.EnumExtensions.EnumRadioListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Type,System.String,System.Object,System.Object)">
+            <summary>
+            The enum radio list extension.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="expression">The expression.</param>
+            <param name="enumType">Type of the enum.</param>
+            <param name="defaultLabel">The default label.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="radioHtmlAttributes">The radio HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.EnumExtensions.EnumCheckBoxListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Type,System.Object)">
+            <summary>
+            The enum check box list extension.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="expression">The expression.</param>
+            <param name="enumType">Type of the enum.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.EnumExtensions.EnumDropDownListFor``2(System.Web.Mvc.HtmlHelper{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Type,System.String,System.Object)">
+            <summary>
+            The enum drop down list extension.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TProperty">The type of the property.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="expression">The expression.</param>
+            <param name="enumType">Type of the enum.</param>
+            <param name="defaultLabel">The default label.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.GlobalizationUrlExtentions">
+            <summary>
+            URL extensions to generate globalized URLs.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.GlobalizationUrlExtentions.GlobalizedContent(System.Web.Mvc.UrlHelper,System.String)">
+            <summary>
+            Converts a virtual path an application absolute path and format the specified path with the current language name.
+            </summary>
+            <param name="urlHelper">The URL helper.</param>
+            <param name="contentPath">The content path.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.BeginCollectionItem(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Begins the scope of the collection items which uses GUID or ID fields and index hidden field instead of zero-based index.
+            </summary>
+            <param name="html"></param>
+            <param name="collectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.BeginHtmlFieldPrefixScope(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Begins the scope of the html field prefix which uses GUID or ID fields and index hidden field instead of zero-based index.
+            </summary>
+            <param name="html"></param>
+            <param name="htmlFieldPrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.GetIdsToReuse(System.Web.HttpContextBase,System.String)">
+            <summary>
+            Gets IDs.
+            </summary>
+            <param name="httpContext"></param>
+            <param name="collectionName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.HtmlFieldPrefixScope">
+            <summary>
+            Represents the HTML field prefix scope.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.HtmlFieldPrefixScope.#ctor(System.Web.Mvc.TemplateInfo,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.HtmlFieldPrefixScope"/> class.
+            </summary>
+            <param name="templateInfo"></param>
+            <param name="htmlFieldPrefix"></param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.HtmlPrefixScopeExtensions.HtmlFieldPrefixScope.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or
+            resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.ViewPageExtensions">
+            <remarks>
+            Idea from http://blog.logrythmik.com/post/A-Script-Block-Templated-Delegate-for-Inline-Scripts-in-Razor-Partials.aspx
+            </remarks>
+        </member>
+        <member name="F:Xoqal.Web.Mvc.Extensions.ViewPageExtensions.ScriptBlockBuilder">
+            <summary>
+            The Script Block Builder.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.ViewPageExtensions.ScriptBlock(System.Web.Mvc.WebViewPage,System.String,System.Func{System.Object,System.Web.WebPages.HelperResult},System.Boolean)">
+            <summary>
+            Scripts the block.
+            </summary>
+            <param name="webPage">The web page.</param>
+            <param name="key">The key.</param>
+            <param name="template">The template.</param>
+            <param name="renderOnAjaxRequest">if set to <c>true</c> [render on ajax request].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.ViewPageExtensions.WriteScriptBlocks(System.Web.Mvc.WebViewPage)">
+            <summary>
+            Writes the script blocks.
+            </summary>
+            <param name="webPage">The web page.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Globalization.ContentLanguageHelper">
+            <summary>
+            Helps to set or get the content language.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Web.Mvc.Globalization.ContentLanguageHelper.ContentLanguageSessionKey">
+            <summary>
+            The Content Language Session Key.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Globalization.ContentLanguageHelper.SetContentLanguage(System.String)">
+            <summary>
+            Sets the content language.
+            </summary>
+            <param name="language"> </param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Globalization.ContentLanguageHelper.SetContentLanguage(Xoqal.Globalization.LanguageInfo)">
+            <summary>
+            Sets the content language.
+            </summary>
+            <param name="language"> </param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Globalization.ContentLanguageHelper.GetContentLanguage">
+            <summary>
+            Gets the current content language.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Globalization.ContentMultilanguageAttribute">
+            <summary>
+            Multilanguage filter which sets the current language for content according to the route values. It doesn't affect the UI or CurrentCulture/UICulture.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Globalization.ContentMultilanguageAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            Called by the ASP.NET MVC framework before the action method executes.
+            </summary>
+            <param name="filterContext"> The filter context. </param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Globalization.MultilanguageAttribute">
+            <summary>
+            Multilanguage filter which sets the current language according to the route values.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Globalization.MultilanguageAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            Called by the ASP.NET MVC framework before the action method executes.
+            </summary>
+            <param name="filterContext"> The filter context. </param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.CrudController`2">
+            <summary>
+            Represents the base class for CRUD controllers.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.CrudController`2.#ctor(Xoqal.Services.ICrudService{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Controllers.CrudController`2"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Controllers.PresenterController`2">
+            <summary>
+            Represents the base class for paginated data presenter controllers.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Controllers.PresenterController`2.#ctor(Xoqal.Services.IPresenterService{`0,`1})">
+            <summary>
+            Initializes a new instance of the <see cref="!:PresenterControllerresenterController&lt;TModel,TCriteria&gt;"/> class.
+            </summary>
+            <param name="service"></param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions">
+            <summary>
+            HTML extension to use in data presentation.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortExpressionKey">
+            <summary>
+            The Sort Expression Key.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.Pager(System.Web.Mvc.HtmlHelper,Xoqal.Web.Mvc.Models.IPaginated,System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            Generates a pager compatible with the Fx data presenter controller.
+            </summary>
+            <param name="htmlHelper"> The HTML helper. </param>
+            <param name="paginatedData"> The paginated data. </param>
+            <param name="firstLinkText"> </param>
+            <param name="previousLinkText"> The previous link text. </param>
+            <param name="nextLinkText"> The next link text. </param>
+            <param name="currentPageFormat"> </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="lastLinkText"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.Pager(System.Web.Mvc.HtmlHelper,Xoqal.Web.Mvc.Models.IPaginated,System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Generates a pager compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper"> The HTML helper. </param>
+            <param name="paginatedData"> The paginated data. </param>
+            <param name="firstLinkText"> </param>
+            <param name="previousLinkText"> The previous link text. </param>
+            <param name="nextLinkText"> The next link title. </param>
+            <param name="currentPageFormat"> </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="lastLinkText"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink``2(System.Web.Mvc.HtmlHelper,System.String,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.String,System.Linq.Expressions.LambdaExpression,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink``2(System.Web.Mvc.HtmlHelper,System.Web.IHtmlString,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink``1(System.Web.Mvc.HtmlHelper,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.Web.IHtmlString,System.Linq.Expressions.LambdaExpression,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Object,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.Web.IHtmlString,System.String,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.Web.IHtmlString,System.String,System.Object,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.SortLink(System.Web.Mvc.HtmlHelper,System.Web.IHtmlString,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Generates a link for sorting operations compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`3"/> .
+            </summary>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="linkText">The link text.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.DataGrid``1(System.Web.Mvc.HtmlHelper,Xoqal.Web.Mvc.Models.IPaginated{``0},Xoqal.Web.Mvc.Models.DataGridColumnCollection{``0},System.Object,System.Func{``0,System.Object},System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Renders a data grid.
+            </summary>
+            <typeparam name="TModel">The model.</typeparam>
+            <param name="htmlHelper">The HTML helper.</param>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="columns">The columns.</param>
+            <param name="tableHtmlAttributes">The table HTML attributes.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.DataGrid``1(Xoqal.Web.Mvc.Models.IPaginated{``0},Xoqal.Web.Mvc.Models.DataGridColumnCollection{``0},System.Object,System.Func{``0,System.Object},System.Web.HtmlString,System.Web.HtmlString,System.Func{Xoqal.Web.Mvc.Models.DataGridColumn{``0},System.String})">
+            <summary>
+            Renders a data grid.
+            </summary>
+            <typeparam name="TModel">The model.</typeparam>
+            <param name="paginatedData">The paginated data.</param>
+            <param name="columns">The columns.</param>
+            <param name="tableHtmlAttributes">The table HTML attributes.</param>
+            <param name="rowHtmlAttributes">The row HTML attributes.</param>
+            <param name="ascendingGlyph">The ascending glyph.</param>
+            <param name="descendingGlyph">The descending glyph.</param>
+            <param name="sortLinkGenerator">The sort link generator.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.Pager(Xoqal.Web.Mvc.Models.IPaginated,System.Func{System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object},System.Web.IHtmlString},System.String,System.String,System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Generates a pager compatible with <see cref="T:Xoqal.Web.Mvc.Controllers.PresenterController`2"/> .
+            </summary>
+            <param name="paginatedData"> </param>
+            <param name="routeLinkGenerator"> </param>
+            <param name="firstLinkText"> </param>
+            <param name="previousLinkText"> </param>
+            <param name="nextLinkText"> </param>
+            <param name="lastLinkText"> </param>
+            <param name="currentPageFormat"> </param>
+            <param name="htmlAttributes"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.GenerateSortExpression(System.Web.Mvc.ViewContext,System.String,System.Web.HtmlString,System.Web.HtmlString,System.Web.HtmlString@)">
+            <summary>
+            Processes the given sort expression and generates the new link.
+            </summary>
+            <param name="viewContext"> </param>
+            <param name="sortExpression"> </param>
+            <param name="ascendingGlyph"> </param>
+            <param name="descendingGlyph"> </param>
+            <param name="sortGlyph"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.GetSortGlyph(System.String,System.String,System.Web.HtmlString,System.Web.HtmlString)">
+            <summary>
+            Gets the sort glyph according to the given parameters.
+            </summary>
+            <param name="sortExpression"> </param>
+            <param name="existingSortExpression"> </param>
+            <param name="ascendingGlyph"> </param>
+            <param name="descendingGlyph"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.DataPresenterExtensions.GenerateDisabledLink(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Generates a disabled link.
+            </summary>
+            <param name="firstLinkText"> </param>
+            <param name="attributes"> </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Extensions.LinkExtensions">
+            <summary>
+            HTML link extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.LinkExtensions.PersistRouteLink(System.Web.Mvc.HtmlHelper,System.String,System.Object,System.Object,System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="htmlHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.LinkExtensions.PersistRouteLink(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Object,System.Object,System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values.
+            </summary>
+            <param name="htmlHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeName"> Name of the route. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="htmlAttributes"> The HTML attributes. </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.LinkExtensions.PersistRouteLink(System.Web.Mvc.HtmlHelper,System.String,System.String,System.Object,System.Collections.Generic.IDictionary{System.String,System.Object},System.Boolean)">
+            <summary>
+            Generates a fully qualified URL for the specified route values by using a route name.
+            </summary>
+            <param name="htmlHelper"> The HTML helper. </param>
+            <param name="linkText"> The link text. </param>
+            <param name="routeName"> Name of the route. </param>
+            <param name="routeValues"> The route values. </param>
+            <param name="htmlAttributes"> </param>
+            <param name="encodeHtml"> </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.LinkExtensions.GeneratePersistRouteUrl(System.Web.Mvc.ViewContext,System.String,System.Object)">
+            <summary>
+            Generates a fully qualified URL for the specified route values by using a route name.
+            </summary>
+            <param name="viewContext"> </param>
+            <param name="routeName"> Name of the route. </param>
+            <param name="routeValues"> The route values. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.LinkExtensions.ParseQueryString(System.String)">
+            <summary>
+            Parses the query string into not districted name value collection.
+            </summary>
+            <param name="queryString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Extensions.LinkExtensions.IsValidForPersistence(System.Object)">
+            <summary>
+            Gets a value indicates that the given value should persist.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Globalization.DataAnnotationBootstrapper">
+            <summary>
+            Resource manager.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Globalization.DataAnnotationBootstrapper.Initialize">
+            <summary>
+            Initializes the data annotations.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Initializer">
+            <summary>
+            Overall web initializer.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Initializer.Initialize">
+            <summary>
+            Initializes the requirements which should be initialized on application start.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Models.DataGridColumn`1">
+            <summary>
+            Represents a data grid column.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Xoqal.Web.Mvc.Models.DataGridColumn`1"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.Create">
+            <summary>
+            Creates a new instance of <see cref="T:Xoqal.Web.Mvc.Models.DataGridColumn`1"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.Create(System.String)">
+            <summary>
+            Creates a new instance of <see cref="T:Xoqal.Web.Mvc.Models.DataGridColumn`1"/>.
+            </summary>
+            <param name="title">The title.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.WithValue(System.Func{`0,System.Object})">
+            <summary>
+            Sets the value selector.
+            </summary>
+            <param name="valueSelector">The value selector.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.WithSort``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Sets the sort expression.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+            <param name="sortExpression">The sort expression.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.WithHtmlAttributes(System.Object)">
+            <summary>
+            Sets the HTML attributes.
+            </summary>
+            <param name="htmlAttributes">The HTML attributes.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumn`1.WithHtmlAttributes(System.Func{`0,System.Object})">
+            <summary>
+            Sets the HTML attributes.
+            </summary>
+            <param name="htmlAttributesSelector">The HTML attributes selector.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.DataGridColumn`1.Title">
+            <summary>
+            Gets the title.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.DataGridColumn`1.SortExpression">
+            <summary>
+            Gets the sort expression.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.DataGridColumn`1.ValueSelector">
+            <summary>
+            Gets the value selector.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.DataGridColumn`1.HtmlAttributesSelector">
+            <summary>
+            Gets the this column HTML attributes selector.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.DataGridColumn`1.HtmlAttributes">
+            <summary>
+            Gets or sets the HTML attributes.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Models.DataGridColumnCollection`1">
+            <summary>
+            Represents a list of <see cref="T:Xoqal.Web.Mvc.Models.DataGridColumnCollection`1"/> objects.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumnCollection`1.Add``1(System.String,System.Func{`0,System.Object},System.Linq.Expressions.Expression{System.Func{`0,``0}},System.Object)">
+            <summary>
+            Adds the specified item.
+            </summary>
+            <param name="title"> The title. </param>
+            <param name="sortExpression"> The sort expression. </param>
+            <param name="valueSelector"> The value selector. </param>
+            <param name="htmlAttributes"> The html attributes </param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.DataGridColumnCollection`1.Add(System.String,System.Func{`0,System.Object},System.Object)">
+            <summary>
+            Adds the specified item.
+            </summary>
+            <param name="title"> The title. </param>
+            <param name="propertySelector"> The property selector. </param>
+            <param name="htmlAttributes"> The html attributes </param>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Models.IPaginated">
+            <summary>
+            Represents a paginated data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.CurrentPage">
+            <summary>
+            Gets or sets the current page.
+            </summary>
+            <value> The current page. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.IsFirstPage">
+            <summary>
+            Gets a value indicating whether this instance is first page.
+            </summary>
+            <value> <c>true</c> if this instance is first page; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.IsLastPage">
+            <summary>
+            Gets a value indicating whether this instance is last page.
+            </summary>
+            <value> <c>true</c> if this instance is last page; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.NextPage">
+            <summary>
+            Gets the next page.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.PageCount">
+            <summary>
+            Gets the page count.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.PageSize">
+            <summary>
+            Gets the size of the page.
+            </summary>
+            <value> The size of the page. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.PreviousPage">
+            <summary>
+            Gets the previous page.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated.TotalRowsCount">
+            <summary>
+            Gets the total rows count.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Models.IPaginated`1">
+            <summary>
+            Represents a paginated data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.IPaginated`1.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value> The data. </value>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Models.MenuItem">
+            <summary>
+            Represents a menu item.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.MenuItem.#ctor(System.Int32,System.String,System.String,System.String,System.String,Xoqal.Web.Mvc.Security.PermissionAttribute,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Models.MenuItem"/> class.
+            </summary>
+            <param name="order">The order.</param>
+            <param name="title">The title.</param>
+            <param name="category">The category.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="permissionAttribute">The permission attribute.</param>
+            <param name="routeValues">The route values.</param>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.Category">
+            <summary>
+            Gets the category.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.ActionName">
+            <summary>
+            Gets the action name.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.ControllerName">
+            <summary>
+            Gets the controller name.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.PermissionAttribute">
+            <summary>
+            Gets the permission attribute.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.MenuItem.RouteValues">
+            <summary>
+            Gets the route values.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Models.Paginated`1">
+            <summary>
+            Represents a paginated data.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Models.Paginated`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Models.Paginated`1"/> class.
+            </summary>
+            <param name="data"> The data. </param>
+            <param name="totalItemCount"> The total item count. </param>
+            <param name="currentPage"> The current page. </param>
+            <param name="pageSize"> Size of the page. </param>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value> The data. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.Xoqal#Web#Mvc#Models#IPaginated#Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.TotalRowsCount">
+            <summary>
+            Gets or sets the total rows count.
+            </summary>
+            <value> The total rows count. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.PageSize">
+            <summary>
+            Gets or sets the size of the page.
+            </summary>
+            <value> The size of the page. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.CurrentPage">
+            <summary>
+            Gets or sets the index of the current page.
+            </summary>
+            <value> The index of the current page. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.PageCount">
+            <summary>
+            Gets the page count.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.PreviousPage">
+            <summary>
+            Gets the previous page.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.NextPage">
+            <summary>
+            Gets the next page.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.IsFirstPage">
+            <summary>
+            Gets a value indicating whether the current page is the first page.
+            </summary>
+            <value> <c>true</c> if the current page is the first page; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Models.Paginated`1.IsLastPage">
+            <summary>
+            Gets a value indicating whether this instance is last page.
+            </summary>
+            <value> <c>true</c> if this instance is last page; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.Security.PermissionAttribute">
+            <summary>
+            Represents an attribute that is used to restrict access by callers to an action method.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Security.PermissionAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.Security.PermissionAttribute"/> class.
+            </summary>
+            <param name="permissionIds"> The permission ids (Could be comma separated). </param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            Called when authorization is required.
+            </summary>
+            <param name="filterContext"> The filter context. </param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext,System.Boolean)">
+            <summary>
+            Called when authorization is required.
+            </summary>
+            <param name="filterContext"></param>
+            <param name="suppressCustomLoginRedirect"></param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.IsAuthorized(Xoqal.Security.IUserPrincipal)">
+            <summary>
+            Gets a value indicating whether the specified user is authorized for the current permission attribute instance or not.
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.HasPermissions(Xoqal.Security.IUserPrincipal)">
+            <summary>
+            Checks if the specified user has the specified permissions.
+            </summary>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.Security.PermissionAttribute.HasRoles(Xoqal.Security.IUserPrincipal)">
+            <summary>
+            Checks if the specified user has the specified roles.
+            </summary>
+            <param name="user">The user.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Security.PermissionAttribute.Roles">
+            <summary>
+            Gets or sets the roles.
+            </summary>
+            <value>
+            The roles.
+            </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Security.PermissionAttribute.PermissionIds">
+            <summary>
+            Gets or sets the permission ids.
+            </summary>
+            <value>
+            The permission ids.
+            </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Security.PermissionAttribute.LoginUrl">
+            <summary>
+            Gets or sets the login URL.
+            </summary>
+            <value> The login URL. </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.Security.PermissionAttribute.IsRoleRequired">
+            <summary>
+            Gets or sets a value indicating whether this instance is role required.
+            </summary>
+            <value> <c>true</c> if this instance is role required; otherwise, <c>false</c> . </value>
+        </member>
+        <member name="T:Xoqal.Web.Mvc.UnityControllerFactory">
+            <summary>
+            Represents a controller factory integrated with Unity.
+            </summary>
+            <remarks>
+            With help of http://weblogs.asp.net/shijuvarghese/archive/2011/01/06/developing-web-apps-using-asp-net-mvc-3-razor-and-ef-code-first-part-1.aspx
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.UnityControllerFactory.#ctor(Microsoft.Practices.Unity.IUnityContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Web.Mvc.UnityControllerFactory"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.UnityControllerFactory.ReleaseController(System.Web.Mvc.IController)">
+            <summary>
+            Releases the specified controller.
+            </summary>
+            <param name="controller"></param>
+        </member>
+        <member name="M:Xoqal.Web.Mvc.UnityControllerFactory.GetControllerInstance(System.Web.Routing.RequestContext,System.Type)">
+            <summary>
+            Gets the controller instance.
+            </summary>
+            <param name="reqContext"> The request context. </param>
+            <param name="controllerType"> Type of the controller. </param>
+            <returns> </returns>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.UnityControllerFactory.Bags">
+            <summary>
+            Gets the bags.
+            </summary>
+            <value>
+            The bags.
+            </value>
+        </member>
+        <member name="P:Xoqal.Web.Mvc.UnityControllerFactoryBag.Container">
+            <summary>
+            Gets or sets the DI container.
+            </summary>
+            <value>
+            The DI container.
+            </value>
+        </member>
+    </members>
+</doc>

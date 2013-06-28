@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Security.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Security.EntityFramework.DbContextRoleRepository`1">
+            <summary>
+            Role repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextRoleRepository`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.EntityFramework.DbContextRoleRepository`1"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextRoleRepository`1.CheckRoleNameDuplicate(System.String,System.Nullable{System.Guid})">
+            <summary>
+            Determines whether is role name duplicated, the specified role name.
+            </summary>
+            <param name="roleName">Name of the role.</param>
+            <param name="excludedRoleId">The excluded role id.</param>
+            <returns>
+            <c>true</c> if is role name duplicated, the specified role name; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Xoqal.Security.EntityFramework.DbContextRoleRepository`1.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.EntityFramework.DbContextRolesInPermissionRepository`1">
+            <summary>
+            RolesInPermission repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextRolesInPermissionRepository`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.EntityFramework.DbContextRolesInPermissionRepository`1"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Xoqal.Security.EntityFramework.DbContextUserRepository`1">
+            <summary>
+            User repository.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.EntityFramework.DbContextUserRepository`1"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.GetCurrentUser">
+            <summary>
+            Gets the current user.
+            </summary>
+            <returns>The current user if there was any logged in, otherwise null.</returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.GetUser(System.Guid)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName"> Name of the user. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName"> Name of the user. </param>
+            <param name="password"> The password. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.UserNameExists(System.String,System.Nullable{System.Guid})">
+            <summary>
+            Determines whether the specified user name exists.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="excludedUserId">The excluded user ID.</param>
+            <returns>
+              <c>true</c> if the user name exists, otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.Add(`0)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.Update(`0)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.Xoqal#Security#IUserRepository#GetUser(System.Guid)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.Xoqal#Security#IUserRepository#GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.Xoqal#Security#IUserRepository#GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.CheckValidationForUpdate(`0)">
+            <summary>
+            Checks the user validation for update.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.DbContextUserRepository`1.CheckValidationForAdd(`0)">
+            <summary>
+            Checks the user validation for add.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="P:Xoqal.Security.EntityFramework.DbContextUserRepository`1.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.EntityFramework.ObjectContextRoleRepository`1">
+            <summary>
+            Role repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextRoleRepository`1.#ctor(System.Data.Objects.ObjectContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.EntityFramework.ObjectContextRoleRepository`1"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextRoleRepository`1.CheckRoleNameDuplicate(System.String,System.Nullable{System.Guid})">
+            <summary>
+            Determines whether is role name duplicated, the specified role name.
+            </summary>
+            <param name="roleName">Name of the role.</param>
+            <param name="excludedRoleId">The excluded role id.</param>
+            <returns>
+            <c>true</c> if is role name duplicated, the specified role name; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Xoqal.Security.EntityFramework.ObjectContextRoleRepository`1.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.EntityFramework.ObjectContextRolesInPermissionRepository`1">
+            <summary>
+            RolesInPermission repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextRolesInPermissionRepository`1.#ctor(System.Data.Objects.ObjectContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.EntityFramework.ObjectContextRolesInPermissionRepository`1"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1">
+            <summary>
+            User repository.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.#ctor(System.Data.Objects.ObjectContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1"/> class.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.GetCurrentUser">
+            <summary>
+            Gets the current user.
+            </summary>
+            <returns>The current user if there was any logged in, otherwise null.</returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.GetUser(System.Guid)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName"> Name of the user. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName"> Name of the user. </param>
+            <param name="password"> The password. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.UserNameExists(System.String,System.Nullable{System.Guid})">
+            <summary>
+            Determines whether the specified user name exists.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="excludedUserId">The excluded user ID.</param>
+            <returns>
+              <c>true</c> if the user name exists, otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.Add(`0)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.Update(`0)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.Xoqal#Security#IUserRepository#GetUser(System.Guid)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userId">The user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.Xoqal#Security#IUserRepository#GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.Xoqal#Security#IUserRepository#GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.CheckValidation(`0)">
+            <summary>
+            Checks the validation.
+            </summary>
+            <param name="entity">The entity.</param>
+            <exception cref="T:Xoqal.Security.UserValidationException"></exception>
+        </member>
+        <member name="P:Xoqal.Security.EntityFramework.ObjectContextUserRepository`1.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+    </members>
+</doc>

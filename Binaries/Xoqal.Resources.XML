@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Resources</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Resources.Resource">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_Currency">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid currency..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_Date">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid date..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_DateTime">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid date time..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_Duration">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid duration..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_EmailAddress">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid email address..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_PhoneNumber">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid phone number..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_Time">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid time..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_DataType_ValidationError_Url">
+            <summary>
+              Looks up a localized string similar to The field {0} is not a valid URL..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_IntegerAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to The field {0} must be an integer..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_RangeAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to The field {0} must be between {1} and {2}.TEST.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_RegexAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to The field {0} must match the regular expression &apos;{1}&apos;..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_RequiredAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to The {0} field is required..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DataAnnotations_StringLengthAttribute_ValidationError">
+            <summary>
+              Looks up a localized string similar to The field {0} must be a string with a maximum length of {1}..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.Delete">
+            <summary>
+              Looks up a localized string similar to Delete.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DeleteConfirm">
+            <summary>
+              Looks up a localized string similar to {0} item(s) are selected. Are you sure to delete the selected items?.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.DeleteConflictErrorMessage">
+            <summary>
+              Looks up a localized string similar to The record you select for delete is referenced by another item. You should first remove the refrencing item..
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.IsActive">
+            <summary>
+              Looks up a localized string similar to Is Active.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.MenuItemCategory">
+            <summary>
+              Looks up a localized string similar to Menu Item Category.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.MenuItemTitle">
+            <summary>
+              Looks up a localized string similar to Menu Item Title.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.Name">
+            <summary>
+              Looks up a localized string similar to Name.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.OfPage">
+            <summary>
+              Looks up a localized string similar to Of {0}.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Resources.Resource.Page">
+            <summary>
+              Looks up a localized string similar to Page.
+            </summary>
+        </member>
+    </members>
+</doc>

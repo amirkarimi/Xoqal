@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>DocumentFormat.OpenXml</id>
+    <version>1.0</version>
+    <title>DocumentFormat.OpenXml</title>
+    <authors>Microsot</authors>
+    <owners>Microsot</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Microsoft OpenXML SDK 2.0</description>
+    <summary>Microsoft OpenXML SDK 2.0</summary>
+  </metadata>
+</package>

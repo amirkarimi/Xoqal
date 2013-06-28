@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.ExportImport</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.ExportImport.Attributes.IgnoreAttribute">
+            <summary>
+            Marks properties to be ignored by export and import libraries.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.ExcelExporter`1">
+            <summary>
+            Exports a general data to an excel file.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xoqal.ExportImport.ExcelExporterBase`1">
+            <summary>
+            Represents a generic excel exporter.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.IExporter`1">
+            <summary>
+            Represents a generic exporter.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.IExporter">
+            <summary>
+            Represents a general exporter.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.IImporterExporter">
+            <summary>
+            Represents an importer or exporter.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.IImporterExporter.FileExtensionFilter">
+            <summary>
+            Gets the file extension.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.IExporter.Export(System.Collections.IEnumerable,System.IO.Stream)">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.IExporter`1.Export(System.Collections.Generic.IEnumerable{`0},System.IO.Stream)">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporterBase`1.Export(System.Collections.Generic.IEnumerable{`0},System.IO.Stream)">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporterBase`1.Xoqal#ExportImport#IExporter#Export(System.Collections.IEnumerable,System.IO.Stream)">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporterBase`1.Export(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporterBase`1.InitializeWorkbook">
+            <summary>
+            Initializes the workbook.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporterBase`1.SaveWorkbook">
+            <summary>
+            Saves the workbook.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.ExcelExporterBase`1.FileExtensionFilter">
+            <summary>
+            Gets the file extension.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.ExcelExporterBase`1.Workbook">
+            <summary>
+            Gets the workbook.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.ExcelExporterBase`1.Worksheet">
+            <summary>
+            Gets the worksheet.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporter`1.Export(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporter`1.GetProperties(System.Type)">
+            <summary>
+            Gets the properties.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelExporter`1.GetPropertyValue(System.ComponentModel.PropertyDescriptor,System.Object)">
+            <summary>
+            Gets the specified property value for the specified component.
+            </summary>
+            <param name="property"></param>
+            <param name="component"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.ExportImport.ExcelImporter`1">
+            <summary>
+            Imports a general data from an excel file.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xoqal.ExportImport.ExcelImporterBase`1">
+            <summary>
+            Represents a generic excel importer.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.IImporter`1">
+            <summary>
+            Represents a generic importer.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.IImporter">
+            <summary>
+            Represents a general importer.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.IImporter.Import(System.IO.Stream)">
+            <summary>
+            Imports data from the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.IImporter`1.Import(System.IO.Stream)">
+            <summary>
+            Imports data from the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporterBase`1.Import(System.IO.Stream)">
+            <summary>
+            Exports the specified data.
+            </summary>
+            <param name="data">The data.</param>
+            <param name="stream">The stream.</param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporterBase`1.Xoqal#ExportImport#IImporter#Import(System.IO.Stream)">
+            <summary>
+            Imports data from the specified stream.
+            </summary>
+            <param name="stream">The stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporterBase`1.Import">
+            <summary>
+            Import the data.
+            </summary>
+            <returns>Imported data.</returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporterBase`1.OpenWorkbook">
+            <summary>
+            Initializes the workbook.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporterBase`1.SaveWorkbook">
+            <summary>
+            Saves the workbook.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.ExcelImporterBase`1.FileExtensionFilter">
+            <summary>
+            Gets the file extension.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.ExcelImporterBase`1.Workbook">
+            <summary>
+            Gets the workbook.
+            </summary>
+        </member>
+        <member name="P:Xoqal.ExportImport.ExcelImporterBase`1.Worksheet">
+            <summary>
+            Gets the worksheet.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporter`1.Import">
+            <summary>
+            Import the data.
+            </summary>
+            <returns>Imported data.</returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporter`1.GetProperties(System.Type)">
+            <summary>
+            Gets the properties.
+            </summary>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporter`1.SetPropertyValue(System.ComponentModel.PropertyDescriptor,System.Object,System.Object)">
+            <summary>
+            Sets the property value.
+            </summary>
+            <param name="property"></param>
+            <param name="component"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Xoqal.ExportImport.ExcelImporter`1.GetCellValue(ClosedXML.Excel.IXLRow,System.Int32)">
+            <summary>
+            Gets the cell value.
+            </summary>
+            <param name="row">The row.</param>
+            <param name="columnLetter">The column letter.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.ExportImport.IExporterContainer">
+            <summary>
+            Represents an exporter container.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.IExporterContainer.GetExporter(System.String)">
+            <summary>
+            Gets the exporter.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.ExportImport.IExporterContainer.GetExportData">
+            <summary>
+            Gets the export data.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.ExportImport.IExporterContainer.CanExport">
+            <summary>
+            Gets a value indicating whether this instance can export.
+            </summary>
+            <value>
+            <c>true</c> if this instance can export; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Xoqal.ExportImport.ImportExportException">
+            <summary>
+            Represents import or export errors.
+            </summary>
+        </member>
+        <member name="T:Xoqal.ExportImport.PropertyDescriptorExtensions">
+            <summary>
+            <see cref="T:System.ComponentModel.PropertyDescriptor"/> class extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.ExportImport.PropertyDescriptorExtensions.GetDisplayName(System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            Gets the specified property display name.
+            </summary>
+            <param name="property"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

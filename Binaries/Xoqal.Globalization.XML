@@ -1,0 +1,452 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Globalization</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Globalization.DataAnnotations.IntegerAttribute">
+            <summary>
+            Specifies that a data field value must be an integer.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.IntegerAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.DataAnnotations.IntegerAttribute"/> class.
+            </summary>
+            <param name="allowNegatives">if set to <c>true</c> allows negatives integers.</param>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.IntegerAttribute.GetPattern(System.Boolean)">
+            <summary>
+            Gets the pattern.
+            </summary>
+            <param name="allowNegatives">if set to <c>true</c> allows negatives integers.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.IntegerAttribute.SetResources">
+            <summary>
+            Sets the resources.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.DataAnnotations.RangeAttribute">
+            <summary>
+            Specifies the numeric range constraints for the value of a data field.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.RangeAttribute.#ctor(System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.DataAnnotations.RangeAttribute"/> class.
+            </summary>
+            <param name="minimum">Specifies the minimum value allowed for the data field value.</param>
+            <param name="maximum">Specifies the maximum value allowed for the data field value.</param>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.RangeAttribute.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.DataAnnotations.RangeAttribute"/> class.
+            </summary>
+            <param name="minimum">Specifies the minimum value allowed for the data field value.</param>
+            <param name="maximum">Specifies the maximum value allowed for the data field value.</param>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.RangeAttribute.#ctor(System.Type,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.DataAnnotations.RangeAttribute"/> class.
+            </summary>
+            <param name="type">Specifies the type of the object to test.</param>
+            <param name="minimum">Specifies the minimum value allowed for the data field value.</param>
+            <param name="maximum">Specifies the maximum value allowed for the data field value.</param>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.RangeAttribute.SetResources">
+            <summary>
+            Sets the resources.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.DataAnnotations.StringLengthAttribute">
+            <summary>
+            Specifies the minimum and maximum length of characters that are allowed in a data field.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.StringLengthAttribute.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.ComponentModel.DataAnnotations.StringLengthAttribute"/> class by using a specified maximum length.
+            </summary>
+            <param name="maximumLength">The maximum length of a string. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.StringLengthAttribute.SetResources">
+            <summary>
+            Sets the resources.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.LanguageNotSupportedException">
+            <summary>
+            Represents the error that a language is not supported.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageNotSupportedException.#ctor(System.Globalization.CultureInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.LanguageNotSupportedException"/> class.
+            </summary>
+            <param name="cultureInfo"> The CultureInfo. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageNotSupportedException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.LanguageNotSupportedException"/> class.
+            </summary>
+            <param name="message"> The message. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageNotSupportedException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.LanguageNotSupportedException"/> class.
+            </summary>
+            <param name="message"> The message. </param>
+            <param name="inner"> The inner exception. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageNotSupportedException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.LanguageNotSupportedException"/> class.
+            </summary>
+            <param name="info"> The serialization information. </param>
+            <param name="context"> The streaming context. </param>
+        </member>
+        <member name="P:Xoqal.Globalization.LanguageNotSupportedException.RequestedCultureInfo">
+            <summary>
+            Gets the requested CultureInfo which is not supported.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.GlobalDateTime">
+            <summary>
+            Represents the globalized DateTime object virtually base on the given DateTime.
+            </summary>
+            <remarks>
+            Created by A. Karimi (karimi@dev-frame.com)
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.#ctor(System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.GlobalDateTime"/> class.
+            </summary>
+            <param name="dateTime"> The date time. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.GetCalendar">
+            <summary>
+            Gets the current UI calendar.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.GetDateTimeFormat">
+            <summary>
+            Gets the current UI <see cref="T:System.Globalization.DateTimeFormatInfo" /> .
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToShortDateString(System.DateTime)">
+            <summary>
+            Returns the short date format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToShortDateTimeString(System.DateTime)">
+            <summary>
+            Returns the short date and time format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToLongDateString(System.DateTime)">
+            <summary>
+            Returns the long date format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToLongDateTimeString(System.DateTime)">
+            <summary>
+            Returns the long date and time format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToString(System.DateTime,System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="dateTime"> The date time. </param>
+            <param name="format"> The format. </param>
+            <returns> A <see cref="T:System.String"/> that represents this instance. </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToRelativeDateTimeString(System.DateTime,System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the time in a relative manner.
+            </summary>
+            <param name="dateTime"> The date time. </param>
+            <param name="underMinuteFormat"> The under minute format. </param>
+            <param name="underHourFormat"> The under hour format. </param>
+            <param name="underDayFormat"> The under day format. </param>
+            <param name="defaultFormat"> The default format. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.GetPersianDateTimeFormatInfo">
+            <summary>
+            Gets the date time format info.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToShortDateString">
+            <summary>
+            Returns the short date format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToShortDateTimeString">
+            <summary>
+            Returns the short date and time format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToLongDateString">
+            <summary>
+            Returns the long date format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToLongDateTimeString">
+            <summary>
+            Returns the long date and time format of this instance.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToString(System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents this instance.
+            </summary>
+            <param name="format"> The format. </param>
+            <returns> A <see cref="T:System.String"/> that represents this instance. </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalDateTime.ToRelativeDateTimeString(System.String,System.String,System.String,System.String)">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the time in a relative manner.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Now">
+            <summary>
+            Gets a <see cref="T:Xoqal.Globalization.GlobalDateTime"/> object that is set to the current date and time on this computer.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.DateTimeValue">
+            <summary>
+            Gets or sets the date time.
+            </summary>
+            <value> The date time. </value>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Calendar">
+            <summary>
+            Gets or sets the calendar.
+            </summary>
+            <value> The calendar. </value>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.DefaultDateTimeFormat">
+            <summary>
+            Gets or sets the default date time format info.
+            </summary>
+            <value> The default date time format info. </value>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Year">
+            <summary>
+            Gets the year.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Month">
+            <summary>
+            Gets the month.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Day">
+            <summary>
+            Gets the day of month.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Hour">
+            <summary>
+            Gets the hour.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Minute">
+            <summary>
+            Gets the minute.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Second">
+            <summary>
+            Gets the second.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.Milliseconds">
+            <summary>
+            Gets the milliseconds.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.DayOfWeek">
+            <summary>
+            Gets the day of week.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalDateTime.TwoDigitYear">
+            <summary>
+            Gets the two digit year.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.GlobalizationRegulatorAttribute">
+            <summary>
+            Indicates that an assembly is a globalization regulator.
+            </summary>
+            <remarks>
+            Globalization regulator assembly can define the supported languages for example.
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Globalization.GlobalizationRegulatorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.GlobalizationRegulatorAttribute"/> class.
+            </summary>
+            <param name="languageContainerType"> The language container. </param>
+        </member>
+        <member name="P:Xoqal.Globalization.GlobalizationRegulatorAttribute.LanguageContainerType">
+            <summary>
+            Gets the type of the language container.
+            </summary>
+            <value> The type of the language container. </value>
+        </member>
+        <member name="T:Xoqal.Globalization.LanguageContainer">
+            <summary>
+            Represents search and load functionality to find all languages which defined in the driven projects.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageContainer.LoadLanguages">
+            <summary>
+            Loads the languages.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.LanguageContainer.Languages">
+            <summary>
+            Gets the languages.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.LanguageInfo">
+            <summary>
+            Represents a language information.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageInfo.#ctor(System.Globalization.CultureInfo,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.LanguageInfo"/> class.
+            </summary>
+            <param name="cultureInfo"> The CultureInfo object. </param>
+            <param name="order"> The order. </param>
+        </member>
+        <member name="P:Xoqal.Globalization.LanguageInfo.CultureInfo">
+            <summary>
+            Gets the culture info.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.LanguageInfo.Order">
+            <summary>
+            Gets the order.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.LanguageManagement">
+            <summary>
+            Represents the functionality of the multilanguage management.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.GetAllLanguages">
+            <summary>
+            Gets all languages.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.GetDefaultLanguage">
+            <summary>
+            Gets the default language.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.GetLanguage(System.String)">
+            <summary>
+            Gets the language by its name.
+            </summary>
+            <param name="name"> The language name. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.GetCurrentLanguage">
+            <summary>
+            Gets the current language.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.SetLanguage(Xoqal.Globalization.LanguageInfo)">
+            <summary>
+            Sets current language.
+            </summary>
+            <param name="language"> The language item. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.SetLanguage(System.String)">
+            <summary>
+            Sets current language.
+            </summary>
+            <param name="name"> The name. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.SetLanguage(System.Globalization.CultureInfo)">
+            <summary>
+            Set current language.
+            </summary>
+            <param name="cultureInfo"> The CultureInfo object. </param>
+        </member>
+        <member name="M:Xoqal.Globalization.LanguageManagement.GetLanguage(System.Globalization.CultureInfo)">
+            <summary>
+            Gets the language by the culture information.
+            </summary>
+            <param name="cultureInfo"> The CultureInfo object. </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Globalization.PersianDateHelper">
+            <summary>
+            Helps parsing Persian date.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.PersianDateHelper.ParsePersianDate(System.String)">
+            <summary>
+            Parses the Persian date.
+            </summary>
+            <param name="rawValue"> The raw value. </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Globalization.DataAnnotations.RequiredAttribute">
+            <summary>
+            Specifies that a data field value is required.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.RequiredAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Globalization.DataAnnotations.RequiredAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.DataAnnotations.RequiredAttribute.SetResources">
+            <summary>
+            Sets the resources.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Globalization.ResourceManager">
+            <summary>
+            Resource manager.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Globalization.ResourceManager.#cctor">
+            <summary>
+            Initializes the <see cref="T:Xoqal.Globalization.ResourceManager"/> class.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Globalization.ResourceManager.ResourceType">
+            <summary>
+            Gets or sets the type of the resource.
+            </summary>
+            <value>
+            The type of the resource.
+            </value>
+        </member>
+    </members>
+</doc>

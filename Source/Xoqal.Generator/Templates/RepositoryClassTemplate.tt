@@ -1,0 +1,37 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+namespace <#=this.options.DataNamespace#>
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Linq;
+    using System.Text;
+    using Xoqal.Data.EntityFramework;
+
+    /// <summary>
+    /// Represents the <#=this.entityInfo.EntityName.ToLower()#> repository.
+    /// </summary>
+    internal class <#=this.entityInfo.EntityName#>Repository : DbContextRepository<Entities.<#=this.entityInfo.EntityName#><#=this.entityInfo.IsInheritedEntity ? string.Format(", {0}", this.entityInfo.EntityType.BaseType.Name) : string.Empty#>>, I<#=this.entityInfo.EntityName#>Repository
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="<#=this.entityInfo.EntityName#>Repository"/> class.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        public <#=this.entityInfo.EntityName#>Repository(DbContext context)
+            : base(context)
+        {
+        }
+
+        /// <summary>
+        /// Gets the query.
+        /// </summary>
+        public override IQueryable<Entities.<#=this.entityInfo.EntityName#>> Query
+        {
+            get { return base.Query.OrderByDescending(p => p.Id); }
+        }
+    }
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Data.EntityFramework.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext">
+            <summary>
+            Represents a <see cref="T:System.Data.Entity.DbContext"/> type that have more functionality to set some entity properties automatically.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor">
+            <summary>
+            Initialized a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+            <param name="nameOrConnectinString"></param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor(System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor(System.String,System.Data.Entity.Infrastructure.DbCompiledModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+            <param name="nameOrConnectionString">Either the database name or a connection string.</param>
+            <param name="model">The model that will back this context.</param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor(System.Data.Common.DbConnection,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+            <param name="existingConnection"></param>
+            <param name="contextOwnsConnection"></param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor(System.Data.Objects.ObjectContext,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+            <param name="objectContext"></param>
+            <param name="dbContextOwnsObjectContext"></param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.#ctor(System.Data.Common.DbConnection,System.Data.Entity.Infrastructure.DbCompiledModel,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext"/> class.
+            </summary>
+            <param name="existingConnection"></param>
+            <param name="model"></param>
+            <param name="contextOwnsConnection"></param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext.SaveChanges">
+            <summary>
+            Saves all changes made in this context to the underlying database.
+            </summary>
+            <returns>
+            The number of objects written to the underlying database.
+            </returns>
+            <exception cref="T:System.InvalidOperationException"/>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext">
+            <summary>
+            Represents an <see cref="T:System.Data.Objects.ObjectContext"/> type that have more functionality to set some entity properties automatically.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext"/> class.
+            </summary>
+            <param name="connectionString"> The connection string. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext.#ctor(System.Data.EntityClient.EntityConnection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext"/> class.
+            </summary>
+            <param name="connection"> The connection. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext"/> class.
+            </summary>
+            <param name="connectionString"> The connection string. </param>
+            <param name="defaultContainerName"> Default name of the container. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext.#ctor(System.Data.EntityClient.EntityConnection,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext"/> class.
+            </summary>
+            <param name="connection">The connection.</param>
+            <param name="defaultContainerName">The defaultContainerName.</param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Extensions.AdvancedObjectContext.SaveChanges(System.Data.Objects.SaveOptions)">
+            <summary>
+            Persists all updates to the data source with the specified <see cref="T:System.Data.Objects.SaveOptions" /> .
+            </summary>
+            <param name="options">A <see cref="T:System.Data.Objects.SaveOptions" /> value that determines the behavior of the operation.</param>
+            <returns>
+            The number of objects in an <see cref="F:System.Data.EntityState.Added" /> , <see cref="F:System.Data.EntityState.Modified" /> , or <see cref="F:System.Data.EntityState.Deleted" /> state when <see cref="M:System.Data.Objects.ObjectContext.SaveChanges" /> was called.
+            </returns>
+            <exception cref="T:System.Data.OptimisticConcurrencyException">An optimistic concurrency violation has occurred.</exception>
+        </member>
+    </members>
+</doc>

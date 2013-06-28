@@ -1,0 +1,501 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Data.EntityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Data.EntityFramework.DbContextRepository`1">
+            <summary>
+            Represents the base class for a repository.
+            </summary>
+            <typeparam name="T">Entity type.</typeparam>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.DbContextRepository`2">
+            <summary>
+            Represents the base class for a repository.
+            </summary>
+            <typeparam name="T">Entity type.</typeparam>
+            <typeparam name="TRoot">The root type.</typeparam>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.DbContextRepository`1"/> class.
+            </summary>
+            <param name="context"> The context. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.GetItems(System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="startIndex"> The start index. </param>
+            <param name="itemCount"> The item count. </param>
+            <param name="sortDescirptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.GetItemCount">
+            <summary>
+            Gets the item count.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.GetItemByKey(System.Object[])">
+            <summary>
+            Gets the item by key.
+            </summary>
+            <param name="keys"> The keys. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#GetItems(System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="startIndex"> The start index. </param>
+            <param name="itemCount"> The item count. </param>
+            <param name="sortDescirptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#GetItemByKey(System.Object[])">
+            <summary>
+            Gets an item by its key(s).
+            </summary>
+            <param name="keys"> The key(s). </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Add(`0)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Update(`0)">
+            <summary>
+            Updates the specified entity in a disconnected manner.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Remove(`0)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Deletes the items which match the specified predicate.
+            </summary>
+            <param name="predicate"> The predicate. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#Add(System.Object)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#Update(System.Object)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#Remove(System.Object)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Attach(`0)">
+            <summary>
+            Attaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Detach(`0)">
+            <summary>
+            Detaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Reload(`0)">
+            <summary>
+            Reloads the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#Reload(System.Object)">
+            <summary>
+            Refreshes the specified refresh mode.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#Attach(System.Object)">
+            <summary>
+            Attaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IRepository#Detach(System.Object)">
+            <summary>
+            Detaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`2.GetAttachedEntity(`0)">
+            <summary>
+            Gets the attached entity.
+            </summary>
+            <param name="entity">The entity.</param>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.DbContextRepository`2.ObjectSet">
+            <summary>
+            Gets the object set.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.DbContextRepository`2.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.DbContextRepository`2.Xoqal#Data#IQueryableRepository#Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.DbContextRepository`2.Context">
+            <summary>
+            Gets the context.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextRepository`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.DbContextRepository`1"/> class.
+            </summary>
+            <param name="context"> The context. </param>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.DbContextUnitOfWork">
+            <summary>
+            Represents the base class for EF unit of work.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextUnitOfWork.#ctor(System.Data.Entity.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.DbContextUnitOfWork"/> class.
+            </summary>
+            <param name="context"> The context. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextUnitOfWork.Commit">
+            <summary>
+            Commits this instance.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextUnitOfWork.RollBack">
+            <summary>
+            Rolls the back.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextUnitOfWork.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextUnitOfWork.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"> <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.DbContextUnitOfWork.GetDbEntityValidationErrorMessage(System.Data.Entity.Validation.DbEntityValidationException)">
+            <summary>
+            Get <see cref="T:System.Data.Entity.Validation.DbEntityValidationException"/> validation error for each property.
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.DbContextUnitOfWork.Context">
+            <summary>
+            Gets the context.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.ObjectContextRepository`2">
+            <summary>
+            Represents the base class for a repository.
+            </summary>
+            <typeparam name="T">Entity type.</typeparam>
+            <typeparam name="TRoot">The root type.</typeparam>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.#ctor(System.Data.Objects.ObjectContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.ObjectContextRepository`1"/> class.
+            </summary>
+            <param name="context"> The context. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.GetItems(System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="startIndex"> The start index. </param>
+            <param name="itemCount"> The item count. </param>
+            <param name="sortDescirptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.GetItemCount">
+            <summary>
+            Gets the item count.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.GetItemByKey(System.Object[])">
+            <summary>
+            Gets the item by key.
+            </summary>
+            <param name="keys"> The keys. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#GetItems(System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets the items.
+            </summary>
+            <param name="startIndex"> The start index. </param>
+            <param name="itemCount"> The item count. </param>
+            <param name="sortDescirptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#GetItemByKey(System.Object[])">
+            <summary>
+            Gets an item by its key(s).
+            </summary>
+            <param name="keys"> The key(s). </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Add(`0)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Update(`0)">
+            <summary>
+            Updates the specified entity in both disconnected and connected manner.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Remove(`0)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Deletes the items which match the specified predicate.
+            </summary>
+            <param name="predicate"> The predicate. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#Add(System.Object)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#Update(System.Object)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#Remove(System.Object)">
+            <summary>
+            Deletes the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Attach(`0)">
+            <summary>
+            Attaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Detach(`0)">
+            <summary>
+            Detaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Reload(`0)">
+            <summary>
+            Reloads the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#Reload(System.Object)">
+            <summary>
+            Refreshes the specified refresh mode.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#Attach(System.Object)">
+            <summary>
+            Attaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IRepository#Detach(System.Object)">
+            <summary>
+            Detaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.ObjectContextRepository`2.ObjectSet">
+            <summary>
+            Gets the object set.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Xoqal#Data#IQueryableRepository#Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.ObjectContextRepository`2.Context">
+            <summary>
+            Gets the context.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.Linq.NameOf`1">
+            <summary>
+            Used as a helper for EntityFrameworkExtensions and maybe others
+            </summary>
+            <typeparam name="T"> T </typeparam>
+            <remarks>
+            Created by A. Karimi (karimi@dev-frame.com)
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Linq.NameOf`1.Property``1(System.Linq.Expressions.Expression{System.Func{`0,``0}})">
+            <summary>
+            Properties the specified expression.
+            </summary>
+            <typeparam name="TProp"> The type of the prop. </typeparam>
+            <param name="expr"> The expression.</param>
+            <returns> The text format of the expression </returns>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.ObjectContextRepository`1">
+            <summary>
+            Represents the base class for a repository.
+            </summary>
+            <typeparam name="T"> Entity type. </typeparam>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextRepository`1.#ctor(System.Data.Objects.ObjectContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.ObjectContextRepository`1"/> class.
+            </summary>
+            <param name="context"> The context. </param>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork">
+            <summary>
+            Represents the base class for EF unit of work.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork.#ctor(System.Data.Objects.ObjectContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork"/> class.
+            </summary>
+            <param name="context"> The context. </param>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork.Commit">
+            <summary>
+            Commits this instance.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork.RollBack">
+            <summary>
+            Rolls the back.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"> <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources. </param>
+        </member>
+        <member name="P:Xoqal.Data.EntityFramework.ObjectContextUnitOfWork.Context">
+            <summary>
+            Gets the context.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Data.EntityFramework.Linq.QueryExtensions">
+            <summary>
+            IQueryable extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Linq.QueryExtensions.Include``2(System.Data.Objects.ObjectQuery{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Includes the specified expression.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <typeparam name="TProp"> The type of the prop. </typeparam>
+            <param name="q"> The query. </param>
+            <param name="expr"> The expression. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Linq.QueryExtensions.Include``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+            <summary>
+            Includes the specified expression, but works on <see cref="T:System.Linq.IQueryable"/> which supposed that is <see cref="T:System.Data.Objects.ObjectQuery"/>.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <typeparam name="TProp"> The type of the prop. </typeparam>
+            <param name="q"> The q. </param>
+            <param name="expr"> The expression. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Linq.QueryExtensions.Include``1(System.Linq.IQueryable{``0},System.String)">
+            <summary>
+            Includes the specified expression, but works on <see cref="T:System.Linq.IQueryable"/> which supposed that is <see cref="T:System.Data.Objects.ObjectQuery"/>.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="q"> The query. </param>
+            <param name="expr"> The expression. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.EntityFramework.Linq.QueryExtensions.ToList(System.Linq.IQueryable,System.Type)">
+            <summary>
+            Calls the ToList method of the given query.
+            </summary>
+            <param name="query"> The query. </param>
+            <param name="dataObjectType"> Type of the data object. </param>
+            <returns> </returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,242 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Data</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Data.IQueryableRepository">
+            <summary>
+            Represents a LINQ supported repository.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Data.IRepository">
+            <summary>
+            Represents a generic object repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.GetItems(System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets paginated items supporting sorting.
+            </summary>
+            <param name="startIndex"> The start index. </param>
+            <param name="itemCount"> The item count. </param>
+            <param name="sortDescriptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.GetItemCount">
+            <summary>
+            Gets the item count.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.GetItemByKey(System.Object[])">
+            <summary>
+            Gets an item by its key(s).
+            </summary>
+            <param name="keys"> The key(s). </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.Attach(System.Object)">
+            <summary>
+            Attaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.Detach(System.Object)">
+            <summary>
+            Detaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.Add(System.Object)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.Update(System.Object)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.Remove(System.Object)">
+            <summary>
+            Removes the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository.Reload(System.Object)">
+            <summary>
+            Reloads the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="P:Xoqal.Data.IQueryableRepository.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Data.IQueryableRepository`1">
+            <summary>
+            Represents a LINQ supported repository.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Data.IRepository`1">
+            <summary>
+            Represents a generic repository.
+            </summary>
+            <typeparam name="T"> Entity type </typeparam>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.GetItems(System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets paginated items with support of sorting.
+            </summary>
+            <param name="startIndex">The start index.</param>
+            <param name="itemCount">The item count.</param>
+            <param name="sortDescriptions">The sort descriptions.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.GetItemByKey(System.Object[])">
+            <summary>
+            Gets an item by its key(s).
+            </summary>
+            <param name="keys"> The key(s). </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.Attach(`0)">
+            <summary>
+            Attaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.Detach(`0)">
+            <summary>
+            Detaches the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.Add(`0)">
+            <summary>
+            Adds the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.Update(`0)">
+            <summary>
+            Updates the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.Remove(`0)">
+            <summary>
+            Removes the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IRepository`1.Reload(`0)">
+            <summary>
+            Reloads the specified entity.
+            </summary>
+            <param name="entity"> The entity. </param>
+        </member>
+        <member name="M:Xoqal.Data.IQueryableRepository`1.Remove(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Removes the items which match the specified predicate.
+            </summary>
+            <param name="predicate"> The predicate. </param>
+        </member>
+        <member name="P:Xoqal.Data.IQueryableRepository`1.Query">
+            <summary>
+            Gets the query.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.Linq.Extensions.Sort``1(System.Linq.IQueryable{``0},Xoqal.Core.SortDescription[])">
+            <summary>
+            Sorts the specified query.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="query"> The query. </param>
+            <param name="sortDescriptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.Linq.Extensions.ToPage``1(System.Linq.IQueryable{``0},System.Int32,System.Int32,Xoqal.Core.SortDescription[])">
+            <summary>
+            Gets the paginated data.
+            </summary>
+            <typeparam name="T"> </typeparam>
+            <param name="query"> The query. </param>
+            <param name="startIndex"> Start index of the row. </param>
+            <param name="itemCount"> Size of the page. </param>
+            <param name="sortDescriptions"> The sort descriptions. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Data.Linq.Extensions.ToPage``1(System.Linq.IQueryable{``0},System.Nullable{System.Int32},System.Int32,System.String)">
+            <summary>
+            Gets the paginated data.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="page">The page.</param>
+            <param name="pageSize">Size of the page.</param>
+            <param name="sortExpression">The sort expression.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Xoqal.Data.Linq.Extensions.ToPage``1(System.Linq.IQueryable{``0},Xoqal.Core.Models.IPaginatedCriteria)">
+            <summary>
+            Gets the paginated data.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="paginatedCriteria">The paginated criteria.</param>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException">query</exception>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Xoqal.Data.Linq.Extensions.ToPaginated``1(System.Linq.IQueryable{``0},Xoqal.Core.Models.PaginatedCriteria)">
+            <summary>
+            Creates an <see cref="T:Xoqal.Core.Models.IPaginated`1"/> instance from the specified query.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="query">The query.</param>
+            <param name="criteria">The criteria.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Data.Linq.Extensions.GetSortDescriptions(System.String)">
+            <summary>
+            Gets the sort descriptions from the specified criteria.
+            </summary>
+            <param name="sort">The sort.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Data.IUnitOfWork">
+            <summary>
+            Represents a unit of work.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.IUnitOfWork.Commit">
+            <summary>
+            Commits the works.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Data.IUnitOfWork.RollBack">
+            <summary>
+            Rolls the works.
+            </summary>
+        </member>
+    </members>
+</doc>

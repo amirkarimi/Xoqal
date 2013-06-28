@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{550583D9-99F2-4D51-9923-3339E5B95E13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xoqal.Services</RootNamespace>
+    <AssemblyName>Xoqal.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Xoqal.Services.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Lib\GlobalAssemblyInfo.cs">
+      <Link>GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CrudServiceModelDecorator{TViewModel,TPersistenceModel,TCriteria}.cs" />
+    <Compile Include="CrudServiceModelDecorator{TViewModel,TPersistenceModel}.cs" />
+    <Compile Include="CrudService{TModel,TCriteria}.cs" />
+    <Compile Include="CrudService{TModel}.cs" />
+    <Compile Include="IMapper{TSource,TDestination}.cs" />
+    <Compile Include="ICreateService.cs" />
+    <Compile Include="ICrudService{TModel,TCriteria}.cs" />
+    <Compile Include="ICrudService{TModel}.cs" />
+    <Compile Include="ICudService.cs" />
+    <Compile Include="IDataService.cs" />
+    <Compile Include="IDeleteService.cs" />
+    <Compile Include="IDetailsService.cs" />
+    <Compile Include="IPaginatedService{TModel}.cs" />
+    <Compile Include="IPresenterService{TModel,TCriteria}.cs" />
+    <Compile Include="IPresenterService{TModel}.cs" />
+    <Compile Include="IPaginatedService{TModel, TCriteria}.cs" />
+    <Compile Include="IReadService.cs" />
+    <Compile Include="IReloadService.cs" />
+    <Compile Include="IService.cs" />
+    <Compile Include="ITwoWayMapper{TSource,TDestination}.cs" />
+    <Compile Include="IUpdateService.cs" />
+    <Compile Include="PresenterServiceModelDecorator{TViewModel,TPersistenceModel,TCriteria}.cs" />
+    <Compile Include="PresenterServiceModelDecorator{TViewModel,TPersistenceModel}.cs" />
+    <Compile Include="PresenterService{TModel,TCriteria}.cs" />
+    <Compile Include="PresenterService{TModel}.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xoqal.Core\Xoqal.Core.csproj">
+      <Project>{09fd2c42-58a9-4aed-a2e6-61c118f15334}</Project>
+      <Name>Xoqal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xoqal.Data\Xoqal.Data.csproj">
+      <Project>{ff71ea01-001d-4adc-8ed7-624bc19b1324}</Project>
+      <Name>Xoqal.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>for %25%25x in (dll pdb xml) do xcopy "$(TargetDir)*.%25%25x" "$(SolutionDir)..\Bin" /i /y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

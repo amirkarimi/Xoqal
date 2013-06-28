@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Core.Extensions.ViewModelExtensions">
+            <summary>
+            The view model extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Core.Extensions.ViewModelExtensions.RaisePropertyChanged``2(``0,System.Linq.Expressions.Expression{System.Func{``1}})">
+            <summary>
+            Raises the <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> event.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="TProperty"></typeparam>
+            <param name="notificationObject"></param>
+            <param name="expression"></param>
+        </member>
+        <member name="M:Xoqal.Core.Extensions.ViewModelExtensions.GetPropertyName``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Gets the property name which specified in the expression.
+            </summary>
+            <typeparam name="TProperty"></typeparam>
+            <param name="expression"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Core.Models.PaginatedCriteria">
+            <summary>
+            Represents the criteria used to show a paginated data.
+            </summary>
+            <remarks>
+            The <see cref="T:Xoqal.Core.Models.PaginatedCriteria"/> properties are intentionally left without property change notification.
+            </remarks>
+        </member>
+        <member name="T:Xoqal.Core.Models.NotificationObject">
+            <summary>
+            The base class that implemented the <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> interface.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Core.Models.INotificationObject">
+            <summary>
+            Represents a notification object.
+            </summary>
+            <remarks>
+            Add <code>using Xoqal.Core.Extensions</code> to support 
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Core.Models.INotificationObject.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:System.ComponentModel.INotifyPropertyChanged.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:Xoqal.Core.Models.NotificationObject.RaisePropertyChanged(System.String)">
+            <summary>
+            Raises the <see cref="E:Xoqal.Core.Models.NotificationObject.PropertyChanged"/> event.
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:Xoqal.Core.Models.NotificationObject.RaisePropertyChanged``1(System.Linq.Expressions.Expression{System.Func{``0}})">
+            <summary>
+            Raises the <see cref="E:Xoqal.Core.Models.NotificationObject.PropertyChanged"/> event.
+            </summary>
+            <typeparam name="TProperty"></typeparam>
+            <param name="expression"></param>
+        </member>
+        <member name="E:Xoqal.Core.Models.NotificationObject.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Core.Models.IPaginatedCriteria">
+            <summary>
+            Represents the criteria used to show a paginated data.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Core.Models.ICriteria">
+            <summary>
+            Represents a data presenter criteria.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginatedCriteria.Page">
+            <summary>
+            Gets or sets the page number.
+            </summary>
+            <remarks>
+            Starts from 1.
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginatedCriteria.PageSize">
+            <summary>
+            Gets or sets the page size.
+            </summary>
+            The default value is 10.
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginatedCriteria.SortDescriptions">
+            <summary>
+            Gets or sets the sort descriptions.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginatedCriteria.StartIndex">
+            <summary>
+            Gets the start index according to the current page and page size.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginatedCriteria.SortExpression">
+            <summary>
+            Gets or sets the sort expression.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Core.Models.PaginatedCriteria.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Core.Models.PaginatedCriteria"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Core.Models.PaginatedCriteria.ParseSortExpression(System.String)">
+            <summary>
+            Parses the specified sort expression.
+            </summary>
+            <param name="sortExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Core.Models.PaginatedCriteria.Page">
+            <summary>
+            Gets or sets the page number.
+            </summary>
+            <remarks>
+            Starts from 1.
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Core.Models.PaginatedCriteria.PageSize">
+            <summary>
+            Gets or sets the page size.
+            </summary>
+            <remarks>
+            The default value is 10.
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Core.Models.PaginatedCriteria.SortDescriptions">
+            <summary>
+            Gets or sets the sort descriptions.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.PaginatedCriteria.StartIndex">
+            <summary>
+            Gets the start index according to the current page and page size.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.PaginatedCriteria.SortExpression">
+            <summary>
+            Gets or sets the sort expression.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.DetailPaginatedCriteria`1.MasterCurrentItem">
+            <summary>
+            Gets or sets the master current item.
+            </summary>
+            <value> The master current item. </value>
+        </member>
+        <member name="T:Xoqal.Core.Models.ICreateTime">
+            <summary>
+            Represents and entity with a CreateTime property.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.ICreateTime.CreateTime">
+            <summary>
+            Gets or sets the create time.
+            </summary>
+            <value> The create time. </value>
+        </member>
+        <member name="P:Xoqal.Core.Models.ICreateUser.CreateUserId">
+            <summary>
+            Gets or sets the create user id.
+            </summary>
+            <value>
+            The create user id.
+            </value>
+        </member>
+        <member name="T:Xoqal.Core.Models.IGuidKey">
+            <summary>
+            Represents an entity with standard GUID key.
+            </summary>
+            <remarks>
+            Used to set the GUID key automatically.
+            </remarks>
+        </member>
+        <member name="P:Xoqal.Core.Models.IGuidKey.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value> The id. </value>
+        </member>
+        <member name="T:Xoqal.Core.Models.ILastUpdateTime">
+            <summary>
+            Represents an entity with a LastUpdateTime property.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.ILastUpdateTime.LastUpdateTime">
+            <summary>
+            Gets or sets the last update time.
+            </summary>
+            <value> The last update time. </value>
+        </member>
+        <member name="P:Xoqal.Core.Models.ILastUpdateUser.LastUpdateUserId">
+            <summary>
+            Gets or sets the last update user id.
+            </summary>
+            <value>
+            The last update user id.
+            </value>
+        </member>
+        <member name="T:Xoqal.Core.Models.IMultilanguageEntity">
+            <summary>
+            Represents an entity which supports multilanguage.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IMultilanguageEntity.LanguageId">
+            <summary>
+            Gets or sets the language.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Core.Models.IPaginated">
+            <summary>
+            Represents a paginated data containing total rows count.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginated.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginated.TotalRowsCount">
+            <summary>
+            Gets the total number of data.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Core.Models.IPaginated`1">
+            <summary>
+            Represents a paginated data containing total rows count.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.IPaginated`1.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Core.Models.Paginated`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.Int32)">
+            <summary>
+            Create a new instance of the <see cref="T:Paginated"/> class.
+            </summary>
+            <param name="data"></param>
+            <param name="totalRowsCount"></param>
+        </member>
+        <member name="P:Xoqal.Core.Models.Paginated`1.Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.Paginated`1.Xoqal#Core#Models#IPaginated#Data">
+            <summary>
+            Gets the data.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Core.Models.Paginated`1.TotalRowsCount">
+            <summary>
+            Gets the total number of data.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Core.SortDescription">
+            <summary>
+            Represents a sort description.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Core.SortDescription.#ctor(System.String,Xoqal.Core.SortDirection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Core.SortDescription"/> class.
+            </summary>
+            <param name="propertyName"> Name of the property. </param>
+            <param name="direction"> The direction. </param>
+        </member>
+        <member name="M:Xoqal.Core.SortDescription.Parse(System.String)">
+            <summary>
+            Parses the specified sort expression.
+            </summary>
+            <param name="sortExpression"> The sort expression. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Core.SortDescription.TryParse(System.String,Xoqal.Core.SortDescription@)">
+            <summary>
+            Tries the parse.
+            </summary>
+            <param name="sortExpression"> The sort expression. </param>
+            <param name="sortDescription"> The sort description. </param>
+            <returns> </returns>
+        </member>
+        <member name="P:Xoqal.Core.SortDescription.Direction">
+            <summary>
+            Gets or sets the direction.
+            </summary>
+            <value> The direction. </value>
+        </member>
+        <member name="P:Xoqal.Core.SortDescription.PropertyName">
+            <summary>
+            Gets or sets the name of the property.
+            </summary>
+            <value> The name of the property. </value>
+        </member>
+        <member name="T:Xoqal.Core.SortDirection">
+            <summary>
+            Specifies the direction of a sort operation.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Core.SortDirection.Ascending">
+            <summary>
+            Ascending 
+            </summary>
+        </member>
+        <member name="F:Xoqal.Core.SortDirection.Descending">
+            <summary>
+            Descending
+            </summary>
+        </member>
+    </members>
+</doc>

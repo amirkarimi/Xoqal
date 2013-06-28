@@ -1,0 +1,36 @@
+﻿<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+namespace <#=this.options.DataNamespace#>
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
+    using System.Linq;
+    using System.Text;
+
+    /// <summary>
+    /// Represents the <#=this.options.ProjectName#> context.
+    /// </summary>
+    public class <#=this.options.ProjectName#>Context : Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext
+    {
+        public DbSet<Entities.User> Users { get; set; }
+
+        public DbSet<Entities.Role> Roles { get; set; }
+
+        public DbSet<Entities.RolesInPermission> RolesInPermissions { get; set; }
+
+<#foreach (var entityInfo in this.options.EntityInfoes) {#>
+        public DbSet<Entities.<#=entityInfo.EntityName#>> <#=this.codeConventionService.Pluralize(entityInfo.EntityName)#> { get; set; }
+
+<#} #>
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            base.OnModelCreating(modelBuilder);
+        }
+    }
+}

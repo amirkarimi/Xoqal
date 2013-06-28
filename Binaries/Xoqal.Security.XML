@@ -1,0 +1,893 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Security</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Security.Authentication">
+            <summary>
+            Authentication manager.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.IAuthentication">
+            <summary>
+            Represents an authentication manager.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.ValidateUser(System.String,System.String)">
+            <summary>
+            Validates the user.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.Authenticate(System.String,System.String,System.Boolean)">
+            <summary>
+            Authenticates the specified user.
+            </summary>
+            <param name="name"> Name of the user. </param>
+            <param name="password"> The password. </param>
+            <param name="remember"> The value indicating whether remember the credential or not. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.Authenticate(System.String,System.Boolean)">
+            <summary>
+            Authenticates the specified user.
+            </summary>
+            <param name="name"> Name of the user. </param>
+            <param name="remember"> The value indicating whether remember the credential or not. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.AuthenticateByNameOrEmail(System.String,System.String,System.Boolean)">
+            <summary>
+            Authenticates the specified user with its username or password.
+            </summary>
+            <param name="usernameOrEmail"> Name of the user. </param>
+            <param name="password"> The password. </param>
+            <param name="remember">The remember. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.Logout">
+            <summary>
+            Signs out the current user principal.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.GetCurrentUserPrincipal(System.Boolean)">
+            <summary>
+            Gets the current user principal.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.IsUserInPermission(Xoqal.Security.PermissionItem[])">
+            <summary>
+            Determines whether the current user principal has the specified permissions.
+            </summary>
+            <param name="permissionItems">The permission items.</param>
+            <returns>
+            <c>true</c> if the current user principal has the specified permissions; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.IsUserInPermission(System.String[])">
+            <summary>
+            Determines whether the current user principal has the specified permissions.
+            </summary>
+            <param name="permissions">The permissions.</param>
+            <returns>
+            <c>true</c> if the current user principal has the specified permissions; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthentication.IsUserInRole(System.String[])">
+            <summary>
+            Determines whether the current user principal has the specified roles.
+            </summary>
+            <param name="roles">The roles.</param>
+            <returns>
+            <c>true</c> if the current user principal has the specified roles; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Xoqal.Security.IAuthentication.DataProvider">
+            <summary>
+            Gets or sets the data provider.
+            </summary>
+            <value>
+            The data provider.
+            </value>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.ValidateUser(System.String,System.String)">
+            <summary>
+            Validates the user.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.Authenticate(System.String,System.String,System.Boolean)">
+            <summary>
+            Authenticates the specified user.
+            </summary>
+            <param name="name"> Name of the user. </param>
+            <param name="password"> The password. </param>
+            <param name="remember"> The value indicating whether remember the credential or not. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.Authenticate(System.String,System.Boolean)">
+            <summary>
+            Authenticates the specified user.
+            </summary>
+            <param name="name"> Name of the user. </param>
+            <param name="remember"> The value indicating whether remember the credential or not. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.AuthenticateByNameOrEmail(System.String,System.String,System.Boolean)">
+            <summary>
+            Authenticates the specified user with its username or password.
+            </summary>
+            <param name="usernameOrEmail"> Name of the user. </param>
+            <param name="password"> The password. </param>
+            <param name="remember">The remember. </param>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.Logout">
+            <summary>
+            Signs out the current user.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.GetCurrentUserPrincipal(System.Boolean)">
+            <summary>
+            Gets the current user.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.IsUserInPermission(Xoqal.Security.PermissionItem[])">
+            <summary>
+            Determines whether the current user principal has the specified permissions.
+            </summary>
+            <param name="permissionItems">The permission items.</param>
+            <returns>
+            <c>true</c> if the current user principal has the specified permissions; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.IsUserInPermission(System.String[])">
+            <summary>
+            Determines whether the current user principal has the specified permissions.
+            </summary>
+            <param name="permissions">The permissions.</param>
+            <returns>
+            <c>true</c> if the current user principal has the specified permissions; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.IsUserInRole(System.String[])">
+            <summary>
+            Determines whether the current user principal has the specified roles.
+            </summary>
+            <param name="roles">The roles.</param>
+            <returns>
+            <c>true</c> if the current user principal has the specified roles; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.GetCurrentUser(Xoqal.Security.IUserPrincipal@,Xoqal.Security.IUser@,System.Boolean)">
+            <summary>
+            Gets the current user.
+            </summary>
+            <param name="userPrincipal"></param>
+            <param name="userEntity"></param>
+            <param name="updateLastActivityTime"></param>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.GetCurrentPrincipal">
+            <summary>
+            Gets the current principal.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.CreateUserPrincipal(Xoqal.Security.IUser)">
+            <summary>
+            Creates an <see cref="T:Xoqal.Security.IUserPrincipal"/> from the specified user.
+            </summary>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.SetCurrentUser(Xoqal.Security.IUser,System.Boolean)">
+            <summary>
+            Sets the current user.
+            </summary>
+            <param name="user"> The user. </param>
+            <param name="remember">The remember. </param>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.SetCurrentPrincipal(System.Security.Principal.IPrincipal,System.Boolean)">
+            <summary>
+            Sets the current principal.
+            </summary>
+            <param name="principal"> The principal. </param>
+            <param name="remember"> if set to <c>true</c> remember the authentication. </param>
+        </member>
+        <member name="M:Xoqal.Security.Authentication.ValidateDataProvider">
+            <summary>
+            Validates the data provider.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.Authentication.Default">
+            <summary>
+            Gets the default instance.
+            </summary>
+            <value>
+            The default.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.Authentication.DataProvider">
+            <summary>
+            Gets or sets the authentication data provider.
+            </summary>
+            <value>
+            The authentication data provider.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IAuthenticationDataProvider">
+            <summary>
+            Represents the data provider of the <see cref="T:Xoqal.Security.Authentication"/> class.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IAuthenticationDataProvider.GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthenticationDataProvider.GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthenticationDataProvider.GetUserByNameOrEmail(System.String,System.String)">
+            <summary>
+            Gets the user by name or email.
+            </summary>
+            <param name="nameOrEmail">The name or email.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IAuthenticationDataProvider.UpdateUserLastActivityTime(System.String)">
+            <summary>
+            Updates the user last activity time.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Xoqal.Security.IAuthenticationDataProvider.UpdateUserLastLoginTime(System.String)">
+            <summary>
+            Updates the user.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="T:Xoqal.Security.IRole">
+            <summary>
+            Represents a role.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.IRole.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IRole.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IRole.IsBuiltin">
+            <summary>
+            Gets or sets a value indicating whether this instance is built-in.
+            </summary>
+            <value>
+            <c>true</c> if this instance is built-in; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IRole.RolesInPermissions">
+            <summary>
+            Gets the roles in permissions.
+            </summary>
+            <value>
+            The roles in permissions.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IRole.Users">
+            <summary>
+            Gets the users.
+            </summary>
+            <value>
+            The users.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IRoleRepository`1">
+            <summary>
+            Represents the role repository.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Xoqal.Security.IRoleRepository">
+            <summary>
+            Represents the role repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IRoleRepository.CheckRoleNameDuplicate(System.String,System.Nullable{System.Guid})">
+            <summary>
+            Determines whether is the specified role name duplicated.
+            </summary>
+            <param name="roleName">Name of the role.</param>
+            <param name="excludedRoleId">The excluded role id.</param>
+            <returns>
+            <c>true</c> if the specified role name is duplicated; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Xoqal.Security.IRolesInPermission">
+            <summary>
+            Represents a conceptual relation between roles and permissions.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.IRolesInPermission.RoleId">
+            <summary>
+            Gets or sets the role id.
+            </summary>
+            <value>
+            The role id.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IRolesInPermission.PermissionId">
+            <summary>
+            Gets or sets the permission id.
+            </summary>
+            <value>
+            The permission id.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IRolesInPermission.Role">
+            <summary>
+            Gets or sets the role.
+            </summary>
+            <value>
+            The role.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IRolesInPermissionRepository`1">
+            <summary>
+            Represents the association of the roles and permissions repository.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.IRolesInPermissionRepository">
+            <summary>
+            Represents the association of the roles and permissions repository.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.IUser.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.UserName">
+            <summary>
+            Gets or sets the name of the user.
+            </summary>
+            <value>
+            The name of the user.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.Password">
+            <summary>
+            Gets or sets the hashed password.
+            </summary>
+            <value>
+            The hashed password.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.IsActive">
+            <summary>
+            Gets or sets a value indicating whether this instance is active.
+            </summary>
+            <value>
+            <c>true</c> if this instance is active; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.CreateTime">
+            <summary>
+            Gets or sets the create time.
+            </summary>
+            <value>
+            The create time.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.LastActivityTime">
+            <summary>
+            Gets or sets the last activity time.
+            </summary>
+            <value>
+            The last activity time.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.LastLoginTime">
+            <summary>
+            Gets or sets the last login time.
+            </summary>
+            <value>
+            The last login time.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.LastUpdateTime">
+            <summary>
+            Gets or sets the last update time.
+            </summary>
+            <value>
+            The last update time.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUser.Roles">
+            <summary>
+            Gets the roles.
+            </summary>
+            <value>
+            The roles.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IUserIdentity">
+            <summary>
+            Defines the basic functionality of an user identity object.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.IUserIdentity.Id">
+            <summary>
+            Gets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IUserPrincipal">
+            <summary>
+            Defines a user principal.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IUserPrincipal.IsInPermission(Xoqal.Security.PermissionItem)">
+            <summary>
+            Determines whether the current principal belongs to the specified permission.
+            </summary>
+            <param name="permission">The permission.</param>
+            <returns>
+            <c>true</c> if the current principal belongs to the specified permission; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserPrincipal.IsInPermission(System.String)">
+            <summary>
+            Determines whether the current principal belongs to the specified permission.
+            </summary>
+            <param name="permission">The permission.</param>
+            <returns>
+            <c>true</c> if the current principal belongs to the specified permission; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="P:Xoqal.Security.IUserPrincipal.Identity">
+            <summary>
+            Gets the identity.
+            </summary>
+            <value>
+            The identity.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUserPrincipal.HasAnyRole">
+            <summary>
+            Gets a value indicating whether this instance has any role.
+            </summary>
+            <value>
+            <c>true</c> if this instance has any role; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.IUserPrincipal.HasAnyPermission">
+            <summary>
+            Gets a value indicating whether this instance has any permission.
+            </summary>
+            <value>
+            <c>true</c> if this instance has any permission; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IUserRepository">
+            <summary>
+            Represents the user repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository.GetUser(System.Guid)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository.GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository.GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository.UserNameExists(System.String,System.Nullable{System.Guid})">
+            <summary>
+            Determines whether the specified user name exists.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="excludedUserId">The excluded user ID.</param>
+            <returns>
+            <c>true</c> if the user name exists, otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Xoqal.Security.IUserRepository`1">
+            <summary>
+            Represents the user repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository`1.GetCurrentUser">
+            <summary>
+            Gets the current user.
+            </summary>
+            <returns>The current user if there was any logged in, otherwise null.</returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository`1.GetUser(System.Guid)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository`1.GetUser(System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Security.IUserRepository`1.GetUser(System.String,System.String)">
+            <summary>
+            Gets the user.
+            </summary>
+            <param name="userName">Name of the user.</param>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Security.PasswordHasherFactory">
+            <summary>
+            Factory of password hasher.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.PasswordHasherFactory.Default">
+            <summary>
+            Gets the default.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.PermissionContainer">
+            <summary>
+            Represents search and load functionality to find all permission which defined in the driven projects.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.PermissionContainer.LoadPermissions">
+            <summary>
+            Loads the permissions.
+            </summary>
+        </member>
+        <member name="P:Xoqal.Security.PermissionContainer.Permissions">
+            <summary>
+            Gets the permissions.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.PermissionItem">
+            <summary>
+            Represents a permission entity.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.PermissionItem.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.PermissionItem"/> class.
+            </summary>
+            <param name="permissionId"> The permission id. </param>
+            <param name="description"> The description. </param>
+        </member>
+        <member name="M:Xoqal.Security.PermissionItem.#ctor(System.String,System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.PermissionItem"/> class.
+            </summary>
+            <param name="permissoinId">The permission id. </param>
+            <param name="resourceType">The resource type. </param>
+            <param name="resourceName">The resource name. </param>
+        </member>
+        <member name="P:Xoqal.Security.PermissionItem.PermissionId">
+            <summary>
+            Gets or sets the permission id.
+            </summary>
+            <value> The permission id. </value>
+        </member>
+        <member name="P:Xoqal.Security.PermissionItem.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value> The description. </value>
+        </member>
+        <member name="T:Xoqal.Security.UserIdentity">
+            <summary>
+            Represents the user identity.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.UserIdentity.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserIdentity"/> class.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:Xoqal.Security.UserIdentity.#ctor(System.Guid,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserIdentity"/> class.
+            </summary>
+            <param name="id">The id.</param>
+            <param name="name">The name.</param>
+            <param name="authenticationType">Type of the authentication.</param>
+        </member>
+        <member name="P:Xoqal.Security.UserIdentity.Id">
+            <summary>
+            Gets the id.
+            </summary>
+            <value>
+            The id.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.UserIdentity.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>
+            The name.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.UserIdentity.AuthenticationType">
+            <summary>
+            Gets the type of the authentication.
+            </summary>
+            <value>
+            The type of the authentication.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.UserIdentity.IsAuthenticated">
+            <summary>
+            Gets a value indicating whether this instance is authenticated.
+            </summary>
+            <value>
+            <c>true</c> if this instance is authenticated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.UserPrincipal">
+            <summary>
+            Represents a user principal.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.UserPrincipal.#ctor(Xoqal.Security.IUserIdentity,System.String[],System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserPrincipal"/> class.
+            </summary>
+            <param name="identity">The user.</param>
+            <param name="roles">The roles.</param>
+            <param name="permissions">The permissions.</param>
+        </member>
+        <member name="M:Xoqal.Security.UserPrincipal.IsInRole(System.String)">
+            <summary>
+            Determines whether the current principal belongs to the specified role.
+            </summary>
+            <param name="role"> The name of the role for which to check membership. </param>
+            <returns> true if the current principal is a member of the specified role; otherwise, false. </returns>
+        </member>
+        <member name="M:Xoqal.Security.UserPrincipal.IsInPermission(Xoqal.Security.PermissionItem)">
+            <summary>
+            Determines whether the current principal belongs to the specified permission.
+            </summary>
+            <param name="permission">The permission.</param>
+            <returns>
+            true if the current principal is a member of the specified permission; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.UserPrincipal.IsInPermission(System.String)">
+            <summary>
+            Determines whether the current principal belongs to the specified permission.
+            </summary>
+            <param name="permission">The permission.</param>
+            <returns>
+            true if the current principal is a member of the specified permission; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:Xoqal.Security.UserPrincipal.Identity">
+            <summary>
+            Gets the identity of the current principal.
+            </summary>
+            <returns> The <see cref="T:System.Security.Principal.IIdentity" /> object associated with the current principal. </returns>
+        </member>
+        <member name="P:Xoqal.Security.UserPrincipal.System#Security#Principal#IPrincipal#Identity">
+            <summary>
+            Gets the identity.
+            </summary>
+            <value>
+            The identity.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.UserPrincipal.HasAnyRole">
+            <summary>
+            Gets a value indicating whether this instance has any role.
+            </summary>
+            <value>
+            <c>true</c> if this instance has any role; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Xoqal.Security.UserPrincipal.HasAnyPermission">
+            <summary>
+            Gets a value indicating whether this instance has any permission.
+            </summary>
+            <value>
+            <c>true</c> if this instance has any permission; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Xoqal.Security.IPasswordHasher">
+            <summary>
+            Represents a hasher to hash passwords.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.IPasswordHasher.Hash(System.String)">
+            <summary>
+            Hashes the specified password.
+            </summary>
+            <param name="password">The password.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Security.MD5PasswordHasher">
+            <summary>
+            Represents MD5 algorithm for hashing the passwords.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.MD5PasswordHasher.Hash(System.String)">
+            <summary>
+            Hashes the specified password.
+            </summary>
+            <param name="password"> The password. </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Security.SecurityRegulatorAttribute">
+            <summary>
+            Indicates that an assembly is a security regulator.
+            </summary>
+            <remarks>
+            Security regulator can define the permissions for example.
+            </remarks>
+        </member>
+        <member name="M:Xoqal.Security.SecurityRegulatorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.SecurityRegulatorAttribute"/> class.
+            </summary>
+            <param name="permissionContainerType"> The permission container. </param>
+        </member>
+        <member name="P:Xoqal.Security.SecurityRegulatorAttribute.PermissionContainerType">
+            <summary>
+            Gets the type of the permission container.
+            </summary>
+            <value> The type of the permission container. </value>
+        </member>
+        <member name="T:Xoqal.Security.UserExtensions">
+            <summary>
+            <see cref="T:Xoqal.Security.IUser"/> extensions.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.UserExtensions.IsInRole(Xoqal.Security.IUser,System.String[])">
+            <summary>
+            Determines whether the user has the specified roles.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="roles">The roles.</param>
+            <returns>
+            <c>true</c> if the user has the specified roles; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.UserExtensions.IsInPermission(Xoqal.Security.IUser,Xoqal.Security.PermissionItem[])">
+            <summary>
+            Determines whether the user has the specified permissions.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="permissionItems">The permission items.</param>
+            <returns>
+              <c>true</c> if the user has the specified permissions; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.UserExtensions.IsInPermission(Xoqal.Security.IUser,System.String[])">
+            <summary>
+            Determines whether the user has the specified permissions.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="permissions">The permissions.</param>
+            <returns>
+            <c>true</c> if the user has the specified permissions; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Xoqal.Security.UserExtensions.SetHashedPassword(Xoqal.Security.IUser,System.String)">
+            <summary>
+            Hashes and sets the specified password for the user.
+            </summary>
+            <param name="user">The user.</param>
+            <param name="password">The password.</param>
+        </member>
+        <member name="T:Xoqal.Security.UserValidationError">
+            <summary>
+            User validation error.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Security.UserValidationError.InvalidUserName">
+            <summary>
+            The user name is invalid.
+            </summary>
+        </member>
+        <member name="F:Xoqal.Security.UserValidationError.DuplicatedUserName">
+            <summary>
+            The user name is duplicated.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Security.UserValidationException">
+            <summary>
+            The exception that is thrown for invalid user insert or update.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Security.UserValidationException.#ctor(Xoqal.Security.UserValidationError)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserValidationException"/> class.
+            </summary>
+            <param name="userValidationError">The user validation error.</param>
+        </member>
+        <member name="M:Xoqal.Security.UserValidationException.#ctor(Xoqal.Security.UserValidationError,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserValidationException"/> class.
+            </summary>
+            <param name="userValidationError">The user validation error.</param>
+            <param name="message">The message.</param>
+        </member>
+        <member name="M:Xoqal.Security.UserValidationException.#ctor(Xoqal.Security.UserValidationError,System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserValidationException"/> class.
+            </summary>
+            <param name="userValidationError">The user validation error.</param>
+            <param name="message">The message.</param>
+            <param name="inner">The inner.</param>
+        </member>
+        <member name="M:Xoqal.Security.UserValidationException.#ctor(Xoqal.Security.UserValidationError,System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Security.UserValidationException"/> class.
+            </summary>
+            <param name="userValidationError">The user validation error.</param>
+            <param name="info">The info.</param>
+            <param name="context">The context.</param>
+        </member>
+        <member name="P:Xoqal.Security.UserValidationException.UserValidationError">
+            <summary>
+            Gets or sets the user validation error.
+            </summary>
+            <value>
+            The user validation error.
+            </value>
+        </member>
+    </members>
+</doc>

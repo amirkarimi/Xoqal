@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Xoqal.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Xoqal.Services.CrudServiceModelDecorator`3">
+            <summary>
+            Represents a model decorator for a <see cref="T:Xoqal.Services.CrudService`2"/> class.
+            </summary>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <typeparam name="TPersistenceModel">The type of the persistence model.</typeparam>
+            <typeparam name="TCriteria">The type of the criteria.</typeparam>
+        </member>
+        <member name="T:Xoqal.Services.ICrudService`2">
+            <summary>
+            Represents a CRUD service.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Services.IPresenterService`2">
+            <summary>
+            Represents a service with sort and pagination support.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Services.IPaginatedService`2">
+            <summary>
+            Represents a paginated data service.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+            <typeparam name="TCriteria">The type of the criteria.</typeparam>
+        </member>
+        <member name="T:Xoqal.Services.IService">
+            <summary>
+            Represents a local service.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Services.IPaginatedService`2.GetItems(`1)">
+            <summary>
+            Gets an <see cref="T:Xoqal.Core.Models.IPaginated"/> instance according to the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Services.IDetailsService`1">
+            <summary>
+            Represents a service which retrieves details of a single data item.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Services.IDetailsService`1.GetItemByKey(System.Object[])">
+            <summary>
+            Gets an item by its key(s).
+            </summary>
+            <param name="keys"> The key(s). </param>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Services.ICudService`1">
+            <summary>
+            Represents a CUD service.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="T:Xoqal.Services.ICreateService`1">
+            <summary>
+            Represents a create service.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="M:Xoqal.Services.ICreateService`1.Add(`0)">
+            <summary>
+            Adds the specified model.
+            </summary>
+            <param name="model"> The model. </param>
+        </member>
+        <member name="T:Xoqal.Services.IUpdateService`1">
+            <summary>
+            Represents an update service.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Services.IUpdateService`1.Update(`0)">
+            <summary>
+            Updates the specified model.
+            </summary>
+            <param name="model"> The model. </param>
+        </member>
+        <member name="T:Xoqal.Services.IDeleteService`1">
+            <summary>
+            Represents a delete service.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="M:Xoqal.Services.IDeleteService`1.Remove(`0)">
+            <summary>
+            Removes the specified model.
+            </summary>
+            <param name="model"> The model. </param>
+        </member>
+        <member name="M:Xoqal.Services.IDeleteService`1.Remove(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Removes all the specified models.
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="T:Xoqal.Services.IReloadService`1">
+            <summary>
+            Represents a service which reloads data items.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Services.IReloadService`1.Reload(`0)">
+            <summary>
+            Reloads the specified model.
+            </summary>
+            <param name="model"> The model. </param>
+        </member>
+        <member name="T:Xoqal.Services.IReadService`1">
+            <summary>
+            Represents a service which retrieves all items or count of them.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Services.IReadService`1.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="M:Xoqal.Services.IReadService`1.GetItemCount">
+            <summary>
+            Gets the total number of items.
+            </summary>
+            <returns> </returns>
+        </member>
+        <member name="T:Xoqal.Services.ITwoWayMapper`2">
+            <summary>
+            Represents a two-way object mapper between two specific types.
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+        </member>
+        <member name="T:Xoqal.Services.IMapper`2">
+            <summary>
+            Represents a one-way object mapper between two specific types.
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+        </member>
+        <member name="M:Xoqal.Services.IMapper`2.Map(`0,`1)">
+            <summary>
+            Maps the specified source object to the destination type.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination which will be instantiate if it is null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.ITwoWayMapper`2.Map(`1,`0)">
+            <summary>
+            Maps the specified source object to the destination type.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination which will be instantiate if it is null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.#ctor(Xoqal.Services.ICrudService{`1,`2})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.CrudServiceModelDecorator`3"/> class.
+            </summary>
+            <param name="persistenceService">The persistence service.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.GetItemByKey(System.Object[])">
+            <summary>
+            Gets the item by key.
+            </summary>
+            <param name="keys">The keys.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Add(`0)">
+            <summary>
+            Adds the specified model.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Update(`0)">
+            <summary>
+            Updates the specified model.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Remove(`0)">
+            <summary>
+            Removes the specified model.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Remove(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Removes the specified models.
+            </summary>
+            <param name="models">The models.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Reload(`0)">
+            <summary>
+            Reloads the specified model.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.GetItemCount">
+            <summary>
+            Gets the item count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.GetItems(`2)">
+            <summary>
+            Gets an <see cref="T:Xoqal.Core.Models.IPaginated"/> instance according to the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Map(`0,`1)">
+            <summary>
+            Maps the specified source object to the destination type.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination which will be instantiate if it is null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.Map(`1,`0)">
+            <summary>
+            Maps the specified source object to the destination type.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination which will be instantiate if it is null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.SafeMap(`0,`1)">
+            <summary>
+            Maps the specified source object to the destination type. If the source type was 
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`3.SafeMap(`1,`0)">
+            <summary>
+            Maps the specified source object to the destination type.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination which will be instantiate if it is null.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Services.CrudServiceModelDecorator`2">
+            <summary>
+            Represents a model decorator for a <see cref="T:Xoqal.Services.CrudService`1"/> class.
+            </summary>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <typeparam name="TPersistenceModel">The type of the persistence model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Services.CrudServiceModelDecorator`2.#ctor(Xoqal.Services.ICrudService{`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.CrudServiceModelDecorator`2"/> class.
+            </summary>
+            <param name="persistenceService">The persistence service.</param>
+        </member>
+        <member name="T:Xoqal.Services.CrudService`2">
+            <summary>
+            Represents the base functionality of a CRUD service.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TCriteria"></typeparam>
+        </member>
+        <member name="T:Xoqal.Services.PresenterService`2">
+            <summary>
+            Represents the base functionality of a service with sort and pagination support.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TCriteria"></typeparam>
+        </member>
+        <member name="M:Xoqal.Services.PresenterService`2.#ctor(Xoqal.Data.IRepository{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.PresenterService`2"/> class.
+            </summary>
+            <param name="repository">The repository.</param>
+        </member>
+        <member name="M:Xoqal.Services.PresenterService`2.GetItems(`1)">
+            <summary>
+            Gets an <see cref="T:Xoqal.Core.Models.IPaginated"/> instance according to the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.PresenterService`2.GetItemByKey(System.Object[])">
+            <summary>
+            Gets an item by its key(s).
+            </summary>
+            <param name="keys"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Services.PresenterService`2.Repository">
+            <summary>
+            Gets the default repository.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.#ctor(Xoqal.Data.IUnitOfWork,Xoqal.Data.IRepository{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.CrudService`2"/> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+            <param name="repository">The repository.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.Add(`0)">
+            <summary>
+            Adds the specified model. 
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.Update(`0)">
+            <summary>
+            Updates the specified model.
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.Remove(`0)">
+            <summary>
+            Deletes the specified model.
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.Remove(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Deletes all the specified models.
+            </summary>
+            <param name="models"></param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.Reload(`0)">
+            <summary>
+            Reloads the specified model.
+            </summary>
+            <param name="model"></param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.GetAllItems">
+            <summary>
+            Gets all items.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`2.GetItemCount">
+            <summary>
+            Gets the item count.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Xoqal.Services.CrudService`2.UnitOfWork">
+            <summary>
+            Gets the unit of work.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Services.CrudService`1">
+            <summary>
+            Represents the base functionality of a CRUD service.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="T:Xoqal.Services.ICrudService`1">
+            <summary>
+            Represents a CRUD service.
+            </summary>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`1.#ctor(Xoqal.Data.IUnitOfWork,Xoqal.Data.IRepository{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.CrudService`1"/> class.
+            </summary>
+            <param name="unitOfWork">The unit of work.</param>
+            <param name="repository">The repository.</param>
+        </member>
+        <member name="M:Xoqal.Services.CrudService`1.GetItems(Xoqal.Core.Models.PaginatedCriteria)">
+            <summary>
+            Gets an <see cref="T:Xoqal.Core.Models.IPaginated"/> instance according to the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Services.IPaginatedService`1">
+            <summary>
+            Represents a paginated data service.
+            </summary>
+            <typeparam name="TModel">The type of the model.</typeparam>
+        </member>
+        <member name="T:Xoqal.Services.IPresenterService`1">
+            <summary>
+            Represents a service with sort and pagination support.
+            </summary>
+        </member>
+        <member name="T:Xoqal.Services.PresenterServiceModelDecorator`3">
+            <summary>
+            Represents a model decorator for a <see cref="T:Xoqal.Services.PresenterService`2"/> class.
+            </summary>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <typeparam name="TPersistenceModel">The type of the persistence model.</typeparam>
+            <typeparam name="TCriteria">The type of the criteria.</typeparam>
+        </member>
+        <member name="M:Xoqal.Services.PresenterServiceModelDecorator`3.#ctor(Xoqal.Services.IPresenterService{`1,`2})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.PresenterServiceModelDecorator`3"/> class.
+            </summary>
+            <param name="persistencePresenterService">The persistence presenter service.</param>
+        </member>
+        <member name="M:Xoqal.Services.PresenterServiceModelDecorator`3.GetItems(`2)">
+            <summary>
+            Gets an <see cref="T:Xoqal.Core.Models.IPaginated"/> instance according to the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.PresenterServiceModelDecorator`3.Map(`1,`0)">
+            <summary>
+            Maps the specified source.
+            </summary>
+            <param name="source">The source.</param>
+            <param name="destination">The destination.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Xoqal.Services.PresenterServiceModelDecorator`3.GetItemByKey(System.Object[])">
+            <summary>
+            Gets the item by key.
+            </summary>
+            <param name="keys">The keys.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Xoqal.Services.PresenterServiceModelDecorator`2">
+            <summary>
+            Represents a model decorator for a <see cref="T:Xoqal.Services.PresenterService`1"/> class.
+            </summary>
+            <typeparam name="TViewModel">The type of the view model.</typeparam>
+            <typeparam name="TPersistenceModel">The type of the persistence model.</typeparam>
+        </member>
+        <member name="M:Xoqal.Services.PresenterServiceModelDecorator`2.#ctor(Xoqal.Services.IPresenterService{`1})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.PresenterServiceModelDecorator`2"/> class.
+            </summary>
+            <param name="persistencePresenterService">The persistence presenter service.</param>
+        </member>
+        <member name="T:Xoqal.Services.PresenterService`1">
+            <summary>
+            Represents the base functionality of a service with sort and pagination support.
+            </summary>
+            <typeparam name="TModel"></typeparam>
+        </member>
+        <member name="M:Xoqal.Services.PresenterService`1.#ctor(Xoqal.Data.IRepository{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Xoqal.Services.PresenterService`1"/> class.
+            </summary>
+            <param name="repository">The repository.</param>
+        </member>
+        <member name="M:Xoqal.Services.PresenterService`1.GetItems(Xoqal.Core.Models.PaginatedCriteria)">
+            <summary>
+            Gets an <see cref="T:Xoqal.Core.Models.IPaginated"/> instance according to the specified criteria.
+            </summary>
+            <param name="criteria"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
