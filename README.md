@@ -1,5 +1,5 @@
-Project Description
-=====
+## Project Description ##
+
 Xoqal is a modern application framework targeting .NET 4+ platform. It supports web and win application with the same infrastructure.
 
 Our first target is producing good software using good design patterns.
