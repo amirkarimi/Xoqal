@@ -72,7 +72,7 @@ namespace Xoqal.Web.Mvc.Controllers
         /// <summary>
         /// GET: /[Controller]/Details/5
         /// </summary>
-        /// <param name="id">The id.</param>
+        /// <param name="id">The ID.</param>
         /// <returns></returns>
         public virtual ActionResult Details(TKey id)
         {

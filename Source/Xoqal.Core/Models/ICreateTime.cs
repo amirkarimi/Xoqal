@@ -21,7 +21,7 @@ namespace Xoqal.Core.Models
     using System;
 
     /// <summary>
-    /// Represents and entity with a CreateTime property.
+    /// Represents the creation time of an entity.
     /// </summary>
     public interface ICreateTime
     {

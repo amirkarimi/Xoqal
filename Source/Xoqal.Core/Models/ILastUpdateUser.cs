@@ -23,13 +23,16 @@ namespace Xoqal.Core.Models
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// Represents the last updater user of an entity.
+    /// </summary>
     public interface ILastUpdateUser
     {
         /// <summary>
-        /// Gets or sets the last update user id.
+        /// Gets or sets the last update user ID.
         /// </summary>
         /// <value>
-        /// The last update user id.
+        /// The last update user ID.
         /// </value>
         Guid? LastUpdateUserId { get; set; }
     }

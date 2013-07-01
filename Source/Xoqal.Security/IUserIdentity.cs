@@ -30,10 +30,10 @@ namespace Xoqal.Security
     public interface IUserIdentity : IIdentity
     {
         /// <summary>
-        /// Gets the id.
+        /// Gets the ID.
         /// </summary>
         /// <value>
-        /// The id.
+        /// The ID.
         /// </value>
         Guid Id { get; }
     }

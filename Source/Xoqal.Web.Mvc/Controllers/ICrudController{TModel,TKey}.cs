@@ -48,21 +48,21 @@ namespace Xoqal.Web.Mvc.Controllers
         /// <summary>
         /// GET: /[Controller]/Remove/5
         /// </summary>
-        /// <param name="id"> The id. </param>
+        /// <param name="id">The ID.</param>
         /// <returns> </returns>
         ActionResult Delete(TKey id);
 
         /// <summary>
         /// GET: /[Controller]/Edit/5
         /// </summary>
-        /// <param name="id"> The id. </param>
+        /// <param name="id">The ID.</param>
         /// <returns> </returns>
         ActionResult Edit(TKey id);
 
         /// <summary>
         /// POST: /[Controller]/Edit/5
         /// </summary>
-        /// <param name="id"> The id. </param>
+        /// <param name="id">The ID.</param>
         /// <param name="model"> The model.</param>
         /// <returns> </returns>
         ActionResult Edit(TKey id, TModel model);

@@ -31,7 +31,7 @@ namespace Xoqal.Security
         /// <summary>
         /// Initializes a new instance of the <see cref="UserIdentity" /> class.
         /// </summary>
-        /// <param name="id">The id.</param>
+        /// <param name="id">The ID.</param>
         /// <param name="name">The name.</param>
         public UserIdentity(Guid id, string name)
         {
@@ -42,7 +42,7 @@ namespace Xoqal.Security
         /// <summary>
         /// Initializes a new instance of the <see cref="UserIdentity" /> class.
         /// </summary>
-        /// <param name="id">The id.</param>
+        /// <param name="id">The ID.</param>
         /// <param name="name">The name.</param>
         /// <param name="authenticationType">Type of the authentication.</param>
         public UserIdentity(Guid id, string name, string authenticationType)
@@ -52,10 +52,10 @@ namespace Xoqal.Security
         }
 
         /// <summary>
-        /// Gets the id.
+        /// Gets the ID.
         /// </summary>
         /// <value>
-        /// The id.
+        /// The ID.
         /// </value>
         public Guid Id { get; private set; }
 

@@ -33,7 +33,7 @@ namespace Xoqal.Utilities
         private static string fingerPrint = string.Empty;
 
         /// <summary>
-        /// Gets the machine id.
+        /// Gets the machine ID.
         /// </summary>
         /// <param name="components">The components.</param>
         /// <returns></returns>
@@ -237,7 +237,7 @@ namespace Xoqal.Utilities
         }
 
         /// <summary>
-        /// Gets the bios id.
+        /// Gets the bios ID.
         /// </summary>
         /// <returns> </returns>
         private static string GetBiosId()
@@ -248,7 +248,7 @@ namespace Xoqal.Utilities
         }
 
         /// <summary>
-        /// Gets the disk id.
+        /// Gets the disk ID.
         /// </summary>
         /// <returns> </returns>
         private static string GetDiskId()
@@ -264,7 +264,7 @@ namespace Xoqal.Utilities
         }
 
         /// <summary>
-        /// Gets the video id.
+        /// Gets the video ID.
         /// </summary>
         /// <returns> </returns>
         private static string GetVideoId()
@@ -273,7 +273,7 @@ namespace Xoqal.Utilities
         }
 
         /// <summary>
-        /// Macs the id.
+        /// Macs the ID.
         /// </summary>
         /// <returns> </returns>
         private static string GetMacId()

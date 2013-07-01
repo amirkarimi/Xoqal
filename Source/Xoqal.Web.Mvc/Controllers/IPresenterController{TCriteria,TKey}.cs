@@ -31,7 +31,7 @@ namespace Xoqal.Web.Mvc.Controllers
         /// <summary>
         /// GET: /[Controller]/Details/1
         /// </summary>
-        /// <param name="id"> The id. </param>
+        /// <param name="id">The ID.</param>
         /// <returns> </returns>
         ActionResult Details(TKey id);
 
