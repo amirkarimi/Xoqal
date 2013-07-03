@@ -21,7 +21,7 @@ namespace Xoqal.Core.Models
     using System;
 
     /// <summary>
-    /// Represents an entity with a LastUpdateTime property.
+    /// Represents the last update time of an entity.
     /// </summary>
     public interface ILastUpdateTime
     {

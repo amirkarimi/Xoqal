@@ -23,13 +23,16 @@ namespace Xoqal.Core.Models
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// Represents the creator user of an entity.
+    /// </summary>
     public interface ICreateUser
     {
         /// <summary>
-        /// Gets or sets the create user id.
+        /// Gets or sets the create user ID.
         /// </summary>
         /// <value>
-        /// The create user id.
+        /// The create user ID.
         /// </value>
         Guid? CreateUserId { get; set; }
     }

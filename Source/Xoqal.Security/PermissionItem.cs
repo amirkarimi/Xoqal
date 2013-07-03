@@ -33,7 +33,7 @@ namespace Xoqal.Security
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionItem" /> class.
         /// </summary>
-        /// <param name="permissionId"> The permission id. </param>
+        /// <param name="permissionId"> The permission ID. </param>
         /// <param name="description"> The description. </param>
         public PermissionItem(string permissionId, string description)
         {
@@ -44,7 +44,7 @@ namespace Xoqal.Security
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionItem" /> class.
         /// </summary>
-        /// <param name="permissoinId">The permission id. </param>
+        /// <param name="permissoinId">The permission ID. </param>
         /// <param name="resourceType">The resource type. </param>
         /// <param name="resourceName">The resource name. </param>
         public PermissionItem(string permissoinId, Type resourceType, string resourceName)
@@ -55,9 +55,9 @@ namespace Xoqal.Security
         }
 
         /// <summary>
-        /// Gets or sets the permission id.
+        /// Gets or sets the permission ID.
         /// </summary>
-        /// <value> The permission id. </value>
+        /// <value> The permission ID. </value>
         public string PermissionId { get; private set; }
 
         /// <summary>

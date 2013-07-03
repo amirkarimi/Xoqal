@@ -26,18 +26,18 @@ namespace Xoqal.Security
     public interface IRolesInPermission
     {
         /// <summary>
-        /// Gets or sets the role id.
+        /// Gets or sets the role ID.
         /// </summary>
         /// <value>
-        /// The role id.
+        /// The role ID.
         /// </value>
         Guid RoleId { get; set; }
 
         /// <summary>
-        /// Gets or sets the permission id.
+        /// Gets or sets the permission ID.
         /// </summary>
         /// <value>
-        /// The permission id.
+        /// The permission ID.
         /// </value>
         string PermissionId { get; set; }
 

@@ -80,7 +80,7 @@ namespace Xoqal.Web.Mvc.Controllers
         /// <summary>
         /// GET: /[Controller]/Edit/5
         /// </summary>
-        /// <param name="id"> The id. </param>
+        /// <param name="id">The ID.</param>
         /// <returns> </returns>
         public virtual ActionResult Edit(TKey id)
         {
@@ -90,7 +90,7 @@ namespace Xoqal.Web.Mvc.Controllers
         /// <summary>
         /// POST: /[Controller]/Edit/5
         /// </summary>
-        /// <param name="id">The id.</param>
+        /// <param name="id">The ID.</param>
         /// <param name="model">The model.</param>
         /// <returns></returns>
         [HttpPost]
@@ -105,7 +105,7 @@ namespace Xoqal.Web.Mvc.Controllers
         /// <summary>
         /// GET: /[Controller]/Delete/5
         /// </summary>
-        /// <param name="id"> The id. </param>
+        /// <param name="id"> The ID. </param>
         /// <returns> </returns>
         public virtual ActionResult Delete(TKey id)
         {

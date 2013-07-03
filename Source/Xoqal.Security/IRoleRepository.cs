@@ -30,9 +30,9 @@ namespace Xoqal.Security
         /// Determines whether is the specified role name duplicated.
         /// </summary>
         /// <param name="roleName">Name of the role.</param>
-        /// <param name="excludedRoleId">The excluded role id.</param>
+        /// <param name="excludedRoleId">The excluded role ID.</param>
         /// <returns>
-        /// <c>true</c> if the specified role name is duplicated; otherwise, <c>false</c>.
+        ///   <c>true</c> if the specified role name is duplicated; otherwise, <c>false</c>.
         /// </returns>
         bool CheckRoleNameDuplicate(string roleName, Guid? excludedRoleId = null);
     }

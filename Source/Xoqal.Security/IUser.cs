@@ -25,10 +25,10 @@ namespace Xoqal.Security
     public interface IUser
     {
         /// <summary>
-        /// Gets or sets the id.
+        /// Gets or sets the ID.
         /// </summary>
         /// <value>
-        /// The id.
+        /// The ID.
         /// </value>
         Guid Id { get; set; }
 
