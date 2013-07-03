@@ -60,9 +60,9 @@ namespace Xoqal.Data.EntityFramework
         #region Properties
 
         /// <summary>
-        /// Gets the object set.
+        /// Gets the DB set.
         /// </summary>
-        public virtual DbSet<TRoot> ObjectSet
+        public virtual DbSet<TRoot> DbSet
         {
             get { return this.Context.Set<TRoot>(); }
         }
@@ -72,7 +72,7 @@ namespace Xoqal.Data.EntityFramework
         /// </summary>
         public virtual IQueryable<T> Query
         {
-            get { return this.ObjectSet.OfType<T>().AsQueryable(); }
+            get { return this.DbSet.OfType<T>().AsQueryable(); }
         }
 
         /// <summary>
@@ -132,7 +132,7 @@ namespace Xoqal.Data.EntityFramework
         /// <returns> </returns>
         public T GetItemByKey(params object[] keys)
         {
-            return (T)this.ObjectSet.Find(keys);
+            return (T)this.DbSet.Find(keys);
         }
 
         /// <summary>
@@ -176,7 +176,7 @@ namespace Xoqal.Data.EntityFramework
         /// <param name="entity"> The entity. </param>
         public virtual void Add(T entity)
         {
-            this.ObjectSet.Add(entity);
+            this.DbSet.Add(entity);
         }
 
         /// <summary>
@@ -222,7 +222,7 @@ namespace Xoqal.Data.EntityFramework
                 entity = this.GetAttachedEntity(entity);
             }
 
-            this.ObjectSet.Remove(entity);
+            this.DbSet.Remove(entity);
         }
 
         /// <summary>
@@ -280,7 +280,7 @@ namespace Xoqal.Data.EntityFramework
                 return;
             }
 
-            this.ObjectSet.Attach(entity);
+            this.DbSet.Attach(entity);
         }
 
         /// <summary>
@@ -347,7 +347,7 @@ namespace Xoqal.Data.EntityFramework
             var entityType = entity.GetType();
             var keyValues = entitySet.ElementType.KeyMembers.Select(k => entityType.GetProperty(k.Name).GetValue(entity, null)).ToArray();
 
-            var attachedEntity = (T)this.ObjectSet.Find(keyValues);
+            var attachedEntity = (T)this.DbSet.Find(keyValues);
             return attachedEntity;
         }
 
