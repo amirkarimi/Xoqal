@@ -23,6 +23,9 @@ namespace Xoqal.Utilities
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// Helps to use Persian text.
+    /// </summary>
     public class PersianTextHelper
     {
         /// <summary>
@@ -32,12 +35,7 @@ namespace Xoqal.Utilities
         /// <returns> </returns>
         public static string GetArabicsFormat(string txt)
         {
-            if (!string.IsNullOrEmpty(txt))
-            {
-                return txt.Replace("ی", "ي").Replace("ک", "ك");
-            }
-
-            return txt;
+            return !string.IsNullOrEmpty(txt) ? txt.Replace("ی", "ي").Replace("ک", "ك") : txt;
         }
 
         /// <summary>
@@ -47,12 +45,7 @@ namespace Xoqal.Utilities
         /// <returns> </returns>
         public static string GetPersianFormat(string txt)
         {
-            if (!string.IsNullOrEmpty(txt))
-            {
-                return txt.Replace("ي", "ی").Replace("ك", "ک");
-            }
-
-            return txt;
+            return !string.IsNullOrEmpty(txt) ? txt.Replace("ي", "ی").Replace("ك", "ک") : txt;
         }
 
         /// <summary>
@@ -62,8 +55,13 @@ namespace Xoqal.Utilities
         /// <returns> </returns>
         public static string ConvertToPersianDigit(string source)
         {
+            if (string.IsNullOrWhiteSpace(source))
+            {
+                return source;
+            }
+            
             var nums = new[] { "۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹" };
-            for (int i = 0; i <= 9; i++)
+            for (var i = 0; i <= 9; i++)
             {
                 source = source.Replace(i.ToString(), nums[i]);
             }
