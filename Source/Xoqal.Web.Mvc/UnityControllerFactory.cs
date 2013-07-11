@@ -47,16 +47,16 @@ using Microsoft.Practices.Unity;
         }
 
         /// <summary>
-        /// Gets the bags.
+        /// Gets the bag.
         /// </summary>
         /// <value>
-        /// The bags.
+        /// The bag.
         /// </value>
-        private Dictionary<IController, UnityControllerFactoryBag> Bags
+        protected Dictionary<IController, object> Bag
         {
             get
             {
-                var bags = HttpContext.Current.Items[HttpContextKey] as Dictionary<IController, UnityControllerFactoryBag>;
+                var bags = HttpContext.Current.Items[HttpContextKey] as Dictionary<IController, object>;
                 if (bags != null)
                 {
                     return bags;
@@ -64,10 +64,10 @@ using Microsoft.Practices.Unity;
 
                 lock (SyncObject)
                 {
-                    bags = HttpContext.Current.Items[HttpContextKey] as Dictionary<IController, UnityControllerFactoryBag>;
+                    bags = HttpContext.Current.Items[HttpContextKey] as Dictionary<IController, object>;
                     if (bags == null)
                     {
-                        bags = new Dictionary<IController, UnityControllerFactoryBag>();
+                        bags = new Dictionary<IController, object>();
                         HttpContext.Current.Items[HttpContextKey] = bags;
                     }
 
@@ -83,7 +83,7 @@ using Microsoft.Practices.Unity;
         public override void ReleaseController(IController controller)
         {
             base.ReleaseController(controller);
-            this.Bags[controller].Container.Dispose();
+            ((IUnityContainer)this.Bag[controller]).Dispose();
         }
 
         /// <summary>
@@ -102,13 +102,10 @@ using Microsoft.Practices.Unity;
 
             try
             {
-                // Create new bag
-                var bag = new UnityControllerFactoryBag();
-                bag.Container = this.container.CreateChildContainer();
-
-                controller = bag.Container.Resolve(controllerType) as IController;
-                
-                this.Bags.Add(controller, bag);
+                // Create new child container
+                var childContainer = this.container.CreateChildContainer();
+                controller = childContainer.Resolve(controllerType) as IController;
+                this.Bag.Add(controller, childContainer);
             }
             catch (Exception ex)
             {
