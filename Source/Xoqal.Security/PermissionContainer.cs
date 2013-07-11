@@ -63,7 +63,7 @@ namespace Xoqal.Security
         private static void LoadPermissions()
         {
             // Search among the assemblies which defined the SecurityRegulatorAttribute.
-            IEnumerable<Assembly> assemblies =
+            var assemblies =
                 AppDomain.CurrentDomain.GetAssemblies().Where(a => a.IsDefined(typeof(SecurityRegulatorAttribute), false));
 
             // Create new permission list
@@ -77,10 +77,15 @@ namespace Xoqal.Security
 
                 if (attribute != null)
                 {
-                    FieldInfo[] fields = attribute.PermissionContainerType.GetFields(BindingFlags.Public | BindingFlags.Static);
+                    var permissionContainerAttribute = attribute.PermissionContainerType.GetCustomAttributes(false).OfType<PermissionContainerAttribute>().FirstOrDefault();
+                    var fields = attribute.PermissionContainerType.GetFields(BindingFlags.Public | BindingFlags.Static);
 
-                    List<PermissionItem> permissionItems =
-                        fields.Where(p => p.FieldType == typeof(PermissionItem)).Select(p => (PermissionItem)p.GetValue(null)).ToList();
+                    var permissionItems = fields
+                        .Select(field =>
+                            new PermissionItem(
+                                field.Name,
+                                GetPermissionDescription(permissionContainerAttribute, field)))
+                        .ToList();
 
                     // Add all found permissions to permission list
                     permissions.AddRange(permissionItems);
@@ -88,6 +93,31 @@ namespace Xoqal.Security
             }
 
             Debug.WriteIf(permissions.Count == 0, "PermissionContainer.LoadPermissions called but no permission found.");
+        }
+
+        /// <summary>
+        /// Gets the permission description.
+        /// </summary>
+        /// <param name="permissionContainerAttribute">The permission container attribute.</param>
+        /// <param name="field">The field.</param>
+        /// <returns></returns>
+        private static string GetPermissionDescription(PermissionContainerAttribute permissionContainerAttribute, FieldInfo field)
+        {
+            var permissionItemAttribute = field.GetCustomAttributes(true).OfType<PermissionItemAttribute>().FirstOrDefault();
+
+            if (permissionItemAttribute == null)
+            {
+                // Return convention-based description if the DefaultResouceType is available.
+                if (permissionContainerAttribute != null)
+                {
+                    return Utilities.ResourceHelper.GetResourceValue(permissionContainerAttribute.DefaultResourceType, field.Name);
+                }
+
+                // Nothing to do? The return raw const value.
+                return field.GetRawConstantValue().ToString();
+            }
+
+            return permissionItemAttribute.Description;
         }
     }
 }

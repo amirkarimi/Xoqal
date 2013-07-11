@@ -76,7 +76,9 @@
     <Compile Include="IUserRepository{T}.cs" />
     <Compile Include="PasswordHasherFactory.cs" />
     <Compile Include="PermissionContainer.cs" />
+    <Compile Include="PermissionContainerAttribute.cs" />
     <Compile Include="PermissionItem.cs" />
+    <Compile Include="PermissionItemAttribute.cs" />
     <Compile Include="UserIdentity.cs" />
     <Compile Include="UserPrincipal.cs" />
     <Compile Include="IPasswordHasher.cs" />
@@ -117,9 +119,6 @@
       <Project>{9855e705-e483-46ff-ad70-9de80b26e8f8}</Project>
       <Name>Xoqal.Utilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(ProgramFiles)\MSBuild\StyleCop\v4.7\StyleCop.Targets" />
