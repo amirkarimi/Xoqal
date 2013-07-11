@@ -18,7 +18,7 @@ namespace Xoqal.Generator.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+    #line 1 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class RepositoryClassTemplate : RepositoryClassTemplateBase
     {
@@ -30,7 +30,7 @@ namespace Xoqal.Generator.Templates
         {
             this.Write("namespace ");
             
-            #line 6 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 6 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.options.DataNamespace));
             
             #line default
@@ -39,34 +39,34 @@ namespace Xoqal.Generator.Templates
                     "ata.Entity;\r\n    using System.Linq;\r\n    using System.Text;\r\n    using Xoqal.Dat" +
                     "a.EntityFramework;\r\n\r\n    /// <summary>\r\n    /// Represents the ");
             
-            #line 16 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 16 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName.ToLower()));
             
             #line default
             #line hidden
-            this.Write(" repository.\r\n    /// </summary>\r\n    internal class ");
+            this.Write(" repository.\r\n    /// </summary>\r\n    public class ");
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write("Repository : DbContextRepository<Entities.");
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.IsInheritedEntity ? string.Format(", {0}", this.entityInfo.EntityType.BaseType.Name) : string.Empty));
             
             #line default
             #line hidden
             this.Write(">, I");
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
@@ -74,7 +74,7 @@ namespace Xoqal.Generator.Templates
             this.Write("Repository\r\n    {\r\n        /// <summary>\r\n        /// Initializes a new instance " +
                     "of the <see cref=\"");
             
-            #line 21 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 21 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
@@ -82,7 +82,7 @@ namespace Xoqal.Generator.Templates
             this.Write("Repository\"/> class.\r\n        /// </summary>\r\n        /// <param name=\"context\">T" +
                     "he context.</param>\r\n        public ");
             
-            #line 24 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 24 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
@@ -91,7 +91,7 @@ namespace Xoqal.Generator.Templates
                     "\n\r\n        /// <summary>\r\n        /// Gets the query.\r\n        /// </summary>\r\n " +
                     "       public override IQueryable<Entities.");
             
-            #line 32 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
+            #line 32 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\RepositoryClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
