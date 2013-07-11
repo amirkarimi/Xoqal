@@ -24,7 +24,7 @@ namespace Xoqal.Utilities
     using System.Text;
 
     /// <summary>
-    /// Helps to use Persian text.
+    /// Helps to processing Persian text.
     /// </summary>
     public class PersianTextHelper
     {
