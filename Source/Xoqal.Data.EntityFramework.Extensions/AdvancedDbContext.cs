@@ -140,10 +140,10 @@ namespace Xoqal.Data.EntityFramework.Extensions
                     }
                 }
 
-                var currentUser = Security.Authentication.Default.GetCurrentUserPrincipal(false);
                 var entityWithCreateUser = entry.Entity as ICreateUser;
                 if (entityWithCreateUser != null)
                 {
+                    var currentUser = Security.Authentication.Default.GetCurrentUserPrincipal(false);
                     if (entityWithCreateUser.CreateUserId == null && currentUser != null)
                     {
                         entityWithCreateUser.CreateUserId = currentUser.Identity.Id;
@@ -153,6 +153,7 @@ namespace Xoqal.Data.EntityFramework.Extensions
                 var entityWithLastUpdateUser = entry.Entity as ILastUpdateUser;
                 if (entityWithLastUpdateUser != null)
                 {
+                    var currentUser = Security.Authentication.Default.GetCurrentUserPrincipal(false);
                     if (entityWithLastUpdateUser.LastUpdateUserId == null && currentUser != null)
                     {
                         entityWithLastUpdateUser.LastUpdateUserId = entityWithCreateUser == null
