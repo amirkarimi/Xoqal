@@ -64,6 +64,7 @@
     <Compile Include="SecurityTests\AuthenticationTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExportImportTests\ExcelExportImportTest.cs" />
+    <Compile Include="UtilitiesTests\StringExtensions.cs" />
     <Compile Include="WebMvcTests\DataGridDataRowGeneratorTest.cs" />
     <Compile Include="WebMvcTests\DataGridGeneratorTest.cs" />
     <Compile Include="WebMvcTests\DataGridHeaderRowGeneratorTest.cs" />

@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Attributes\ValidExtensionsAttribute.cs" />
     <Compile Include="EnumHelper.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="FileHelper.cs" />
     <Compile Include="FingerPrint.cs" />
     <Compile Include="HtmlTextHelper.cs" />
