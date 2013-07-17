@@ -15,7 +15,7 @@ namespace <#=this.options.DataNamespace#>
     /// <summary>
     /// Represents the <#=this.entityInfo.EntityName.ToLower()#> repository.
     /// </summary>
-    internal class <#=this.entityInfo.EntityName#>Repository : DbContextRepository<Entities.<#=this.entityInfo.EntityName#><#=this.entityInfo.IsInheritedEntity ? string.Format(", {0}", this.entityInfo.EntityType.BaseType.Name) : string.Empty#>>, I<#=this.entityInfo.EntityName#>Repository
+    public class <#=this.entityInfo.EntityName#>Repository : DbContextRepository<Entities.<#=this.entityInfo.EntityName#><#=this.entityInfo.IsInheritedEntity ? string.Format(", {0}", this.entityInfo.EntityType.BaseType.Name) : string.Empty#>>, I<#=this.entityInfo.EntityName#>Repository
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="<#=this.entityInfo.EntityName#>Repository"/> class.

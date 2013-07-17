@@ -18,7 +18,7 @@ namespace Xoqal.Generator.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+    #line 1 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class ServiceClassTemplate : ServiceClassTemplateBase
     {
@@ -30,7 +30,7 @@ namespace Xoqal.Generator.Templates
         {
             this.Write("namespace ");
             
-            #line 6 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 6 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.options.ServicesNamespace));
             
             #line default
@@ -39,28 +39,28 @@ namespace Xoqal.Generator.Templates
                     "inq;\r\n    using System.Text;\r\n    using Xoqal.Data;\r\n    using Xoqal.Services;\r\n" +
                     "\r\n    /// <summary>\r\n    /// Represents the ");
             
-            #line 16 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 16 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName.ToLower()));
             
             #line default
             #line hidden
-            this.Write(" service.\r\n    /// </summary>\r\n    internal class ");
+            this.Write(" service.\r\n    /// </summary>\r\n    public class ");
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write("Service : CrudService<Entities.");
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write(">, I");
             
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 18 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
@@ -68,14 +68,14 @@ namespace Xoqal.Generator.Templates
             this.Write("Service\r\n    {\r\n        private readonly IUnitOfWork unitOfWork;\r\n        private" +
                     " readonly Data.I");
             
-            #line 21 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 21 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write("Repository ");
             
-            #line 21 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 21 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default
@@ -83,7 +83,7 @@ namespace Xoqal.Generator.Templates
             this.Write("Repository;\r\n\r\n        /// <summary>\r\n        /// Initializes a new instance of t" +
                     "he <see cref=\"");
             
-            #line 24 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 24 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
@@ -91,42 +91,42 @@ namespace Xoqal.Generator.Templates
             this.Write("Service\"/> class.\r\n        /// </summary>\r\n        /// <param name=\"unitOfWork\">T" +
                     "he unit of work.</param>\r\n        /// <param name=\"");
             
-            #line 27 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 27 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default
             #line hidden
             this.Write("Repository\">The ");
             
-            #line 27 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 27 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default
             #line hidden
             this.Write(" repository</param>\r\n        public ");
             
-            #line 28 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 28 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write("Service(IUnitOfWork unitOfWork, Data.I");
             
-            #line 28 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 28 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write("Repository ");
             
-            #line 28 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 28 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default
             #line hidden
             this.Write("Repository)\r\n            : base(unitOfWork, ");
             
-            #line 29 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 29 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default
@@ -134,14 +134,14 @@ namespace Xoqal.Generator.Templates
             this.Write("Repository)\r\n        {\r\n            this.unitOfWork = unitOfWork;\r\n            th" +
                     "is.");
             
-            #line 32 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 32 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default
             #line hidden
             this.Write("Repository = ");
             
-            #line 32 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
+            #line 32 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\ServiceClassTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)));
             
             #line default

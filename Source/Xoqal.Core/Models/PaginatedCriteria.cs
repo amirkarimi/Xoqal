@@ -20,6 +20,7 @@ namespace Xoqal.Core.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     using System.Linq;
 
     /// <summary>
@@ -44,6 +45,7 @@ namespace Xoqal.Core.Models
         /// <remarks>
         /// Starts from 1.
         /// </remarks>
+        [ScaffoldColumn(false)]
         public int? Page { get; set; }
 
         /// <summary>
@@ -52,16 +54,19 @@ namespace Xoqal.Core.Models
         /// <remarks>
         /// The default value is 10.
         /// </remarks>
+        [ScaffoldColumn(false)]
         public int PageSize { get; set; }
 
         /// <summary>
         /// Gets or sets the sort descriptions.
         /// </summary>
+        [ScaffoldColumn(false)]
         public SortDescription[] SortDescriptions { get; set; }
 
         /// <summary>
         /// Gets the start index according to the current page and page size.
         /// </summary>
+        [ScaffoldColumn(false)]
         public int StartIndex
         {
             get
@@ -73,6 +78,7 @@ namespace Xoqal.Core.Models
         /// <summary>
         /// Gets or sets the sort expression.
         /// </summary>
+        [ScaffoldColumn(false)]
         public string SortExpression
         {
             get

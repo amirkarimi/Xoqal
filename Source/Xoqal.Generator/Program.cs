@@ -66,7 +66,7 @@ namespace Xoqal.Generator
                     type.IsPublic &&
                     type.IsClass &&
                     type.Namespace == options.EntitiesNamespace &&
-                    !type.GetCustomAttributes(true).Any(ca => ca is ComplexTypeAttribute) &&
+                    !type.GetCustomAttributes(true).Any(ca => ca.GetType().Name == "ComplexTypeAttribute") &&
                     !options.ExcludedEntities.Contains(type.Name))
                 .Select(type => new EntityInfo(type))
                 .ToArray();
@@ -86,8 +86,6 @@ namespace Xoqal.Generator
             }
 
             GenerateDbContext(options);
-            GenerateDataDIContainer(options);
-            GenerateServiceDIContainer(options);
         }
 
         private static void CheckDirectoryExistance(string path)
@@ -126,18 +124,6 @@ namespace Xoqal.Generator
         {
             var template = new Templates.DbContextTemplate(options, new CodeConventionService());
             File.WriteAllText(Path.Combine(options.DataDirectory, string.Format("{0}Context.cs", options.ProjectName)), template.TransformText());
-        }
-
-        private static void GenerateDataDIContainer(GeneratorOptions options)
-        {
-            var template = new Templates.DataBootstrapper(options, new CodeConventionService());
-            File.WriteAllText(Path.Combine(options.DataDirectory, "Bootstrapper.cs"), template.TransformText());
-        }
-
-        private static void GenerateServiceDIContainer(GeneratorOptions options)
-        {
-            var template = new Templates.ServiceBootstrapper(options, new CodeConventionService());
-            File.WriteAllText(Path.Combine(options.ServicesDirectory, "Bootstrapper.cs"), template.TransformText());
         }
     }
 }

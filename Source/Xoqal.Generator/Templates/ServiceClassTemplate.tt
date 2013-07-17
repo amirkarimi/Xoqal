@@ -15,7 +15,7 @@ namespace <#=this.options.ServicesNamespace#>
     /// <summary>
     /// Represents the <#=this.entityInfo.EntityName.ToLower()#> service.
     /// </summary>
-    internal class <#=this.entityInfo.EntityName#>Service : CrudService<Entities.<#=this.entityInfo.EntityName#>>, I<#=this.entityInfo.EntityName#>Service
+    public class <#=this.entityInfo.EntityName#>Service : CrudService<Entities.<#=this.entityInfo.EntityName#>>, I<#=this.entityInfo.EntityName#>Service
     {
         private readonly IUnitOfWork unitOfWork;
         private readonly Data.I<#=this.entityInfo.EntityName#>Repository <#=this.codeConventionService.ToCamelCase(this.entityInfo.EntityName)#>Repository;

@@ -1,4 +1,4 @@
-﻿#region License
+#region License
 // UrlHelper.cs
 // 
 // Copyright (c) 2012 Xoqal.com

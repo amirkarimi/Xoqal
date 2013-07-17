@@ -23,11 +23,8 @@ namespace Xoqal.Globalization
     using System.Threading;
 
     /// <summary>
-    /// Represents the globalized DateTime object virtually base on the given DateTime.
+    /// Represents a globalized date-time object.
     /// </summary>
-    /// <remarks>
-    /// Created by A. Karimi (karimi@dev-frame.com)
-    /// </remarks>
     public class GlobalDateTime
     {
         #region Ctors

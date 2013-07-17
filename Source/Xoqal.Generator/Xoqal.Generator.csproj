@@ -59,18 +59,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DbContextTemplate.tt</DependentUpon>
     </Compile>
-    <Compile Include="Templates\ServiceBootstrapper.cs">
-      <DependentUpon>ServiceBootstrapper.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <Compile Include="Templates\ServiceBootstrapper.partial.cs" />
-    <Compile Include="Templates\DataBootstrapper.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataBootstrapper.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Templates\DataBootstrapper.partial.cs" />
     <Compile Include="Templates\RepositoryClassTemplate.partial.cs" />
     <Compile Include="Templates\RepositoryClassTemplate1.cs">
       <AutoGen>True</AutoGen>
@@ -103,18 +92,6 @@
     <None Include="Templates\DbContextTemplate.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>DbContextTemplate.cs</LastGenOutput>
-      <TransformOnBuild>True</TransformOnBuild>
-    </None>
-    <None Include="Templates\ServiceBootstrapper.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>ServiceBootstrapper.cs</LastGenOutput>
-      <TransformOnBuild>True</TransformOnBuild>
-    </None>
-    <None Include="Templates\DataBootstrapper.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>DataBootstrapper.cs</LastGenOutput>
-      <Parameters>&lt;%3fxml version="1.0" encoding="utf-16"%3f&gt;
-&lt;ArrayOfParameterStorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" /&gt;</Parameters>
       <TransformOnBuild>True</TransformOnBuild>
     </None>
     <None Include="Templates\RepositoryClassTemplate.tt">
