@@ -53,7 +53,7 @@ namespace Xoqal.Generator
         /// </value>
         public bool IsInheritedEntity { get; set; }
 
-    /// <summary>
+        /// <summary>
         /// Gets the type of the entity.
         /// </summary>
         /// <value>
