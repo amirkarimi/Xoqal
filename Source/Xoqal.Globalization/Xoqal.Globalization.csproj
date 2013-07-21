@@ -58,7 +58,7 @@
     <Compile Include="GlobalDateTime.cs" />
     <Compile Include="GlobalizationRegulatorAttribute.cs" />
     <Compile Include="LanguageContainer.cs" />
-    <Compile Include="LanguageInfo.cs" />
+    <Compile Include="LanguageItem.cs" />
     <Compile Include="LanguageManagement.cs" />
     <Compile Include="PersianDateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
