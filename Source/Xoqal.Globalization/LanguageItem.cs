@@ -1,5 +1,5 @@
 #region License
-// LanguageInfo.cs
+// LanguageItem.cs
 // 
 // Copyright (c) 2012 Xoqal.com
 //
@@ -23,14 +23,14 @@ namespace Xoqal.Globalization
     /// <summary>
     /// Represents a language information.
     /// </summary>
-    public class LanguageInfo
+    public class LanguageItem
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="LanguageInfo" /> class.
+        /// Initializes a new instance of the <see cref="LanguageItem" /> class.
         /// </summary>
         /// <param name="cultureInfo"> The CultureInfo object. </param>
         /// <param name="order"> The order. </param>
-        public LanguageInfo(CultureInfo cultureInfo, int order)
+        public LanguageItem(CultureInfo cultureInfo, int order)
         {
             this.CultureInfo = cultureInfo;
             this.Order = order;

@@ -44,7 +44,7 @@ namespace Xoqal.Web.Mvc.Globalization
         /// Sets the content language.
         /// </summary>
         /// <param name="language"> </param>
-        public static void SetContentLanguage(LanguageInfo language)
+        public static void SetContentLanguage(LanguageItem language)
         {
             HttpContext.Current.Session[ContentLanguageSessionKey] = language;
         }
@@ -53,9 +53,9 @@ namespace Xoqal.Web.Mvc.Globalization
         /// Gets the current content language.
         /// </summary>
         /// <returns> </returns>
-        public static LanguageInfo GetContentLanguage()
+        public static LanguageItem GetContentLanguage()
         {
-            LanguageInfo currentLanguage = HttpContext.Current.Session[ContentLanguageSessionKey] as LanguageInfo ??
+            LanguageItem currentLanguage = HttpContext.Current.Session[ContentLanguageSessionKey] as LanguageItem ??
                 LanguageManagement.GetDefaultLanguage();
 
             return currentLanguage;
