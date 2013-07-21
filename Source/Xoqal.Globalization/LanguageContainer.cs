@@ -30,12 +30,12 @@ namespace Xoqal.Globalization
     internal class LanguageContainer
     {
         private static readonly object SyncObject = new object();
-        private static List<LanguageItem> languages;
+        private static List<LanguageInfo> languages;
 
         /// <summary>
         /// Gets the languages.
         /// </summary>
-        public static List<LanguageItem> Languages
+        public static List<LanguageInfo> Languages
         {
             get
             {
@@ -67,7 +67,7 @@ namespace Xoqal.Globalization
                 AppDomain.CurrentDomain.GetAssemblies().Where(a => a.IsDefined(typeof(GlobalizationRegulatorAttribute), false));
 
             // Create new permission list
-            languages = new List<LanguageItem>();
+            languages = new List<LanguageInfo>();
 
             // Find LanguageContainerType in the found assemblies.
             foreach (Assembly assembly in assemblies)
@@ -80,8 +80,8 @@ namespace Xoqal.Globalization
                 {
                     FieldInfo[] fields = attribute.LanguageContainerType.GetFields(BindingFlags.Public | BindingFlags.Static);
 
-                    List<LanguageItem> languageItems =
-                        fields.Where(p => p.FieldType == typeof(LanguageItem)).Select(p => (LanguageItem)p.GetValue(null)).ToList();
+                    List<LanguageInfo> languageItems =
+                        fields.Where(p => p.FieldType == typeof(LanguageInfo)).Select(p => (LanguageInfo)p.GetValue(null)).ToList();
 
                     // Add all found languages to permission list
                     languages.AddRange(languageItems);
