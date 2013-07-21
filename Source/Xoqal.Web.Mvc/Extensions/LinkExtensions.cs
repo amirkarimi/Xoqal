@@ -135,7 +135,7 @@ namespace Xoqal.Web.Mvc.Extensions
                 var query = uriBuilder.Query.TrimStart('?');
                 uriBuilder.Query =
                     (string.IsNullOrEmpty(query) ? string.Empty : (query + "&")) +
-                    string.Join("&", distinctQueryStrings.Select(q => string.Format("{0}={1}", q.Key, q.Value)));
+                    string.Join("&", distinctQueryStrings.Select(q => string.Format("{0}={1}", q.Key, HttpUtility.UrlEncode(q.Value))));
             }
 
             return uriBuilder.ToString();
