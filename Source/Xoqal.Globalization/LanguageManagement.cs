@@ -34,7 +34,7 @@ namespace Xoqal.Globalization
         /// Gets all languages.
         /// </summary>
         /// <returns> </returns>
-        public static List<LanguageInfo> GetAllLanguages()
+        public static List<LanguageItem> GetAllLanguages()
         {
             return LanguageContainer.Languages;
         }
@@ -43,7 +43,7 @@ namespace Xoqal.Globalization
         /// Gets the default language.
         /// </summary>
         /// <returns> </returns>
-        public static LanguageInfo GetDefaultLanguage()
+        public static LanguageItem GetDefaultLanguage()
         {
             return GetAllLanguages().OrderBy(l => l.Order).First();
         }
@@ -53,7 +53,7 @@ namespace Xoqal.Globalization
         /// </summary>
         /// <param name="name"> The language name. </param>
         /// <returns> </returns>
-        public static LanguageInfo GetLanguage(string name)
+        public static LanguageItem GetLanguage(string name)
         {
             return GetLanguage(CultureInfo.GetCultureInfo(name));
         }
@@ -62,7 +62,7 @@ namespace Xoqal.Globalization
         /// Gets the current language.
         /// </summary>
         /// <returns> </returns>
-        public static LanguageInfo GetCurrentLanguage()
+        public static LanguageItem GetCurrentLanguage()
         {
             return GetLanguage(Thread.CurrentThread.CurrentUICulture);
         }
@@ -75,7 +75,7 @@ namespace Xoqal.Globalization
         /// Sets current language.
         /// </summary>
         /// <param name="language"> The language item. </param>
-        public static void SetLanguage(LanguageInfo language)
+        public static void SetLanguage(LanguageItem language)
         {
             SetLanguage(language.CultureInfo);
         }
@@ -108,9 +108,9 @@ namespace Xoqal.Globalization
         /// </summary>
         /// <param name="cultureInfo"> The CultureInfo object. </param>
         /// <returns> </returns>
-        private static LanguageInfo GetLanguage(CultureInfo cultureInfo)
+        private static LanguageItem GetLanguage(CultureInfo cultureInfo)
         {
-            LanguageInfo language = LanguageContainer.Languages.Where(l => l.CultureInfo == cultureInfo).FirstOrDefault();
+            LanguageItem language = LanguageContainer.Languages.Where(l => l.CultureInfo == cultureInfo).FirstOrDefault();
             if (language == null)
             {
                 throw new LanguageNotSupportedException(cultureInfo);
