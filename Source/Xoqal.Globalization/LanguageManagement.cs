@@ -110,7 +110,7 @@ namespace Xoqal.Globalization
         /// <returns> </returns>
         private static LanguageItem GetLanguage(CultureInfo cultureInfo)
         {
-            LanguageItem language = LanguageContainer.Languages.Where(l => l.CultureInfo == cultureInfo).FirstOrDefault();
+            LanguageItem language = LanguageContainer.Languages.Where(l => l.CultureInfo.Equals(cultureInfo)).FirstOrDefault();
             if (language == null)
             {
                 throw new LanguageNotSupportedException(cultureInfo);
