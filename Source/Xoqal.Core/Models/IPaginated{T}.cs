@@ -31,6 +31,6 @@ namespace Xoqal.Core.Models
         /// <summary>
         /// Gets the data.
         /// </summary>
-        new IEnumerable<T> Data { get; }
+        new IEnumerable<T> Data { get; set; }
     }
 }

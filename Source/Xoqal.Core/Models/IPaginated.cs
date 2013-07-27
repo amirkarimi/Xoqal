@@ -37,6 +37,6 @@ namespace Xoqal.Core.Models
         /// <summary>
         /// Gets the total number of data.
         /// </summary>
-        int TotalRowsCount { get; }
+        int TotalRowsCount { get; set; }
     }
 }
