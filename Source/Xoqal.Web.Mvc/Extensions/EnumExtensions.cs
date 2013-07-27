@@ -217,7 +217,9 @@ namespace Xoqal.Web.Mvc.Extensions
             {
                 var optionTagBuilder = new TagBuilder("option");
 
-                if (metaData.Model != null && metaData.Model.Equals(enumMember.Key))
+                if (metaData.Model != null && 
+                    (metaData.Model.Equals(enumMember.Key) || 
+                    metaData.Model.Equals(Enum.Parse(enumType, enumMember.Key.ToString()))))
                 {
                     optionTagBuilder.Attributes.Add("selected", "selected");
                 }

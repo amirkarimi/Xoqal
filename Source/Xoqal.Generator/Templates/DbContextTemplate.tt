@@ -13,9 +13,9 @@ namespace <#=this.options.DataNamespace#>
     using System.Text;
 
     /// <summary>
-    /// Represents the <#=this.options.ProjectName#> context.
+    /// Represents the data context.
     /// </summary>
-    public class <#=this.options.ProjectName#>Context : Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext
+    public class DataContext : Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext
     {
         public DbSet<Entities.User> Users { get; set; }
 

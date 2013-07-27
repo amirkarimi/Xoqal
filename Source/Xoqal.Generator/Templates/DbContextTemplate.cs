@@ -18,7 +18,7 @@ namespace Xoqal.Generator.Templates
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
+    #line 1 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "11.0.0.0")]
     public partial class DbContextTemplate : DbContextTemplateBase
     {
@@ -30,29 +30,24 @@ namespace Xoqal.Generator.Templates
         {
             this.Write("namespace ");
             
-            #line 6 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
+            #line 6 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.options.DataNamespace));
             
             #line default
             #line hidden
-            this.Write("\r\n{\r\n    using System;\r\n    using System.Collections.Generic;\r\n    using System.D" +
-                    "ata.Entity;\r\n    using System.Data.Entity.ModelConfiguration.Conventions;\r\n    u" +
-                    "sing System.Linq;\r\n    using System.Text;\r\n\r\n    /// <summary>\r\n    /// Represen" +
-                    "ts the ");
-            
-            #line 16 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.options.ProjectName));
-            
-            #line default
-            #line hidden
-            this.Write(" context.\r\n    /// </summary>\r\n    public class ");
-            
-            #line 18 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(this.options.ProjectName));
-            
-            #line default
-            #line hidden
-            this.Write(@"Context : Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext
+            this.Write(@"
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Conventions;
+    using System.Linq;
+    using System.Text;
+
+    /// <summary>
+    /// Represents the data context.
+    /// </summary>
+    public class DataContext : Xoqal.Data.EntityFramework.Extensions.AdvancedDbContext
     {
         public DbSet<Entities.User> Users { get; set; }
 
@@ -62,28 +57,28 @@ namespace Xoqal.Generator.Templates
 
 ");
             
-            #line 26 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
+            #line 26 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
 foreach (var entityInfo in this.options.EntityInfoes) {
             
             #line default
             #line hidden
             this.Write("        public DbSet<Entities.");
             
-            #line 27 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
+            #line 27 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(entityInfo.EntityName));
             
             #line default
             #line hidden
             this.Write("> ");
             
-            #line 27 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
+            #line 27 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.codeConventionService.Pluralize(entityInfo.EntityName)));
             
             #line default
             #line hidden
             this.Write(" { get; set; }\r\n\r\n");
             
-            #line 29 "D:\Projects\CodePlex Projects\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
+            #line 29 "D:\Projects\Open Source Projects\GitHub\Xoqal\Source\Xoqal.Generator\Templates\DbContextTemplate.tt"
 } 
             
             #line default
