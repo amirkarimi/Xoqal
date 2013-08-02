@@ -91,10 +91,10 @@ namespace Xoqal.Web.Mvc.Controllers
         /// POST: /[Controller]/Edit/5
         /// </summary>
         /// <param name="id">The ID.</param>
-        /// <param name="model">The model.</param>
+        /// <param name="formCollection">The form collection.</param>
         /// <returns></returns>
         [HttpPost]
-        public virtual ActionResult Edit(TKey id, TModel model)
+        public virtual ActionResult Edit(TKey id, FormCollection formCollection)
         {
             var updatingModel = this.service.GetItemByKey(id);
             this.TryUpdateModel(updatingModel);

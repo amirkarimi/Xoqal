@@ -63,8 +63,8 @@ namespace Xoqal.Web.Mvc.Controllers
         /// POST: /[Controller]/Edit/5
         /// </summary>
         /// <param name="id">The ID.</param>
-        /// <param name="model"> The model.</param>
-        /// <returns> </returns>
-        ActionResult Edit(TKey id, TModel model);
+        /// <param name="formCollection">The form collection.</param>
+        /// <returns></returns>
+        ActionResult Edit(TKey id, FormCollection formCollection);
     }
 }
