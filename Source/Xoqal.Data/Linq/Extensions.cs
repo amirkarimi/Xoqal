@@ -145,12 +145,12 @@ namespace Xoqal.Data.Linq
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="query">The query.</param>
-        /// <param name="criteria">The criteria.</param>
+        /// <param name="paginatedCriteria">The paginated criteria.</param>
         /// <returns></returns>
-        public static IPaginated<T> ToPaginated<T>(this IQueryable<T> query, PaginatedCriteria criteria)
+        public static IPaginated<T> ToPaginated<T>(this IQueryable<T> query, IPaginatedCriteria paginatedCriteria)
         {
             return new Paginated<T>(
-                query.ToPage(criteria.StartIndex, criteria.PageSize, criteria.SortDescriptions),
+                query.ToPage(paginatedCriteria.StartIndex, paginatedCriteria.PageSize, paginatedCriteria.SortDescriptions),
                 query.Count());
         }
 
