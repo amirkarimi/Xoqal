@@ -26,9 +26,6 @@ namespace Xoqal.Core.Models
 
     public class Paginated<T> : IPaginated<T>
     {
-        private readonly IEnumerable<T> data;
-        private readonly int totalRowsCount;
-
         /// <summary>
         /// Create a new instance of the <see cref="T:Paginated"/> class.
         /// </summary>
@@ -36,32 +33,26 @@ namespace Xoqal.Core.Models
         /// <param name="totalRowsCount"></param>
         public Paginated(IEnumerable<T> data, int totalRowsCount)
         {
-            this.data = data;
-            this.totalRowsCount = totalRowsCount;
+            this.Data = data;
+            this.TotalRowsCount = totalRowsCount;
         }
 
         /// <summary>
         /// Gets the data.
         /// </summary>
-        public IEnumerable<T> Data
-        {
-            get { return this.data; }
-        }
+        public IEnumerable<T> Data { get; set; }
 
         /// <summary>
         /// Gets the data.
         /// </summary>
         IEnumerable IPaginated.Data
         {
-            get { return this.data; }
+            get { return this.Data; }
         }
 
         /// <summary>
         /// Gets the total number of data.
         /// </summary>
-        public int TotalRowsCount
-        {
-            get { return this.totalRowsCount; }
-        }
+        public int TotalRowsCount { get; set; }
     }
 }
