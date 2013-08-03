@@ -32,7 +32,7 @@ namespace Xoqal.Core.Models
         /// <summary>
         /// Gets the data.
         /// </summary>
-        IEnumerable Data { get; }
+        IEnumerable Data { get; set; }
 
         /// <summary>
         /// Gets the total number of data.

@@ -24,10 +24,13 @@ namespace Xoqal.Core.Models
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// Represents a paginated data containing total rows count.
+    /// </summary>
     public class Paginated<T> : IPaginated<T>
     {
         /// <summary>
-        /// Create a new instance of the <see cref="T:Paginated"/> class.
+        /// Create a new instance of the <see cref="Paginated{T}"/> class.
         /// </summary>
         /// <param name="data"></param>
         /// <param name="totalRowsCount"></param>
@@ -38,21 +41,29 @@ namespace Xoqal.Core.Models
         }
 
         /// <summary>
-        /// Gets the data.
+        /// Gets or sets the data.
         /// </summary>
         public IEnumerable<T> Data { get; set; }
 
         /// <summary>
-        /// Gets the data.
+        /// Gets or sets the total number of data.
+        /// </summary>
+        public int TotalRowsCount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the data.
         /// </summary>
         IEnumerable IPaginated.Data
         {
-            get { return this.Data; }
-        }
+            get 
+            { 
+                return this.Data; 
+            }
 
-        /// <summary>
-        /// Gets the total number of data.
-        /// </summary>
-        public int TotalRowsCount { get; set; }
+            set
+            {
+                this.Data = (IEnumerable<T>)value;
+            }
+        }
     }
 }
