@@ -97,6 +97,12 @@ namespace Xoqal.Core.Models
 
             set
             {
+                if (value == null)
+                {
+                    this.SortDescriptions = null;
+                    return;
+                }
+
                 this.SortDescriptions = this.ParseSortExpression(value).ToArray();
             }
         }

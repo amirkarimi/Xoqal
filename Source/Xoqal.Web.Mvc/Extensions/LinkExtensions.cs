@@ -167,8 +167,12 @@ namespace Xoqal.Web.Mvc.Extensions
         /// <returns></returns>
         private static bool IsValidForPersistence(object value)
         {
-            Type valueType = value.GetType();
+            if (value == null)
+            {
+                return false;
+            }
 
+            Type valueType = value.GetType();
             return !(valueType.IsGenericType && valueType.GetGenericTypeDefinition() == typeof(DictionaryValueProvider<>));
         }
     }
