@@ -31,6 +31,21 @@ namespace Xoqal.Security
     public class Authentication : IAuthentication
     {
         #region Fields
+        
+        /// <summary>
+        /// Responsible for creating a Thread based instrance for IAuthenticationDataProvider 
+        /// </summary>
+        /// <remarks>CallContext is recommended for asp.net stack</remarks>
+        private static readonly ThreadLocal<IAuthenticationDataProvider> CurrentDataProvider =
+            new ThreadLocal<IAuthenticationDataProvider>(() =>
+                {
+                    if (DataProviderInitializer == null)
+                    {
+                        throw new ApplicationException("Authentication.DataProviderInitializer not initialized.");
+                    }
+
+                    return DataProviderInitializer.Invoke();
+                });
 
         private static IAuthentication defaultInstance;
         private static IPrincipal globalPrincipal;
@@ -38,6 +53,28 @@ namespace Xoqal.Security
         #endregion
 
         #region Properties
+        
+        /// <summary>
+        /// Responsible for initializing  IAuthenticationDataProvider.
+        /// It should be populated in application bootstrap
+        /// </summary>
+        /// <remarks>
+        /// a proper DI container should take the lifetime responsibility of an object that put to this class through 
+        /// this delegate.
+        /// </remarks>
+        /// <example>
+        /// var container = new WindsorContainer();
+        /// 
+        /// container.Register(Component.For<IAuthenticationDataProvider>()
+        ///                             .ImplementedBy<AuthenticationDataProvider>()
+        ///                             .LifeStyle.PerWebRequest);
+        /// 
+        /// Xoqal.Security.Authentication.DataProviderInitializer = () =>
+        ///     {
+        ///         return container.Resolve<IAuthenticationDataProvider>();
+        ///     };
+        /// </example>
+        public static Func<IAuthenticationDataProvider> DataProviderInitializer { get; set; }
 
         /// <summary>
         /// Gets the default instance.
@@ -54,12 +91,15 @@ namespace Xoqal.Security
         }
 
         /// <summary>
-        /// Gets or sets the authentication data provider.
+        /// Get the DataProvider instance (for current thread)
         /// </summary>
-        /// <value>
-        /// The authentication data provider.
-        /// </value>
-        public IAuthenticationDataProvider DataProvider { get; set; }
+        /// <remarks>
+        /// Set by DataProviderInitializer delegate
+        /// </remarks>
+        public IAuthenticationDataProvider DataProvider
+        {
+            get { return CurrentDataProvider.Value; }
+        }
 
         #endregion
 
