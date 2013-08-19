@@ -32,7 +32,7 @@ namespace Xoqal.ExportImport
     {
         #region Fields
 
-        private System.IO.Stream stream;
+        private System.IO.Stream dataStream;
 
         #endregion
 
@@ -67,7 +67,7 @@ namespace Xoqal.ExportImport
         /// <param name="stream">The stream.</param>
         public void Export(IEnumerable<T> data, System.IO.Stream stream)
         {
-            this.stream = stream;
+            this.dataStream = stream;
             this.InitializeWorkbook();
             
             this.Export(data);
@@ -113,7 +113,7 @@ namespace Xoqal.ExportImport
         /// </summary>
         private void SaveWorkbook()
         {
-            this.Workbook.SaveAs(this.stream);
+            this.Workbook.SaveAs(this.dataStream);
         }
 
         #endregion

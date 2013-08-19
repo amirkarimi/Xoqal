@@ -19,14 +19,12 @@
 namespace Xoqal.ExportImport
 {
     using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using ClosedXML.Excel;
-using Xoqal.Globalization;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Linq;
+    using System.Text;
+    using ClosedXML.Excel;
+    using Xoqal.Globalization;
 
     /// <summary>
     /// Exports a general data to an excel file.
@@ -41,7 +39,7 @@ using Xoqal.Globalization;
         protected override void Export(IEnumerable<T> data)
         {
             var properties = this.GetProperties(typeof(T)).ToArray();
-            int col = 1;
+            var col = 1;
             foreach (var property in properties)
             {
                 var cell = this.Worksheet.Cell(1, col);
@@ -66,6 +64,7 @@ using Xoqal.Globalization;
                     {
                         cell.SetDataType(XLCellValues.Text);
                     }
+
                     col++;
                 }
             }
