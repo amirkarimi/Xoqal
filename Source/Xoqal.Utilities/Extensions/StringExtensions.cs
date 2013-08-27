@@ -30,5 +30,26 @@
 
             return source.Remove(source.Length - text.Length);
         }
+
+        /// <summary>
+        /// Removes if starts with.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="text">The text.</param>
+        /// <returns></returns>
+        public static string RemoveIfStartsWith(this string source, string text)
+        {
+            if (string.IsNullOrEmpty(source) || string.IsNullOrEmpty(text))
+            {
+                return source;
+            }
+
+            if (!source.StartsWith(text))
+            {
+                return source;
+            }
+
+            return source.Remove(0, text.Length);
+        }
     }
 }

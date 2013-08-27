@@ -52,7 +52,7 @@ namespace Xoqal.Security.EntityFramework
         /// Gets the current user.
         /// </summary>
         /// <returns>The current user if there was any logged in, otherwise null.</returns>
-        public T GetCurrentUser()
+        public virtual T GetCurrentUser()
         {
             var userPrincipal = Authentication.Default.GetCurrentUserPrincipal();
             if (userPrincipal == null)
@@ -68,7 +68,7 @@ namespace Xoqal.Security.EntityFramework
         /// </summary>
         /// <param name="userId">The user ID.</param>
         /// <returns></returns>
-        public T GetUser(Guid userId)
+        public virtual T GetUser(Guid userId)
         {
             var user = this.Query.FirstOrDefault(u => u.Id == userId);
             return user;
@@ -79,7 +79,7 @@ namespace Xoqal.Security.EntityFramework
         /// </summary>
         /// <param name="userName"> Name of the user. </param>
         /// <returns> </returns>
-        public T GetUser(string userName)
+        public virtual T GetUser(string userName)
         {
             userName = userName.ToLower();
             var user = this.Query.FirstOrDefault(u => u.UserName.ToLower() == userName);
@@ -92,7 +92,7 @@ namespace Xoqal.Security.EntityFramework
         /// <param name="userName"> Name of the user. </param>
         /// <param name="password"> The password. </param>
         /// <returns> </returns>
-        public T GetUser(string userName, string password)
+        public virtual T GetUser(string userName, string password)
         {
             userName = userName.ToLower();
             var user = this.Query.FirstOrDefault(u => u.UserName.ToLower() == userName && u.Password == password);
