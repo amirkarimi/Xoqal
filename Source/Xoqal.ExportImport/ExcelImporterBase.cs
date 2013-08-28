@@ -32,7 +32,7 @@ namespace Xoqal.ExportImport
     {
         #region Fields
 
-        private System.IO.Stream stream;
+        private System.IO.Stream dataStream;
 
         #endregion
 
@@ -63,11 +63,11 @@ namespace Xoqal.ExportImport
         /// <summary>
         /// Exports the specified data.
         /// </summary>
-        /// <param name="data">The data.</param>
         /// <param name="stream">The stream.</param>
+        /// <returns></returns>
         public IEnumerable<T> Import(System.IO.Stream stream)
         {
-            this.stream = stream;
+            this.dataStream = stream;
             this.OpenWorkbook();
 
             return this.Import();
@@ -102,20 +102,12 @@ namespace Xoqal.ExportImport
         /// </summary>
         private void OpenWorkbook()
         {
-            this.Workbook = new XLWorkbook(this.stream);
+            this.Workbook = new XLWorkbook(this.dataStream);
             this.Worksheet = this.Workbook.Worksheets.FirstOrDefault();
             if (this.Workbook == null)
             {
-                throw new ImportExportException("Workbook dosen't contain any worksheet.");
+                throw new ImportExportException("Workbook doesn't contain any worksheet.");
             }
-        }
-
-        /// <summary>
-        /// Saves the workbook.
-        /// </summary>
-        private void SaveWorkbook()
-        {
-            this.Workbook.SaveAs(this.stream);
         }
 
         #endregion

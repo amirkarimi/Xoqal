@@ -27,7 +27,7 @@ namespace Xoqal.ExportImport
     /// <summary>
     /// Represents a generic importer.
     /// </summary>
-    public interface IImporter<T> : IImporter
+    public interface IImporter<out T> : IImporter
     {        
         /// <summary>
         /// Imports data from the specified stream.
