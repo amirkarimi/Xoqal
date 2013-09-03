@@ -24,6 +24,7 @@ namespace Xoqal.Web.Mvc.Controllers
     using System.Text;
     using System.Web.Mvc;
     using Xoqal.Services;
+    using Xoqal.Web.Mvc.Extensions;
     using Xoqal.Web.Mvc.Models;
 
     /// <summary>
@@ -88,13 +89,7 @@ namespace Xoqal.Web.Mvc.Controllers
         {
             var paginatedData = this.service.GetItems(criteria);
 
-            var paginatedModel = new Paginated<TModel>(
-                paginatedData.Data,
-                paginatedData.TotalRowsCount,
-                criteria.Page ?? 1,
-                criteria.PageSize);
-
-            return paginatedModel;
+            return paginatedData.ToPaginatedViewModel(criteria);
         }
     }
 }
