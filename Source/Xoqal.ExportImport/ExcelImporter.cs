@@ -23,7 +23,6 @@ namespace Xoqal.ExportImport
     using System.ComponentModel;
     using System.Linq;
     using System.Text;
-    using ClosedXML.Excel;
     using Xoqal.Globalization;
 
     /// <summary>
@@ -39,7 +38,6 @@ namespace Xoqal.ExportImport
         /// <returns>Imported data.</returns>
         protected override IEnumerable<T> Import()
         {
-            List<T> importLoadingLists = new List<T>();
             var properties = this.GetProperties(typeof(T)).ToArray();
 
             // Recognize headers
@@ -60,7 +58,7 @@ namespace Xoqal.ExportImport
 
             foreach (var row in this.Worksheet.Rows().Skip(1))
             {
-                T importedRecord = new T();
+                var importedRecord = new T();
 
                 for (int column = 1; column <= columnPropertiesMap.Count; column++)
                 {
@@ -127,7 +125,7 @@ namespace Xoqal.ExportImport
         /// Gets the cell value.
         /// </summary>
         /// <param name="row">The row.</param>
-        /// <param name="columnLetter">The column letter.</param>
+        /// <param name="column">The column.</param>
         /// <returns></returns>
         private object GetCellValue(ClosedXML.Excel.IXLRow row, int column)
         {
@@ -135,14 +133,13 @@ namespace Xoqal.ExportImport
             {
                 return row.Cell(column).Value;
             }
-            else if (!string.IsNullOrWhiteSpace(row.Cell(column).ValueCached))
+
+            if (!string.IsNullOrWhiteSpace(row.Cell(column).ValueCached))
             {
                 return row.Cell(column).ValueCached;
             }
-            else
-            {
-                return null;
-            }
+
+            return null;
         }
     }
 }
