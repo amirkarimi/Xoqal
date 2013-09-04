@@ -95,6 +95,7 @@
     <Compile Include="Extensions\AjaxDataPresenterExtensions.cs" />
     <Compile Include="Extensions\AjaxLinkExtensions.cs" />
     <Compile Include="Extensions\AuthorizationExtensions.cs" />
+    <Compile Include="Extensions\DataExtensions.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
     <Compile Include="Extensions\GlobalizationUrlExtentions.cs" />
     <Compile Include="Extensions\HtmlPrefixScopeExtensions.cs" />

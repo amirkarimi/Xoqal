@@ -27,7 +27,7 @@ namespace Xoqal.ExportImport
     /// <summary>
     /// Represents a generic exporter.
     /// </summary>
-    public interface IExporter<T> : IExporter
+    public interface IExporter<in T> : IExporter
     {
         /// <summary>
         /// Exports the specified data.
