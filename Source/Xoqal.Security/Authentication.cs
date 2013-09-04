@@ -32,21 +32,6 @@ namespace Xoqal.Security
     {
         #region Fields
         
-        /// <summary>
-        /// Responsible for creating a Thread based instrance for IAuthenticationDataProvider 
-        /// </summary>
-        /// <remarks>CallContext is recommended for asp.net stack</remarks>
-        private static readonly ThreadLocal<IAuthenticationDataProvider> CurrentDataProvider =
-            new ThreadLocal<IAuthenticationDataProvider>(() =>
-                {
-                    if (DataProviderInitializer == null)
-                    {
-                        throw new ApplicationException("Authentication.DataProviderInitializer not initialized.");
-                    }
-
-                    return DataProviderInitializer.Invoke();
-                });
-
         private static IAuthentication defaultInstance;
         private static IPrincipal globalPrincipal;
 
@@ -67,7 +52,7 @@ namespace Xoqal.Security
         /// 
         /// container.Register(Component.For<IAuthenticationDataProvider>()
         ///                             .ImplementedBy<AuthenticationDataProvider>()
-        ///                             .LifeStyle.PerWebRequest);
+        ///                             .LifeStyle.HybridPerWebRequestPerThread());
         /// 
         /// Xoqal.Security.Authentication.DataProviderInitializer = () =>
         ///     {
@@ -94,11 +79,11 @@ namespace Xoqal.Security
         /// Get the DataProvider instance (for current thread)
         /// </summary>
         /// <remarks>
-        /// Set by DataProviderInitializer delegate
+        /// Set by DataProviderInitializer factory
         /// </remarks>
         public IAuthenticationDataProvider DataProvider
         {
-            get { return CurrentDataProvider.Value; }
+            get { return DataProviderInitializer.Invoke(); }
         }
 
         #endregion
