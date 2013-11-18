@@ -16,16 +16,16 @@
 // limitations under the License.
 #endregion
 
-using System;
-using System.Linq;
-using System.Reflection;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Xoqal.Web.Mvc.Controllers;
-using Xoqal.Web.Mvc.Security;
-
 namespace Xoqal.Tests.WebMvcTests
 {
+    using System;
+    using System.Linq;
+    using System.Reflection;
+    using System.Web.Mvc;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using Xoqal.Web.Mvc.Controllers;
+    using Xoqal.Web.Mvc.Security;
+
     [TestClass]
     public class MenuGeneratorTest
     {
@@ -96,7 +96,7 @@ namespace Xoqal.Tests.WebMvcTests
     }
 
     [MenuItem(ActionMethodName = "Index", ResourceType = typeof(Resources.Resource), TitleResourceName = "MenuItemTitle", CategoryResourceName = "MenuItemCategory")]
-    [Permission(PermissionIds = "PermissionIds", Roles = "Roles", LoginUrl = "LoginUrl")]
+    [Permission(PermissionIds = new[] { "PermissionIds" }, Roles = new[] { "Roles" }, LoginUrl = "LoginUrl")]
     public class GeneralController
     {
         [ActionName("MyAction")]
@@ -115,7 +115,7 @@ namespace Xoqal.Tests.WebMvcTests
     [MenuItem(ActionMethodName = "Index", ResourceType = typeof(Resources.Resource), Title = "General2", Category = "Home")]
     public class General2Controller
     {
-        [Permission(PermissionIds = "PermissionIds", Roles = "Roles", LoginUrl = "LoginUrl")]
+        [Permission(PermissionIds = new[] { "PermissionIds" }, Roles = new[] { "Roles" }, LoginUrl = "LoginUrl")]
         public ActionResult Index()
         {
             throw new NotImplementedException();
@@ -125,14 +125,14 @@ namespace Xoqal.Tests.WebMvcTests
     public class General3Controller
     {
         [MenuItem(ActionMethodName = "Index3", ResourceType = typeof(Resources.Resource), Title = "General3", Category = "Home3")]
-        [Permission(PermissionIds = "PermissionIds3", Roles = "Roles3", LoginUrl = "LoginUrl3")]
+        [Permission(PermissionIds = new[] { "PermissionIds3" }, Roles = new[] { "Roles3" }, LoginUrl = "LoginUrl3")]
         public ActionResult Index3()
         {
             throw new NotImplementedException();
         }
     }
 
-    [Permission(PermissionIds = "PermissionIds4", Roles = "Roles4", LoginUrl = "LoginUrl4")]
+    [Permission(PermissionIds = new[] { "PermissionIds4" }, Roles = new[] { "Roles4" }, LoginUrl = "LoginUrl4")]
     public class General4Controller
     {
         [MenuItem(ActionMethodName = "Index4", ResourceType = typeof(Resources.Resource), Title = "General4", Category = "Home4")]
@@ -150,7 +150,7 @@ namespace Xoqal.Tests.WebMvcTests
         }
     }
 
-    [Permission(PermissionIds = "PermissionIds5", Roles = "Roles5", LoginUrl = "LoginUrl5")]
+    [Permission(PermissionIds = new[] { "PermissionIds5" }, Roles = new[] { "Roles5" }, LoginUrl = "LoginUrl5")]
     [MenuItem(ActionMethodName = "Index5", ResourceType = typeof(Resources.Resource), Title = "General5", Category = "Home5")]
     public class General5Controller : BaseClass
     {

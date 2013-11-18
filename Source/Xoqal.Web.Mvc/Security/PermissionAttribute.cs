@@ -39,8 +39,8 @@ namespace Xoqal.Web.Mvc.Security
         /// <summary>
         /// Initializes a new instance of the <see cref="PermissionAttribute" /> class.
         /// </summary>
-        /// <param name="permissionIds"> The permission ids (Could be comma separated). </param>
-        public PermissionAttribute(string permissionIds)
+        /// <param name="permissionIds"> The permission ids. </param>
+        public PermissionAttribute(params string[] permissionIds)
         {
             this.PermissionIds = permissionIds;
         }
@@ -51,7 +51,7 @@ namespace Xoqal.Web.Mvc.Security
         /// <value>
         /// The roles.
         /// </value>
-        public string Roles { get; set; }
+        public string[] Roles { get; set; }
 
         /// <summary>
         /// Gets or sets the permission ids.
@@ -59,7 +59,7 @@ namespace Xoqal.Web.Mvc.Security
         /// <value>
         /// The permission ids.
         /// </value>
-        public string PermissionIds { get; set; }
+        public string[] PermissionIds { get; set; }
 
         /// <summary>
         /// Gets or sets the login URL.
@@ -138,7 +138,7 @@ namespace Xoqal.Web.Mvc.Security
         /// <returns></returns>
         private bool HasPermissions(IUserPrincipal user)
         {
-            return string.IsNullOrWhiteSpace(this.PermissionIds) || this.PermissionIds.Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries).Any(p => user.IsInPermission(p));
+            return this.PermissionIds == null || this.PermissionIds.Any(user.IsInPermission);
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace Xoqal.Web.Mvc.Security
         /// <returns></returns>
         private bool HasRoles(IUserPrincipal user)
         {
-            return string.IsNullOrWhiteSpace(this.Roles) || this.Roles.Split(new char[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries).Any(r => user.IsInRole(r));
+            return this.Roles == null || this.Roles.Any(user.IsInRole);
         }
     }
 }
