@@ -54,6 +54,7 @@
     <Compile Include="ExcelImporter.cs" />
     <Compile Include="ExcelImporterBase.cs" />
     <Compile Include="IExporter.cs" />
+    <Compile Include="IImporterContainer.cs" />
     <Compile Include="IExporterContainer.cs" />
     <Compile Include="IExporter{T}.cs" />
     <Compile Include="IImporter.cs" />
