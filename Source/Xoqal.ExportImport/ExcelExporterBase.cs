@@ -43,7 +43,7 @@ namespace Xoqal.ExportImport
         /// </summary>
         public string FileExtensionFilter
         {
-            get { return "Excel (*.xls)|*.xlsx"; }
+            get { return "Excel (*.xlsx)|*.xlsx"; }
         }
 
         /// <summary>
