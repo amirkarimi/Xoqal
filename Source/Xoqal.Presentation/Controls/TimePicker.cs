@@ -32,6 +32,9 @@ namespace Xoqal.Presentation.Controls
     using System.Windows.Navigation;
     using System.Windows.Shapes;
 
+    /// <summary>
+    /// 
+    /// </summary>
     [TemplatePart(Name = "PART_HourTextBox", Type = typeof(TimePicker))]
     [TemplatePart(Name = "PART_MinuteTextBox", Type = typeof(TimePicker))]
     public class TimePicker : Control

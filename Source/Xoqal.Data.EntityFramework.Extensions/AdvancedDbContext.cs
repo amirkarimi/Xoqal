@@ -83,7 +83,7 @@ namespace Xoqal.Data.EntityFramework.Extensions
         /// <param name="objectContext"></param>
         /// <param name="dbContextOwnsObjectContext"></param>
         [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1305:FieldNamesMustNotUseHungarianNotation", Justification = "Reviewed.")]
-        public AdvancedDbContext(System.Data.Objects.ObjectContext objectContext, bool dbContextOwnsObjectContext)
+        public AdvancedDbContext(System.Data.Entity.Core.Objects.ObjectContext objectContext, bool dbContextOwnsObjectContext)
             : base(objectContext, dbContextOwnsObjectContext)
         {
         }
@@ -109,7 +109,7 @@ namespace Xoqal.Data.EntityFramework.Extensions
         public override int SaveChanges()
         {
             // Set some fields which can automatically filled
-            foreach (var entry in this.ChangeTracker.Entries().Where(e => e.State == EntityState.Added).ToList())
+            foreach (var entry in this.ChangeTracker.Entries().Where(e => e.State == System.Data.Entity.EntityState.Added).ToList())
             {
                 var entityWithGuidKey = entry.Entity as IGuidKey;
                 if (entityWithGuidKey != null)
@@ -163,7 +163,7 @@ namespace Xoqal.Data.EntityFramework.Extensions
                 }
             }
 
-            foreach (var entry in this.ChangeTracker.Entries().Where(e => e.State == EntityState.Modified).ToList())
+            foreach (var entry in this.ChangeTracker.Entries().Where(e => e.State == System.Data.Entity.EntityState.Modified).ToList())
             {
                 var entityWithLastUpdateTime = entry.Entity as ILastUpdateTime;
                 if (entityWithLastUpdateTime != null)

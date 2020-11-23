@@ -23,6 +23,9 @@ namespace Xoqal.Security
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public interface ISecurityContainer
     {
     }

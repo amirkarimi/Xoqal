@@ -98,6 +98,11 @@ namespace Xoqal.ExportImport
                 value = GlobalDateTime.ToShortDateTimeString((DateTime)value);
             }
 
+            if (property.PropertyType == typeof(decimal) || (property.PropertyType == typeof(decimal?) && value != null))
+            {
+                value = ((decimal)value).ToString("N0");
+            }
+
             return value;
         }
     }

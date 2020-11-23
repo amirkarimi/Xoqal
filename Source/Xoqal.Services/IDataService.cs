@@ -24,6 +24,9 @@ namespace Xoqal.Services
     using System.Text;
     using Xoqal.Core.Models;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IDataService<TModel, in TCriteria> : ICrudService<TModel, TCriteria>, IReadService<TModel>
         where TModel : class, new()
         where TCriteria : PaginatedCriteria

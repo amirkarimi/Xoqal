@@ -22,6 +22,10 @@ namespace Xoqal.Presentation.Converters
     using System.Globalization;
     using System.Windows.Data;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Windows.Data.IMultiValueConverter" />
     public class AndConverter : IMultiValueConverter
     {
         #region IMultiValueConverter Members
