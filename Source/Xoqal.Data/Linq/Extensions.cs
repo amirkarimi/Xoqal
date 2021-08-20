@@ -26,6 +26,9 @@ namespace Xoqal.Data.Linq
     using Xoqal.Core;
     using Xoqal.Core.Models;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public static class Extensions
     {
         /// <summary>

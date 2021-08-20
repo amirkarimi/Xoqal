@@ -23,6 +23,9 @@ namespace Xoqal.Generator.Templates
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class ServiceBootstrapper
     {
         private readonly GeneratorOptions options;

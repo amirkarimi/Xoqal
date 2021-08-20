@@ -21,6 +21,9 @@ namespace Xoqal.Utilities
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class TextHelper
     {
         /// <summary>

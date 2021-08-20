@@ -22,6 +22,9 @@ namespace Xoqal.Presentation.Converters
     using System.Globalization;
     using System.Windows.Data;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class OrConverter : IMultiValueConverter
     {
         #region IMultiValueConverter Members

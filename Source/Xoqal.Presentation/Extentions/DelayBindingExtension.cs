@@ -25,6 +25,10 @@ namespace Xoqal.Presentation.Extentions
     using System.Windows.Data;
     using System.Windows.Markup;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Windows.Markup.MarkupExtension" />
     [MarkupExtensionReturnType(typeof(object))]
     public class DelayBindingExtension : MarkupExtension
     {

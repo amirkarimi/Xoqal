@@ -29,6 +29,10 @@ namespace Xoqal.Presentation.ViewModels
     using System.Text;
     using System.Windows.Data;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Windows.Data.ListCollectionView" />
     public class DataPresenterCollectionView : ListCollectionView
     {
         private SortDescriptionCollection sortDescriptionCollection;

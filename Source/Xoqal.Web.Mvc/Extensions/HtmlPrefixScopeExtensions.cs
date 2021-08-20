@@ -23,6 +23,9 @@ namespace Xoqal.Web.Mvc.Extensions
     using System.Web;
     using System.Web.Mvc;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public static class HtmlPrefixScopeExtensions
     {
         private const string IdsToReuseKey = "__htmlPrefixScopeExtensions_IdsToReuse_";

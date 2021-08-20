@@ -77,14 +77,14 @@ namespace Xoqal.Data.EntityFramework
         {
             foreach (System.Data.Entity.Infrastructure.DbEntityEntry entity in this.Context.ChangeTracker.Entries())
             {
-                if (entity.State == EntityState.Added)
+                if (entity.State == System.Data.Entity.EntityState.Added)
                 {
-                    entity.State = EntityState.Detached;
+                    entity.State = System.Data.Entity.EntityState.Detached;
                 }
 
-                if (entity.State == EntityState.Deleted || entity.State == EntityState.Modified)
+                if (entity.State == System.Data.Entity.EntityState.Deleted || entity.State == System.Data.Entity.EntityState.Modified)
                 {
-                    entity.State = EntityState.Unchanged;
+                    entity.State = System.Data.Entity.EntityState.Unchanged;
                 }
             }
         }

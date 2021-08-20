@@ -32,6 +32,10 @@ namespace Xoqal.Presentation.Controls
     using System.Windows.Navigation;
     using System.Windows.Shapes;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Windows.Controls.Control" />
     public class DateTimePicker : Control
     {
         /// <summary>

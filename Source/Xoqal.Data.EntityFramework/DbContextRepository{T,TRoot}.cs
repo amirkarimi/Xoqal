@@ -187,7 +187,7 @@ namespace Xoqal.Data.EntityFramework
         {
             DbEntityEntry<T> entry = this.Context.Entry(entity);
 
-            if (entry.State == EntityState.Detached)
+            if (entry.State == System.Data.Entity.EntityState.Detached)
             {
                 var attachedEntity = this.GetAttachedEntity(entity);
 
@@ -198,7 +198,7 @@ namespace Xoqal.Data.EntityFramework
                 }
                 else
                 {
-                    entry.State = EntityState.Modified; // This should attach entity
+                    entry.State = System.Data.Entity.EntityState.Modified; // This should attach entity
                 }
             }
         }
@@ -211,13 +211,13 @@ namespace Xoqal.Data.EntityFramework
         {
             DbEntityEntry<T> entry = this.Context.Entry(entity);
 
-            if (entry.State == EntityState.Added)
+            if (entry.State == System.Data.Entity.EntityState.Added)
             {
-                entry.State = EntityState.Detached;
+                entry.State = System.Data.Entity.EntityState.Detached;
                 return;
             }
             
-            if (entry.State == EntityState.Detached)
+            if (entry.State == System.Data.Entity.EntityState.Detached)
             {
                 entity = this.GetAttachedEntity(entity);
             }
@@ -275,7 +275,7 @@ namespace Xoqal.Data.EntityFramework
         public void Attach(T entity)
         {
             DbEntityEntry<T> entry = this.Context.Entry(entity);
-            if (entry.State != EntityState.Detached)
+            if (entry.State != System.Data.Entity.EntityState.Detached)
             {
                 return;
             }
@@ -289,7 +289,7 @@ namespace Xoqal.Data.EntityFramework
         /// <param name="entity"> The entity. </param>
         public void Detach(T entity)
         {
-            this.Context.Entry(entity).State = EntityState.Detached;
+            this.Context.Entry(entity).State = System.Data.Entity.EntityState.Detached;
         }
 
         /// <summary>
@@ -299,7 +299,7 @@ namespace Xoqal.Data.EntityFramework
         public virtual T Reload(T entity)
         {
             var entry = this.Context.Entry(entity);
-            if (entry.State == EntityState.Detached)
+            if (entry.State == System.Data.Entity.EntityState.Detached)
             {
                 return this.GetAttachedEntity(entity);
             }

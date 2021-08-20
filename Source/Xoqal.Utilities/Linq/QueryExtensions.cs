@@ -34,8 +34,8 @@ namespace Xoqal.Utilities.Linq
         /// <typeparam name="TResult">The type of the result.</typeparam>
         /// <param name="source">The source.</param>
         /// <param name="condition">the condition</param>
-        /// <param name="trueExpression">The expression that will apply if <see cref="condition"/> is true.</param>
-        /// <param name="falseExpression">The expression that will apply if <see cref="condition"/> is false.</param>
+        /// <param name="trueExpression">The expression that will apply if condition is true.</param>
+        /// <param name="falseExpression">The expression that will apply if condition is false.</param>
         /// <returns>
         /// filtered query
         /// </returns>
@@ -54,8 +54,8 @@ namespace Xoqal.Utilities.Linq
         /// <typeparam name="T"></typeparam>
         /// <param name="source">The source.</param>
         /// <param name="condition">the condition</param>
-        /// <param name="trueExpression">The expression that will apply if <see cref="condition"/> is true.</param>
-        /// <param name="falseExpression">The expression that will apply if <see cref="condition"/> is false.</param>
+        /// <param name="trueExpression">The expression that will apply if condition is true.</param>
+        /// <param name="falseExpression">The expression that will apply if condition is false.</param>
         /// <returns>
         /// filtered query
         /// </returns>

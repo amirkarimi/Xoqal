@@ -22,6 +22,9 @@ namespace Xoqal.Security
     using System.Collections.Generic;
     using System.Security.Principal;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IUser
     {
         /// <summary>

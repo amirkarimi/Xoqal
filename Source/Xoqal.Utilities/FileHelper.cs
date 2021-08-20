@@ -25,6 +25,9 @@ namespace Xoqal.Utilities
     using System.Web;
     using Attributes;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class FileHelper
     {
         /// <summary>
