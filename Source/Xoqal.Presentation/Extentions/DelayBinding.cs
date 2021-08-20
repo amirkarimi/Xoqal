@@ -25,6 +25,9 @@ namespace Xoqal.Presentation.Extentions
     using System.Windows.Input;
     using System.Windows.Threading;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class DelayBinding
     {
         private readonly BindingExpressionBase bindingExpression;

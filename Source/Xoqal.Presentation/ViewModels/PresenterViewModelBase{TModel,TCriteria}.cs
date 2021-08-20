@@ -54,7 +54,7 @@ namespace Xoqal.Presentation.ViewModels
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PresenterViewModelBase" /> class.
+        /// Initializes a new instance of the PresenterViewModelBase /> class.
         /// </summary>
         public PresenterViewModelBase()
         {

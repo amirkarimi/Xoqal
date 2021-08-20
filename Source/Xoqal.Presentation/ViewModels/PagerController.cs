@@ -25,7 +25,7 @@ namespace Xoqal.Presentation.ViewModels
     using Xoqal.Core.Models;
 
     /// <summary>
-    /// Default implementation of the <see cref="IPagerControler"/>.
+    /// Default implementation of the PagerControler/>.
     /// </summary>
     public class PagerController : NotificationObject, IPagerController
     {

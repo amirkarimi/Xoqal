@@ -65,7 +65,6 @@ namespace Xoqal.Web.Mvc.Components
         /// <summary>
         /// Gets the data column tag.
         /// </summary>
-        /// <typeparam name="TModel">The type of the model.</typeparam>
         /// <param name="model">The model.</param>
         /// <param name="column">The column.</param>
         /// <returns></returns>

@@ -21,6 +21,10 @@ namespace Xoqal.Utilities.Attributes
     using System;
     using System.Linq;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <seealso cref="System.Attribute" />
     [AttributeUsage(AttributeTargets.All, Inherited = false, AllowMultiple = true)]
     public class ValidExtensionsAttribute : Attribute
     {

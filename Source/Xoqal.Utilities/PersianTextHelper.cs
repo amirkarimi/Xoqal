@@ -68,5 +68,25 @@ namespace Xoqal.Utilities
 
             return source;
         }
+
+        /// <summary>
+        /// Converts to english digit.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
+        public static string ConvertToEnglishDigit(string source)
+        {
+            if (string.IsNullOrWhiteSpace(source))
+            {
+                return source;
+            }
+
+            for (var i = 0; i <= 9; i++)
+            {
+                source = source.Replace(ConvertToPersianDigit(i.ToString()), i.ToString());
+            }
+
+            return source;
+        }
     }
 }

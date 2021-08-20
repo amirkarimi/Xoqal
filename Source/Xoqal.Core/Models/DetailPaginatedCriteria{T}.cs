@@ -23,6 +23,11 @@ namespace Xoqal.Core.Models
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TMasterModel">The type of the master model.</typeparam>
+    /// <seealso cref="Xoqal.Core.Models.PaginatedCriteria" />
     public class DetailPaginatedCriteria<TMasterModel> : PaginatedCriteria
         where TMasterModel : class, new()
     {

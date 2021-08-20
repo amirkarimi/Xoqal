@@ -21,6 +21,9 @@ namespace Xoqal.Utilities
     using System;
     using System.Text.RegularExpressions;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class HtmlTextHelper
     {
         /// <summary>

@@ -38,6 +38,14 @@ namespace Xoqal.ExportImport
         bool CanExport { get; }
 
         /// <summary>
+        /// Gets the exporter name of the file.
+        /// </summary>
+        /// <value>
+        /// The exporter name of the file.
+        /// </value>
+        string ExporterFileName { get; }
+
+        /// <summary>
         /// Gets the exporter.
         /// </summary>
         /// <returns></returns>

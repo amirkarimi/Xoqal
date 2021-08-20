@@ -43,7 +43,7 @@ namespace Xoqal.Presentation.Converters
         {
             try
             {
-                if ((DateTime)value == DateTime.MinValue)
+                if (value == null || (DateTime)value == DateTime.MinValue)
                 {
                     return null;
                 }

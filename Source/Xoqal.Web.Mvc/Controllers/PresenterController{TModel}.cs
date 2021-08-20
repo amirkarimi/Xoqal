@@ -33,7 +33,7 @@ namespace Xoqal.Web.Mvc.Controllers
         private readonly IPresenterService<TModel> service;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PresenterControllerresenterController{TModel,TCriteria}" /> class.
+        /// Initializes a new instance of the PresenterControllerresenterController{TModel,TCriteria} /> class.
         /// </summary>
         /// <param name="service"></param>
         public PresenterController(IPresenterService<TModel> service)

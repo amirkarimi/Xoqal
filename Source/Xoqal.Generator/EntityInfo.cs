@@ -23,6 +23,9 @@ namespace Xoqal.Generator
     using System.Linq;
     using System.Text;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class EntityInfo
     {
         private readonly Type entityType;

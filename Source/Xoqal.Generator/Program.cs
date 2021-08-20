@@ -26,6 +26,9 @@ namespace Xoqal.Generator
     using System.Reflection;
     using System.Text;
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class Program
     {
         /// <summary>
